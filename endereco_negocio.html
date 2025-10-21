@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço do Negócio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/formulario.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header Fixo -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Barra de Progresso -->
+        <div class="progress-bar-container">
+            <div class="progress-step active">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-step active">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-step active">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-step">
+                <div class="progress-fill"></div>
+            </div>
+            <div class="progress-step">
+                <div class="progress-fill"></div>
+            </div>
+        </div>
+
+        <!-- Conteúdo Principal -->
+        <main class="main-content">
+            <!-- Botão Anterior (Esquerda) -->
+           <a href="informacao_negocio.html" class="nav-link">
+  <button class="nav-button-side nav-button-prev">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <polyline points="15 18 9 12 15 6"></polyline>
+    </svg>
+  </button>
+</a>
+            
+
+            <!-- Formulário -->
+            <div class="form-container">
+                <h1 class="form-title">Endereço do seu negócio!</h1>
+                
+                <form class="form">
+                    <div class="form-group">
+                        <label for="nome" class="form-label">CEP</label>
+                          <a href="https://buscacepinter.correios.com.br/app/endereco/index.php" class="esqueci-cep">Não sei meu CEP</a>
+                        <input type="text" id="nome" name="nome" class="form-input" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email" class="form-label">Rua</label>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="cnpj" class="form-label">Número</label>
+                        <input type="text" id="cnpj" name="cnpj" class="form-input" placeholder="">
+    
+                    </div>
+
+                    <div class="form-group">
+                        <label for="senha" class="form-label">Bairro</label>
+                        <input type="password" id="senha" name="senha" class="form-input" placeholder="">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="confirmacao-senha" class="form-label">Cidade</label>
+                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="confirmacao-senha" class="form-label">Estado</label>
+                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="confirmacao-senha" class="form-label">Ponto de referência</label>
+                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
+                    </div>
+
+                </form>
+            </div>
+
+            <!-- Botão Próximo (Direita) -->
+           <a href="descricao_negocio.html" class="nav-button-side nav-button-next">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+    <polyline points="9 18 15 12 9 6"></polyline>
+  </svg>
+</a>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
+                </div>
+                <div class="footer-tagline">
+                    Mais que produção, uma relação com você!
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
+

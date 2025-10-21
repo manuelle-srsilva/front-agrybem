@@ -1,0 +1,399 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.page-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-highlight {
+    color: #5A8F3A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+/* ===== BARRA DE PROGRESSO ===== */
+.progress-bar-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+    padding: 30px 0;
+    background-color: #f5f5f5;
+}
+
+.progress-step {
+    width: 120px;
+    height: 12px;
+    background-color: #d0d0d0;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-step.active .progress-fill {
+    background-color: #315901;
+    width: 100%;
+}
+
+.progress-step:not(.active) .progress-fill {
+    background-color: #999999;
+    width: 100%;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* ===== FORMULÁRIO ===== */
+.form-container {
+    background-color: #e8e8e8;
+    border: 1px solid #adadad;
+    border-radius: 20px;
+    padding: 50px 40px;
+    width: 1000%;
+    max-width: 550px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 21px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 40px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2e2e2e;
+     text-align: center;
+}
+.esqueci-cep {
+    text-align: center;
+}
+
+.form-label-descricao{
+    text-align: center;
+}
+
+.form-input {
+      padding: 18px 20px;
+
+    /* define uma altura fixa para manter o mesmo tamanho visual que você quer */
+    height: 220px; /* ajuste esse valor até ficar igual à sua caixa desejada */
+
+    /* importante: garantir que padding seja contado dentro do height */
+    box-sizing: border-box;
+
+    border: 1px solid #adadad;
+    border-radius: 20px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    resize: none;      
+    line-height: 1.4;   
+    vertical-align: top;/* redundante aqui, mas seguro */
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #5A8F3A;
+    box-shadow: 0 0 8px rgba(90, 143, 58, 0.2);
+}
+
+.form-input::placeholder {
+    color: #999999;
+}
+
+/* ===== BOTÕES DE NAVEGAÇÃO LATERAL ===== */
+.nav-button-side {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #d0d0d0;
+    border: 3px solid #999999;
+    color: #999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    transform: translateY(100px);
+
+}
+
+.nav-button-side:hover {
+    background-color: #c0c0c0;
+    border-color: #666666;
+    color: #666666;
+
+}
+
+
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #002c0b;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    margin-top: auto;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-logo-highlight {
+    color: #9bff5d;
+}
+
+.footer-tagline {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .nav {
+        gap: 15px;
+    }
+
+    .nav-link {
+        font-size: 14px;
+    }
+
+    .nav-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .progress-bar-container {
+        gap: 30px;
+        padding: 20px 0;
+    }
+
+    .progress-step {
+        width: 80px;
+    }
+
+    .main-content {
+        gap: 40px;
+        padding: 30px 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .form-title {
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+
+    .form {
+        gap: 20px;
+    }
+
+    .nav-button-side {
+        width: 50px;
+        height: 50px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-text {
+        font-size: 18px;
+    }
+
+    .nav {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .nav-link {
+        font-size: 12px;
+    }
+
+    .progress-bar-container {
+        gap: 15px;
+        padding: 15px 10px;
+    }
+
+    .progress-step {
+        width: 60px;
+    }
+
+    .main-content {
+        gap: 20px;
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
+
+    .form-title {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+
+    .form-label {
+        font-size: 14px;
+    }
+
+    .form-input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .nav-button-side {
+        width: 45px;
+        height: 45px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .footer-tagline {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+}
+
