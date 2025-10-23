@@ -3,116 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesta Rural - Agrybem</title>
-    <link rel="stylesheet" href="style/loja.css">
+    <title>Agrybem - Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/empresa_produto.css ">
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header class="header">
+    <!-- Header -->
+   <header class="header">
         <div class="container">
             <div class="logo">
+               
                 <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
             </div>
             <nav class="nav">
-             
-                <a href="clientepagprincipal.html" class="nav-button">Voltar</a>
+                <a href="#" class="nav-link">Cesta Rural</a>
+               <div class="voltar-container">
+    <a href="empresa_painel_profissional.html" class="voltar-toggle">
+        <img src="img/voltar header.png" alt="Menu" class="voltar-icon-img">
+    </a>
+</div>
             </nav>
         </div>
     </header>
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
-       
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">Meus Produtos </h1>
+        </div>
+    </section>
 
-        <!-- HEADER SECTION WITH LOGO AND TITLE -->
-        <section class="header-section">
+    <!-- Painel Profissional -->
+    <section class="professional-panel">
+    <h2 class="panel-title">Escolha uma foto de qualidade para maior confiança</h2>
 
-            <div class="container">
-                <div class="header-top">
-                    <div class="logo-institution">
-                        <img src="img/cesta rural.png" alt="Logo da Empresa" class="logo-img">
-                    </div>
-                      <div class="header-info">
-                        <h1 class="institution-title">Cesta Rural</h1>
-                       
-                    </div>
-
-                </div>
-                <div class="form-field">
-                            <label for="company-name">Descrição</label>
-                            <h3>Somos especializados na venda de  legumes, verduras, raízes e com destaque em frutas. Direto da colheita para você!</h3>
-                        </div>
+    <div class="button-group">
+        <a href="empresa_cadastro_produto.html" class="btn btn-primary">Cadastrar produto</a>
+    </div>
+</section>
 
 
-            </div>
-        </section>
+     </section>
+    
+    
+    <!-- Seção DOE -->
+   
 
-       
-
-        <!-- ADDRESS SECTION -->
-        <section class="address-section">
-            <div class="container">
-                <h2 class="section-title">Endereço</h2>
-                <div class="form-group">
-                    <form class="address-form">
-                        <div class="form-field">
-                            <label for="cep">CEP</label>
-                            <input type="text" id="cep" placeholder="42800-040" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="street">Rua</label>
-                            <input type="text" id="street" placeholder="R. Costa Pinto" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="number">Número</label>
-                            <input type="text" id="number" placeholder="30" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="neighborhood">Bairro</label>
-                            <input type="text" id="neighborhood" placeholder="Centro" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="city">Cidade</label>
-                            <input type="text" id="city" placeholder="Camaçari" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="state">Estado</label>
-                            <input type="text" id="state" placeholder="BA" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="reference">Ponto de Referência</label>
-                            <input type="text" id="reference" placeholder="Praça Abrantes" disabled>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </section>
-
-        <!-- MAP SECTION -->
-        <section class="map-section">
-            <div class="container">
-                <div class="map-placeholder">
-                    <iframe
-                        id="google-map-iframe"
-                        width="600"
-                        height="450"
-                        style="border:0"
-                        loading="lazy"
-                        allowfullscreen
-                        referrerpolicy="no-referrer-when-downgrade"
-                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC0tzkSQhRrMOcoMZ1XU0Ty4RwCER5gxLo
-                            &q=R.+Costa+Pinto,30-Centro,Camaçari-BA,42800-040">
-                    </iframe>
-                </div>
-            </div>
-        </section>
-    </main>
     <!-- Seção de Pesquisa -->
     <section class="search-section">
         
@@ -266,12 +205,10 @@
         </div>
     </section>
 
-
-    <!-- FOOTER -->
-   <footer class="footer">
+    <!-- Footer -->
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                
                 <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
             </div>
             <div class="footer-tagline">
@@ -280,42 +217,7 @@
         </div>
     </footer>
 
-    <script>
-        function atualizarMapa() {
-            // 1. Obter os elementos de endereço pelo ID e seus placeholders
-            const street = document.getElementById('street').placeholder;
-            const number = document.getElementById('number').placeholder;
-            const neighborhood = document.getElementById('neighborhood').placeholder;
-            const city = document.getElementById('city').placeholder;
-            const state = document.getElementById('state').placeholder;
-            const cep = document.getElementById('cep').placeholder;
-
-            // 2. Montar a string do endereço no formato desejado
-            // Ex: R. Costa Pinto,30-Centro,Camaçari-BA,42800-040
-            const rawAddress = `${street},${number}-${neighborhood},${city}-${state},${cep}`;
-
-            // 3. Formatar a string para URL (substituir espaços por + e . por +)
-            // A função encodeURIComponent é a maneira mais robusta, mas o replace funciona para este caso.
-            const encodedAddress = rawAddress.replace(/ /g, '+').replace(/\./g, '');
-            // Para ser idêntico ao seu exemplo, removemos os pontos e usamos + para espaços.
-
-            // 4. Montar a URL completa
-            // O início da URL do Google Maps para embed
-            const baseUrl = "https://maps.google.com/maps?"; 
-            const finalUrl = `${baseUrl}output=embed&q=${encodedAddress}`;
-            
-            // 5. Obter o iframe e atualizar o src
-            const mapIframe = document.getElementById('google-map-iframe');
-            if (mapIframe) {
-                mapIframe.src = finalUrl;
-            } else {
-                console.error("Iframe com ID 'google-map-iframe' não encontrado.");
-            }
-        }
-
-        // Executar a função assim que o DOM estiver completamente carregado
-        document.addEventListener('DOMContentLoaded', atualizarMapa);
-    </script>
+   
 </body>
 </html>
 

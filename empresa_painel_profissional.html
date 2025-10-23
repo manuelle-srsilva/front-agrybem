@@ -7,9 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/produto.css  ">
+    <link rel="stylesheet" href="style/empresa_painel_profissional.css  ">
 </head>
-
 <body>
     <!-- Header -->
    <header class="header">
@@ -20,11 +19,21 @@
             </div>
             <nav class="nav">
                 <a href="#" class="nav-link">Cesta Rural</a>
-               <div class="voltar-container">
-    <a href="painel_profissional_empresa.html" class="voltar-toggle">
-        <img src="img/voltar header.png" alt="Menu" class="voltar-icon-img">
-    </a>
-</div>
+                <div class="menu-container">
+                    <button class="menu-toggle" id="menuToggle">
+                        <img src="img/menu.png" alt="Menu" class="menu-icon-img">
+                    </button>
+                    <div class="dropdown-menu" id="dropdownMenu">
+                        <a href="empresa_perfil.html" class="menu-item">
+                            <img src="img/perfil.png" alt="Perfil" class="menu-item-icon">
+                            <span>Perfil</span>
+                        </a>
+                        <a href="empresa_login.html" class="menu-item">
+                            <img src="img/sair.png" alt="Sair" class="menu-item-icon">
+                            <span>Sair</span>
+                        </a>
+                    </div>
+                </div>
             </nav>
         </div>
     </header>
@@ -32,33 +41,53 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Meus Produtos </h1>
+            <h1 class="hero-title">Orgulho de ter você com a gente!</h1>
         </div>
     </section>
 
     <!-- Painel Profissional -->
     <section class="professional-panel">
-    <h2 class="panel-title">Escolha uma foto de qualidade para maior confiança</h2>
+    <h2 class="panel-title">Painel profissional</h2>
 
     <div class="button-group">
-        <a href="cadastro_produto.html" class="btn btn-primary">Cadastrar produto</a>
+        <a href="loja.html" class="btn btn-primary">Minha loja</a>
+    </div>
+
+    <div class="button-group">
+        <a href="empresa_produto.html" class="btn btn-secondary">Meus Produtos</a>
     </div>
 </section>
+
+    <!-- Divisor -->
+     <section class="barra-diviso"> 
+<div class="divider"></div>
 
 
      </section>
     
     
     <!-- Seção DOE -->
-   
+   <section class="donation">
+        <div class="container donation-container">
+            <div class="donation-content">
+                <h2 class="donation-title">Doe com o Agry<span class="donation-highlight">bem</span>!</h2>
+                <p class="donation-text">No Agrybem, agricultores e comerciantes podem doar alimentos em bom estado,
+                     e instituições cadastradas como ONGs e igrejas podem receber as doações.</p>
+                <button class="donation-button">Participar</button>
+            </div>
+            <div class="donation-image">
+                <img src="img/agricultordoação" alt="Agricultor com vegetais" class="donation-img">
+            </div>
+        </div>
+    </section>
 
     <!-- Seção de Pesquisa -->
     <section class="search-section">
         
-        <h2 class="search-title">Pesquise por categora </h2>
+        <h2 class="search-title">Explore negócios parceiros</h2>
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Pesquisar...">
-          <button class="lupa-toggle" id="lupaToggle">
+          <button class="menu-toggle" id="menuToggle">
                         <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
           </button>
          </div>
@@ -70,48 +99,44 @@
             <!-- Cartão 1 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (20) 1.png" alt="Crédito Rural">
+                    <img src="img/cesta rural.png" alt="Crédito Rural">
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">Banana</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 13,50 kg</h1>
+                    <h3 class="card-title">Cesta Rural</h3>
+                    <p class="card-category">Camaçari (Centro)</p>
                 </div>
             </div>
 
             <!-- Cartão 2 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (21) 1.png" alt="Sementes">
+                    <img src="https://via.placeholder.com/200x150?text=Sementes" alt="Sementes">
                 </div>
-               <div class="card-content">
-                    <h3 class="card-title">Maçã</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 15,50 kg</h1>
+                <div class="card-content">
+                    <h3 class="card-title">Sementes de Milho</h3>
+                    <p class="card-category">Categoria: Insumos</p>
                 </div>
             </div>
 
             <!-- Cartão 3 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (22) 1.png" alt="Maquinário">
+                    <img src="https://via.placeholder.com/200x150?text=Maquinário" alt="Maquinário">
                 </div>
                 <div class="card-content">
-                    <h3 class="card-title">Laranja</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 20,50 kg</h1>
+                    <h3 class="card-title">Maquinário Agrícola</h3>
+                    <p class="card-category">Categoria: Equipamentos</p>
                 </div>
             </div>
 
             <!-- Cartão 4 -->
             <div class="card">
                 <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (23) 1.png" alt="Fertilizantes">
+                    <img src="https://via.placeholder.com/200x150?text=Fertilizantes" alt="Fertilizantes">
                 </div>
-               <div class="card-content">
-                    <h3 class="card-title">Abacaxi</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 23,50 kg</h1>
+                <div class="card-content">
+                    <h3 class="card-title">Fertilizantes Orgânicos</h3>
+                    <p class="card-category">Categoria: Insumos</p>
                 </div>
             </div>
 
@@ -217,7 +242,7 @@
         </div>
     </footer>
 
-   
+   <script src="/js/menu_profissional.js"></script>
 </body>
 </html>
 

@@ -164,6 +164,7 @@ html, body {
 /* até aqui*/
 /* ===== HERO SECTION ===== */
 .hero {
+    position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
                 url('/img/painel_empresa\ \(1\).png') center/cover;
     height: 550px;
@@ -184,6 +185,8 @@ html, body {
     font-size: 40px;
     font-weight: 700;
     text-shadow: 2px 2p0x 8px rgba(0, 0, 0, 0.5);
+      padding-right: 40px;
+      
     
 }
 

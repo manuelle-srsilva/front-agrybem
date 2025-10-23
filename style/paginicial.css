@@ -91,7 +91,7 @@ body {
   background-repeat: no-repeat;
   background-position: right center;  /* foca o agricultor à direita */
   background-color: #e8f5e0;          /* cor de fundo suave */
-  min-height: 500px;                  /* garante altura boa */
+  min-height: 600px;                  /* garante altura boa */
   display: flex;
   align-items: center;            
 }
@@ -265,6 +265,8 @@ body {
     line-height: 1.8;
     color: white;
     margin-bottom: 40px;
+       text-decoration: none; /* tira o sublinhado */
+    
 }
 
 .donation-button {
@@ -277,11 +279,15 @@ body {
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* tira o sublinhado */
+  
+
 }
 
 .donation-button:hover {
     background-color: #9b9b9b;
     transform: translateY(-2px);
+       text-decoration: none; /* tira o sublinhado */
 }
 
 .donation-image {

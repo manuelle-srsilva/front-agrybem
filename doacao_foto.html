@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foto de Perfil</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/empresa_foto.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- HEADER -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- BARRA DE PROGRESSO -->
+        <div class="progress-bar-container">
+            <div class="progress-step active"><div class="progress-fill"></div></div>
+            <div class="progress-step active"><div class="progress-fill"></div></div>
+            <div class="progress-step active"><div class="progress-fill"></div></div>
+            <div class="progress-step active"><div class="progress-fill"></div></div>
+        </div>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="main-content">
+            <!-- Botão Voltar -->
+            <a href="doacao_descricao.html" class="nav-button-side nav-button-prev">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </a>
+
+            <!-- Formulário -->
+            <div class="form-container">
+                <h1 class="form-title">Foto de perfil!</h1>
+                
+                <form class="form" enctype="multipart/form-data">
+                    <div class="upload-box">
+                        <input type="file" id="foto" name="foto" accept="image/*" class="upload-input">
+                        <label for="foto" class="upload-label">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="#1a1a1a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                <polyline points="17 8 12 3 7 8"/>
+                                <line x1="12" y1="3" x2="12" y2="15"/>
+                            </svg>
+                            <p>Envie sua foto</p>
+                        </label>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Botão Avançar -->
+            <a href="doacao_pag_principal.html" class="nav-button-side nav-button-next">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </a>
+        </main>
+
+        <!-- FOOTER -->
+        <footer class="footer">
+            <div class="container footer-container">
+                <div class="footer-logo">
+                    <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
+                </div>
+                <div class="footer-tagline">
+                    Mais que produção, uma relação com você!
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

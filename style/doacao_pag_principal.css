@@ -166,7 +166,7 @@ html, body {
 .hero {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('/img/clienete\ pag\ principal.png') center/cover;
+                url('/img/principal.doação.png') center/cover;
     height: 550px;
     display: flex;
     align-items: center;
@@ -182,60 +182,10 @@ html, body {
     bottom: 95px; /* distância do fundo */
     left: 30px;   /* distância da esquerda */
     color: white;
-  
-    font-weight: 70px;
-   
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2p0x 8px rgba(0, 0, 0, 0.5);
     
-}
-
-/* Products Section */
-.products {
-    background-color: #D9D9D9;
-    padding: 80px 0;
-}
-
-.section-title {
-    font-size: 30px;
-    font-weight: 500;
-    color: #1a1a1a;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.highlight {
-    color: #5A8F3A;
-}
-
-.products-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
-    
-}
-
-.product-card {
-    background-color: white;
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 11px 0px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-     box-shadow: 
-    0 0 10px #8d8d8d,
-    0 0 10px #8d8d8d,
-    0 0 10px #8d8d8d,
-    0 0 10px #8d8d8d;
-}
-
-.product-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
-}
-
-.product-img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    display: block;
 }
 
 /* ===== PROFESSIONAL PANEL ===== */
@@ -457,7 +407,6 @@ html, body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
-    
 }
 
 .card:hover {
@@ -497,10 +446,6 @@ html, body {
 .card-category {
     font-size: 14px;
     color: #666666;
-}
-
-.card-link{
-    text-decoration: none;
 }
 
 /* ===== FOOTER ===== */

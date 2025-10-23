@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro Empresa</title>
+    <title>Informações do Negócio</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -17,9 +17,7 @@
                 <div class="logo">
                     <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
                 </div>
-                <nav class="nav">
-                    <a href="login_empresa.html" class="nav-button">Voltar ao Início</a>
-                </nav>
+               
             </div>
         </header>
 
@@ -28,7 +26,7 @@
             <div class="progress-step active">
                 <div class="progress-fill"></div>
             </div>
-            <div class="progress-step">
+            <div class="progress-step active">
                 <div class="progress-fill"></div>
             </div>
             <div class="progress-step">
@@ -45,7 +43,7 @@
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <!-- Botão Anterior (Esquerda) -->
-           <a href="login_empresa.html" class="nav-link">
+           <a href="empresa_cadastro.html" class="nav-link">
   <button class="nav-button-side nav-button-prev">
     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <polyline points="15 18 9 12 15 6"></polyline>
@@ -56,39 +54,35 @@
 
             <!-- Formulário -->
             <div class="form-container">
-                <h1 class="form-title">Cadastre sua conta aqui!</h1>
+                <h1 class="form-title">Informações do seu negócio!</h1>
                 
                 <form class="form">
                     <div class="form-group">
-                        <label for="nome" class="form-label">Nome do responsável</label>
+                        <label for="nome" class="form-label">Nome da empresa </label>
                         <input type="text" id="nome" name="nome" class="form-input" placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="form-label">E-mail Comercial</label>
+                        <label for="email" class="form-label">Telefone comercial</label>
                         <input type="email" id="email" name="email" class="form-input" placeholder="">
                     </div>
 
                     <div class="form-group">
-                        <label for="cnpj" class="form-label">CNPJ ou CPF</label>
+                        <label for="cnpj" class="form-label">Horário de funcionamento</label>
                         <input type="text" id="cnpj" name="cnpj" class="form-input" placeholder="">
     
                     </div>
 
                     <div class="form-group">
-                        <label for="senha" class="form-label">Senha</label>
+                        <label for="senha" class="form-label">Link para WhatsApp</label>
                         <input type="password" id="senha" name="senha" class="form-input" placeholder="">
                     </div>
 
-                    <div class="form-group">
-                        <label for="confirmacao-senha" class="form-label">Confirmação de senha</label>
-                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
-                    </div>
                 </form>
             </div>
 
             <!-- Botão Próximo (Direita) -->
-           <a href="informacao_negocio.html" class="nav-button-side nav-button-next">
+           <a href="empresa_endereco.html" class="nav-button-side nav-button-next">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
     <polyline points="9 18 15 12 9 6"></polyline>
   </svg>
