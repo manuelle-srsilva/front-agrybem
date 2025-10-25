@@ -17,6 +17,7 @@ body {
     margin: 0 auto;
     padding: 0 20px;
 }
+
 /* globallll para todas as Páginas*/
 /* Header */
 .header {
@@ -25,7 +26,7 @@ body {
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.295);
 }
 
 .header .container {
@@ -84,16 +85,24 @@ body {
 }
 /* até aqui*/
 
-/* Hero Section */
+
+/* Hero Section, primeiro conteudo da pag inicial */
 .hero {
-   background-image: url("/img/fotoinicial.png");
-  background-size: cover;             /* cobre toda a largura */
+  background-image: url("/img/fotoinicial.png");
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position: right center;  /* foca o agricultor à direita */
-  background-color: #e8f5e0;          /* cor de fundo suave */
-  min-height: 600px;                  /* garante altura boa */
+  background-position: right center;
+  background-color: #d1d1d1;
+  min-height: 660px;
   display: flex;
-  align-items: center;            
+  align-items: center;
+
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  position: relative; /* permite controlar sobreposição */
+  z-index: 2; /* fica acima da próxima seção */
+
 }
 
 .hero-container {
@@ -126,33 +135,81 @@ body {
 
 /* Products Section */
 .products {
-    background-color: #D9D9D9;
-    padding: 80px 0;
+      background-color: #cfcfcf;
+  padding: 210px 0;
+  margin-top: -80px; /* faz subir e sobrepor */
+  position: relative;
+  z-index: 1; /* fica abaixo da hero */
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+
+    
 }
 
 .section-title {
     font-size: 42px;
-    font-weight: 700;
+    font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 50px;
-    text-align: left;
+    margin-bottom: 70px;
+    text-align: center;
 }
 
 .highlight {
-    color: #5A8F3A;
+    color: #42ac00;
+}
+
+.products .container {
+    /* Manter o título centralizado e contido */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
 .products-grid {
-    display: grid;
+    /* Removido, substituído por .carousel-wrapper e .products-carousel */
+    /* display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    gap: 30px; */
+}
+
+/* Estrutura do Carrossel */
+.carousel-wrapper {
+    overflow: hidden; /* Esconde o conteúdo que ultrapassa a largura */
+    width: 100vw; /* Ocupa toda a largura da viewport */
+    margin-left: calc(50% - 50vw); /* Truque para centralizar e ocupar a largura total, desfazendo o padding do container */
+}
+
+.products-carousel {
+    display: flex;
+    width: calc(250px * 10 + 30px * 9); /* Largura de 10 cards (5 originais + 5 duplicados) + espaçamento. Ajuste 250px conforme o card-width desejado. */
+    animation: scroll-left 40s linear infinite; /* 40s é a duração da animação. Ajuste conforme a velocidade desejada. */
+    padding: 20px 0; /* Espaçamento vertical */
+}
+
+.product-card {
+    flex-shrink: 0; /* Impede que os cards encolham */
+    width: 250px; /* Largura fixa para cada card */
+    margin-right: 30px; /* Espaçamento entre os cards */
+    /* Manter estilos existentes: background-color, border-radius, box-shadow, transition, etc. */
+}
+
+/* Animação de Carrossel Contínuo */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        /* Move a largura de 5 cards + 5 espaçamentos.
+           (250px * 5) + (30px * 5) = 1250px + 150px = 1400px. */
+        transform: translateX(calc(-1 * (250px * 5 + 30px * 5))); 
+    }
 }
 
 .product-card {
     background-color: white;
-    border-radius: 20px;
+    border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 11px 0px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
      box-shadow: 
     0 0 10px #8d8d8d,
@@ -168,7 +225,7 @@ body {
 
 .product-img {
     width: 100%;
-    height: 250px;
+    height: 210px;
     object-fit: cover;
     display: block;
 }
@@ -176,7 +233,7 @@ body {
 /* About Section */
 .about {
     background-color: white;
-    padding: 40px 0;
+    padding: 75px 0;
 }
 
 .about-container {
@@ -280,12 +337,13 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     text-decoration: none; /* tira o sublinhado */
+      box-shadow: 0 2px 10px rgba(129, 28, 28, 0.295);
   
 
 }
 
 .donation-button:hover {
-    background-color: #9b9b9b;
+    background-color: #ffffff;
     transform: translateY(-2px);
        text-decoration: none; /* tira o sublinhado */
 }
@@ -375,6 +433,71 @@ body {
      transform: translatex( 160px);
     
 }
+/* --- Seção de Copyright (Abaixo do Footer) --- */
+.copyright-section {
+    background-color: #e6e6e6; /* Cor de fundo cinza claro, similar à imagem */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Cor do texto cinza escuro */
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
+}
+
+.copyright-info,
+.copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright-info {
+    text-align: left;
+}
+
+.copyright-address {
+    text-align: center;
+}
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Estilo para os ícones sociais dentro da seção de copyright */
+.copyright-social .social-icon {
+    width: 24px; /* Ícones menores para o rodapé */
+    height: 24px;
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
+    transform: scale(1.1);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -386,10 +509,40 @@ body {
         gap: 40px;
     }
 
-    .products-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+.products-grid {
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 20px; */
+}
+
+.carousel-wrapper {
+    /* No mobile, o carrossel ainda pode ser de largura total, mas o tamanho do card pode ser ajustado */
+    margin-left: 0;
+    width: 100%;
+}
+
+.products-carousel {
+    /* Ajuste a largura total e a animação para o mobile se necessário.
+       Por exemplo, para mostrar 1 card por vez no mobile, defina a largura do card para 80vw.
+       Aqui, vamos manter a animação, mas ajustar o tamanho do card. */
+    width: calc(80vw * 10 + 20px * 9); /* 10 cards * 80vw + 9 espaçamentos */
+    animation-duration: 30s; /* Animação mais rápida no mobile */
+}
+
+.product-card {
+    width: 80vw; /* Largura do card no mobile */
+    margin-right: 20px; /* Espaçamento entre os cards no mobile */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
     }
+    100% {
+        /* Move a largura de 5 cards + 5 espaçamentos.
+           (80vw * 5) + (20px * 5) = 400vw + 100px. */
+        transform: translateX(calc(-1 * (80vw * 5 + 20px * 5))); 
+    }
+}
 
     .hero-title,
     .cta-title {
@@ -408,5 +561,25 @@ body {
 
     .nav-link {
         font-size: 14px;
+    }
+}
+
+
+/* Efeito de Salto para a Exclamação */
+.exclamation {
+    display: inline-block; /* Permite aplicar a transformação de movimento */
+    animation: bounce 2s infinite; /* Aplica a animação: 2 segundos, infinito */
+    transform-origin: bottom; /* Faz a animação parecer um salto a partir da base */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posições de repouso */
+    }
+    40% {
+        transform: translateY(-10px); /* Salto para cima (40% do tempo) */
+    }
+    60% {
+        transform: translateY(-5px); /* Salto menor (60% do tempo) */
     }
 }

@@ -180,6 +180,7 @@ body {
 }
 .esqueci-cep {
     text-align: center;
+     text-decoration: none;
 }
 
 .form-label-descricao{
@@ -187,7 +188,7 @@ body {
 }
 
 .form-input {
-    padding: 15px 20px;
+    padding: 10px 20px;
     border: 1px solid #adadad;
     border-radius: 20px;
     font-size: 16px;

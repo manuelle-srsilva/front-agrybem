@@ -106,9 +106,10 @@ body {
   background-repeat: no-repeat;
   background-position: right center;  /* foca o agricultor à direita */
   background-color: #e8f5e0;          /* cor de fundo suave */
-  min-height: 200px;                  /* garante altura boa */
+  min-height: 650px;                  /* garante altura boa */
   display: flex;
   align-items: center; 
+  margin-bottom: 0; /* Ajuste para remover o espaço em branco */
 
 }
 
@@ -306,12 +307,182 @@ body {
     color: #6b8e23;
 }
 
+/* --- Novas Seções de Parceiros (Partner Info) --- */
+
+/* Seção 1: Imagem e Texto */
+.partner-info-1 {
+    background-color: rgb(238, 238, 238);
+    padding:  150px 0;
+}
+
+.partner-info-1 .partner-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.partner-image-wrapper {
+    flex-shrink: 0;
+    width: 400px; /* Ajuste conforme a imagem */
+    height: 400px; /* Ajuste conforme a imagem */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #003f0a; /* Cor de fundo que parece na imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1); /* Para simular o encaixe na borda */
+}
+
+.partner-content {
+    flex-grow: 1;
+}
+
+.partner-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+  
+}
+
+.partner-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.partner-button {
+    display: inline-block;
+    background-color: #085a00; /* Cor do botão na imagem */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.partner-button:hover {
+    background-color: #30cc00;
+}
+
+/* Seção 2: Vantagens */
+
+.partner-title .section-title{
+      text-align: center;
+      
+}
+.section-title{
+       text-align: center;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+.partner-info-2 {
+    background-color: #f7f7f7;
+    padding:  160px ;
+    text-align: start;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+   align-items: center;
+}
+
+.advantage-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    
+ 
+}
+
+.advantage-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.partner-button-secondary {
+    display: inline-block;
+    background-color: #0a7500;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+   justify-content: center; 
+}
+
+.partner-button-secondary:hover {
+    background-color: #07cc00;
+}
+
+/* Seção 3: Passos */
+.partner-info-3 {
+    background-color: white;
+    padding:  95px ;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    
+}
+
+.step-icon {
+    width: 120px; /* Ajuste conforme o ícone */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.step-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    
+}
+
+
 /* Footer */
 .footer {
-    background-color: #D9D9D9;
-    padding: 2px 0;
+    background-color: #002c0b;
+    padding: 3px 0;
     border-top: 1px solid #e0e0e0;
-    
 }
 
 .footer-container {
@@ -329,16 +500,16 @@ body {
 .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: #000000;
+    color: #ffffff;
 }
 
 .footer-logo-highlight {
-    color: #0e2500;
+    color: #9bff5d;
 }
 
 .footer-tagline {
     
-    color: #002c0b;
+    color: rgb(255, 255, 255);
     padding: 20px 200px;
     border-radius: 20px;
     font-weight: 600;
@@ -346,6 +517,39 @@ body {
      transform: translatex( 160px);
     
 }
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+/* Responsividade para as novas seções */
+@media (max-width: 768px) {
+    .partner-info-1 .partner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partner-image-wrapper {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .partner-title {
+        font-size: 36px;
+    }
+
+    .advantages-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+ 
 /* Responsividade básica */
 @media (max-width: 1024px) {
     .main-container {
@@ -371,3 +575,199 @@ body {
     }
 }
 
+
+
+/* --- Listras Decorativas (Decorative Stripes) --- */
+.decorative-stripes {
+    display: flex;
+    width: 100%;
+    height: 15px; /* Altura total das listras */
+    margin: 0; /* Remove qualquer margem da section */
+    padding: 0; /* Remove qualquer padding da section */
+}
+
+.stripe {
+    height: 100%;
+}
+
+.stripe-red {
+    background-color: #059400; /* Vermelho do iFood */
+    width: 70%; /* Proporção aproximada da listra vermelha */
+}
+
+.stripe-yellow {
+    background-color: #059400; /* Amarelo do iFood */
+    width: 30%; /* Proporção aproximada da listra amarela */
+}
+/* Ajuste para garantir que a seção anterior e a próxima estejam coladas */
+
+
+
+
+
+
+/* --- Seção de Copyright (Abaixo do Footer) --- */
+.copyright-section {
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Cor do texto cinza escuro */
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
+}
+
+.copyright-info,
+.copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright-info {
+    text-align: left;
+}
+
+.copyright-address {
+    text-align: center;
+}
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Estilo para os ícones sociais dentro da seção de copyright */
+.copyright-social .social-icon {
+    width: 24px; /* Ícones menores para o rodapé */
+    height: 24px;
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
+    transform: scale(1.1);
+}
+
+
+
+
+/* --- Seção de Perguntas Frequentes (FAQ) --- */
+.faq-section {
+    background-color: #ffffff; /* Cor de fundo suave para destacar a seção */
+    padding: 80px 0;
+}
+
+.faq-section .section-title {
+    margin-bottom: 40px;
+    font-size: 36px;
+    color: #1a4d2e; /* Cor escura do tema */
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #f0f0f0; /* Borda suave */
+    margin-bottom: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgb(192, 191, 191);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    font-size: 18px;
+    background-color: #eeeded;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+.accordion-icon {
+    font-size: 24px;
+    font-weight: 300;
+    color: #6b8e23; /* Cor de destaque do tema */
+    transition: transform 0.3s ease;
+}
+
+/* Esconde o conteúdo por padrão */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 25px;
+}
+
+.accordion-content p {
+    padding: 15px 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+/* Estado Ativo: Quando o checkbox está marcado */
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 500px; /* Valor grande o suficiente para o conteúdo expandir */
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+    padding: 0 25px 20px 25px;
+}
+
+.accordion-toggle:checked ~ .accordion-header .accordion-icon {
+    transform: rotate(45deg); /* Gira o '+' para um 'x' */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 50px 0;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .accordion-content {
+        padding: 0 20px;
+    }
+
+    .accordion-content p {
+        padding: 10px 0;
+    }
+}

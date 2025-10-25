@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -11,8 +10,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
+
+
 <body>
-    <!-- Header global para todas as páginas-->
+    <!-- Header fixo para todas as páginas-->
     <header class="header">
         <div class="container">
             <div class="logo">
@@ -27,7 +28,7 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- Hero Section (conteudo inical da pag inicial)-->
 <section class="hero">
   <div class="container hero-container">
     <div class="hero-content">
@@ -36,44 +37,68 @@
 </section>
 
 
-    <!-- Products Section -->
+    <!-- sessão dos cards da pag principal-->
     <section class="products">
         <div class="container">
-            <h2 class="section-title">O melhor da agricultura <span class="highlight">para você!</span></h2>
-            <div class="products-grid">
+            <h2 class="section-title">O melhor da agricultura <span class="highlight">para você<span class="exclamation">!</span></span></h2>
+            <div class="carousel-wrapper">
+                <div class="products-carousel">
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?w=400&h=400&fit=crop" alt="Sementes" class="product-img">
+                    <img src="img/grid principal 1.png" alt="Sementes" class="product-img">
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1592924357228-91a4daadcfea?w=400&h=400&fit=crop" alt="Tomates" class="product-img">
+                    <img src="img/grid principal 2.png" alt="Tomates" class="product-img">
                 </div>
                 <div class="product-card">
-                    <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=400&h=400&fit=crop" alt="Café" class="product-img">
+                    <img src="img/grid principal 3.png" alt="Café" class="product-img">
                 </div>
                 <div class="product-card">
-                    <img src="img/castanha pag inicia.png" alt="Castanhas" class="product-img">
+                    <img src="img/grid principal 4.png" alt="Castanhas" class="product-img">
                 </div>
+                <div class="product-card">
+                    <img src="img/castanha pag inicia.png" alt="Novo Produto" class="product-img">
+                </div>
+
+                <!-- Duplicando os cards para o efeito de carrossel infinito -->
+
+                <div class="product-card">
+                    <img src="img/grid principal 1.png" alt="Sementes" class="product-img">
+                </div>
+                <div class="product-card">
+                    <img src="img/grid principal 2.png" alt="Tomates" class="product-img">
+                </div>
+                <div class="product-card">
+                    <img src="img/grid principal 3.png" alt="Café" class="product-img">
+                </div>
+                <div class="product-card">
+                    <img src="img/grid principal 4.png" alt="Castanhas" class="product-img">
+                </div>
+                <div class="product-card">
+                    <img src="img/castanha pag inicia.png" alt="Novo Produto" class="product-img">
+                </div>
+               
             </div>
         </div>
     </section>
+    
 
-    <!-- About Section -->
+    <!--sessão do sobre nós -->
     <section class="about">
         <div class="container about-container">
             <div class="about-content">
                 <h2 class="about-title">Sobre o <span class="about-highlight">Agry<span class="about-highlight-dark">bem</span></span></h2>
-                <p class="about-text">O Agrybem nasceu com o propósito de aproximar comerciantes, consumidores e doadores, fortalecendo a agricultura familiar e o comércio local, além de estimular a solidariedade na cidade.</p>
+                <p class="about-text">O Agrybem é uma agência de negócios agrícolas que nasceu com o propósito de aproximar comerciantes, consumidores e doadores, fortalecendo a agricultura familiar e o comércio local, além de estimular a solidariedade na cidade.</p>
             </div>
             <div class="about-image">
                 <div class="about-image-wrapper">
                     <img src="img/img do sobre nos.png" alt="Agricultor trabalhando" class="about-img">
                     <div class="about-image-accent"></div>
-                </div>
+                </div>  
             </div>
         </div>
     </section>
 
-    <!-- Donation Section -->
+    <!-- sessão da doação-->
     <section class="donation">
         <div class="container donation-container">
             <div class="donation-content">
@@ -88,7 +113,7 @@
         </div>
     </section>
 
-    <!-- CTA Section -->
+    <!-- sessão propaganda -->
     <section class="cta">
         <div class="container cta-container">
             <div class="cta-image">
@@ -100,7 +125,8 @@
         </div>
     </section>
 
-    <!-- Footer -->
+
+    <!-- Footer fixo para todas as pag -->
     <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
@@ -112,9 +138,39 @@
             </div>
         </div>
     </footer>
+  
 
+     <!-- Seção de Copyright (Nova) -->
+    <section class="copyright-section">
+        <div class="container copyright-container">
+            <!-- Coluna 1: Copyright e Direitos -->
+            <div class="copyright-info">
+                <p class="copyright-text">
+                    &copy;  2025 - Agrybem 
+                </p>
+                <p class="copyright-text-small">
+                    Agrybem Agência de Negócios Agrícolas e Bem-Estar 
+                </p>
+            </div>
 
+            <!-- Coluna 2: CNPJ e Endereço (Adaptado para o contexto Agrybem) -->
+            <div class="copyright-address">
+                <p class="copyright-text-small">
+                    Camaçari/BA  | agrybem@gmail.com
+                </p>
+            </div>
 
+            <!-- Coluna 3: Ícones Sociais -->
+            <div class="copyright-social">
+                
+                <a href="https://www.instagram.com/agrybem?igsh=MW55dW04M3B2bXJvMA%3D%3D&utm_source=qr" target="_blank">
+                    <img src="img/instagram (1).png" alt="Instagram Agrybem" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Api Vlibras -->
     <div vw class="enabled">
     <div vw-access-button class="active"></div>
     <div vw-plugin-wrapper>
