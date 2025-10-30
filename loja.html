@@ -3,12 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cesta Rural - Agrybem</title>
+    <title>Agrybem - Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/loja.css">
+    <script src="js/carrinho.js" defer></script>
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
+    <!-- Header -->
+  <header class="header">
         <div class="container">
             <div class="logo">
                 <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
@@ -16,85 +20,152 @@
             <nav class="nav">
              
                 <a href="clientepagprincipal.html" class="nav-button">Voltar</a>
+              
             </nav>
         </div>
     </header>
+    
 
-    <!-- MAIN CONTENT -->
-    <main class="main-content">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
        
-
+        </div>
+    </section>
+    <!-- CONTEÚDO DO PERFIL INTEGRADO (Sem tag <main> para evitar conflitos) -->
         <!-- HEADER SECTION WITH LOGO AND TITLE -->
         <section class="header-section">
-
             <div class="container">
                 <div class="header-top">
                     <div class="logo-institution">
+                       
                         <img src="img/cesta rural.png" alt="Logo da Empresa" class="logo-img">
                     </div>
-                      <div class="header-info">
+
+                    <div class="header-info">
                         <h1 class="institution-title">Cesta Rural</h1>
-                       
+        
                     </div>
-
                 </div>
-                <div class="form-field">
-                            <label for="company-name">Descrição</label>
-                            <h3>Somos especializados na venda de  legumes, verduras, raízes e com destaque em frutas. Direto da colheita para você!</h3>
-                        </div>
-
-
+                
             </div>
         </section>
 
-       
+        <div class="comment-feed">
+            <a href="pag_comentario.html"> Comentários</a>
+        </div>
 
-        <!-- ADDRESS SECTION -->
-        <section class="address-section">
+        <!-- DESCRIPTION CARD -->
+        <section class="card-section">
             <div class="container">
-                <h2 class="section-title">Endereço</h2>
-                <div class="form-group">
-                    <form class="address-form">
+                <div class="card" data-card="description">
+                  
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <div class="form-field">
+                       
+                        <textarea id="company-description" disabled>Somos especializados na venda de legumes, verduras, raízes e com destaque em frutas. Direto da colheita para você!</textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTITUTION INFO CARD -->
+        <section class="card-section">
+            <div class="container">
+                <div class="card" data-card="institution">
+                   
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <form class="institution-form" id="institutionForm">
+                        
+
                         <div class="form-field">
-                            <label for="cep">CEP</label>
-                            <input type="text" id="cep" placeholder="42800-040" disabled>
+                            <label for="company-name">Nome </label>
+                            <input type="text" id="company-name" value="Cesta Rural" disabled>
+                        </div>
+
+                       
+
+                        <div class="form-field">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" value="(71)9 9999-9999" disabled>
                         </div>
 
                         <div class="form-field">
-                            <label for="street">Rua</label>
-                            <input type="text" id="street" placeholder="R. Costa Pinto" disabled>
+                            <label for="hours">Horário de Funcionamento</label>
+                            <input type="text" id="hours" value="Seg - Sex: 07:00 - 17:00 • Sáb: 07:00 - 12:00 • Dom: Fechado" disabled>
                         </div>
 
                         <div class="form-field">
-                            <label for="number">Número</label>
-                            <input type="text" id="number" placeholder="30" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="neighborhood">Bairro</label>
-                            <input type="text" id="neighborhood" placeholder="Centro" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="city">Cidade</label>
-                            <input type="text" id="city" placeholder="Camaçari" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="state">Estado</label>
-                            <input type="text" id="state" placeholder="BA" disabled>
-                        </div>
-
-                        <div class="form-field">
-                            <label for="reference">Ponto de Referência</label>
-                            <input type="text" id="reference" placeholder="Praça Abrantes" disabled>
+                            <label for="whatsapp">Link para WhatsApp</label>
+                            <input type="text" id="whatsapp" value="" disabled>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
 
-        <!-- MAP SECTION -->
+        <!-- ADDRESS CARD -->
+        <section class="card-section">
+            <div class="container">
+                <div class="card" data-card="address">
+                    <div class="card-header">
+                        <h2 class="card-title">Endereço</h2>
+                      
+                    </div>
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <form class="address-form" id="addressForm">
+                        <div class="form-field">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" value="42835-000" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="street">Rua</label>
+                            <input type="text" id="street" value="R. Elvo Urbano Central" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="number">Número</label>
+                            <input type="text" id="number" value="789" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" id="neighborhood" value="Centro" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city" value="Camaçari" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="state">Estado</label>
+                            <input type="text" id="state" value="BA" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="reference">Ponto de Referência</label>
+                            <input type="text" id="reference" value="Praça Abrantes" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+      <!-- MAP SECTION -->
         <section class="map-section">
             <div class="container">
                 <div class="map-placeholder">
@@ -112,163 +183,106 @@
                 </div>
             </div>
         </section>
-    </main>
+    <!-- FIM DO CONTEÚDO DO PERFIL INTEGRADO -->
     <!-- Seção de Pesquisa -->
     <section class="search-section">
         
-        <h2 class="search-title">Pesquise por categora </h2>
+        <h2 class="search-title">Pesquise seu produto por categoria</h2>
+      
         <div class="search-container">
             <input type="text" class="search-input" placeholder="Pesquisar...">
-          <button class="lupa-toggle" id="lupaToggle">
+          <button class="menu-toggle" id="menuToggle">
                         <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
           </button>
          </div>
+         
     </section>
+    <div class="informacao-secao">
+         <p>Clique no card para saber preço e categoria</p> 
+    </div>
+      
+     <!-- Seção de Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+          
 
-    <!-- Grade de Cartões -->
-    <section class="cards-section">
-        <div class="cards-grid">
-            <!-- Cartão 1 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (20) 1.png" alt="Crédito Rural">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Banana</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 13,50 kg</h1>
-                </div>
-            </div>
+            <div class="product-cards-container">
+                <!-- Card de Produto 1 -->
+                <div class="product-card" data-product-id="1" data-product-name="Banana" data-product-category="Fruta" data-product-price="17.50" data-product-image="img/Post instagram dia do feirante moderno verde (21) 1.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/Post instagram dia do feirante moderno verde (21) 1.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
 
-            <!-- Cartão 2 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (21) 1.png" alt="Sementes">
+                        <h3 class="product-name">Maçã</h3>
+                     <h3 class="product-description">Fruta</br>17,50 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="1">+</button>
                 </div>
-               <div class="card-content">
-                    <h3 class="card-title">Maçã</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 15,50 kg</h1>
-                </div>
-            </div>
 
-            <!-- Cartão 3 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (22) 1.png" alt="Maquinário">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Laranja</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 20,50 kg</h1>
-                </div>
-            </div>
+                <!-- Card de Produto 2 -->
+                <div class="product-card" data-product-id="2" data-product-name="Tomate" data-product-category="Legume" data-product-price="6.00" data-product-image="img/tomate.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/Post instagram dia do feirante moderno verde (23) 1.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
 
-            <!-- Cartão 4 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="img/Post instagram dia do feirante moderno verde (23) 1.png" alt="Fertilizantes">
+                        <h3 class="product-name">Abacaxi</h3>
+                     <h3 class="product-description">Fruta</br>R$ 6,00 kg</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="2">+</button>
                 </div>
-               <div class="card-content">
-                    <h3 class="card-title">Abacaxi</h3>
-                    <p class="card-category">Fruta</p>
-                    <h1 class="card-title">R$ 23,50 kg</h1>
-                </div>
-            </div>
 
-            <!-- Cartão 5 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Consultoria" alt="Consultoria">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Consultoria Agrícola</h3>
-                    <p class="card-category">Categoria: Serviços</p>
-                </div>
-            </div>
+                <!-- Card de Produto 3 -->
+                <div class="product-card" data-product-id="3" data-product-name="Alface" data-product-category="Verdura" data-product-price="3.50" data-product-image="img/alface.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/alface.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
 
-            <!-- Cartão 6 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Pesticidas" alt="Pesticidas">
+                        <h3 class="product-name">Alface</h3>
+                     <h3 class="product-description">Verdura</br>3,50 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="3">+</button>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Pesticidas Naturais</h3>
-                    <p class="card-category">Categoria: Insumos</p>
-                </div>
-            </div>
 
-            <!-- Cartão 7 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Irrigação" alt="Irrigação">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Sistemas de Irrigação</h3>
-                    <p class="card-category">Categoria: Equipamentos</p>
-                </div>
-            </div>
+                <!-- Card de Produto 4 -->
+                <div class="product-card" data-product-id="4" data-product-name="Batata" data-product-category="Raiz" data-product-price="4.20" data-product-image="img/batata.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/batata.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
 
-            <!-- Cartão 8 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Armazenamento" alt="Armazenamento">
+                        <h3 class="product-name">Batata</h3>
+                     <h3 class="product-description">Raiz</br>4,20 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="4">+</button>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Armazenamento de Grãos</h3>
-                    <p class="card-category">Categoria: Infraestrutura</p>
-                </div>
-            </div>
 
-            <!-- Cartão 9 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Transporte" alt="Transporte">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Transporte Agrícola</h3>
-                    <p class="card-category">Categoria: Logística</p>
-                </div>
-            </div>
+                <!-- Card de Produto 5 -->
+                <div class="product-card" data-product-id="5" data-product-name="Maçã" data-product-category="Fruta" data-product-price="9.90" data-product-image="img/maca.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/maca.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
 
-            <!-- Cartão 10 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Seguros" alt="Seguros">
+                        <h3 class="product-name">Maçã</h3>
+                     <h3 class="product-description">Fruta</br>9,90 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="5">+</button>
                 </div>
-                <div class="card-content">
-                    <h3 class="card-title">Seguros Agrícolas</h3>
-                    <p class="card-category">Categoria: Seguros</p>
-                </div>
-            </div>
 
-            <!-- Cartão 11 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Tecnologia" alt="Tecnologia">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Tecnologia Agrícola</h3>
-                    <p class="card-category">Categoria: Tecnologia</p>
-                </div>
-            </div>
-
-            <!-- Cartão 12 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Mercado" alt="Mercado">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Mercado de Produtos</h3>
-                    <p class="card-category">Categoria: Comercialização</p>
-                </div>
             </div>
         </div>
     </section>
-
-
-    <!-- FOOTER -->
-   <footer class="footer">
+    
+    <!-- Footer fixo para todas as pag -->
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
                 
@@ -279,43 +293,50 @@
             </div>
         </div>
     </footer>
+  
 
+     <!-- Seção de Copyright (Nova) -->
+    <section class="copyright-section">
+        <div class="container copyright-container">
+            <!-- Coluna 1: Copyright e Direitos -->
+            <div class="copyright-info">
+                <p class="copyright-text">
+                    &copy;  2025 - Agrybem 
+                </p>
+                <p class="copyright-text-small">
+                    Agrybem Agência de Negócios Agrícolas e Bem-Estar 
+                </p>
+            </div>
+
+            <!-- Coluna 2: CNPJ e Endereço (Adaptado para o contexto Agrybem) -->
+            <div class="copyright-address">
+                <p class="copyright-text-small">
+                    Camaçari/BA  | agrybem@gmail.com
+                </p>
+            </div>
+
+            <!-- Coluna 3: Ícones Sociais -->
+            <div class="copyright-social">
+                
+                <a href="https://www.instagram.com/agrybem?igsh=MW55dW04M3B2bXJvMA%3D%3D&utm_source=qr" target="_blank">
+                    <img src="img/instagram (1).png" alt="Instagram Agrybem" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Api Vlibras -->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        function atualizarMapa() {
-            // 1. Obter os elementos de endereço pelo ID e seus placeholders
-            const street = document.getElementById('street').placeholder;
-            const number = document.getElementById('number').placeholder;
-            const neighborhood = document.getElementById('neighborhood').placeholder;
-            const city = document.getElementById('city').placeholder;
-            const state = document.getElementById('state').placeholder;
-            const cep = document.getElementById('cep').placeholder;
-
-            // 2. Montar a string do endereço no formato desejado
-            // Ex: R. Costa Pinto,30-Centro,Camaçari-BA,42800-040
-            const rawAddress = `${street},${number}-${neighborhood},${city}-${state},${cep}`;
-
-            // 3. Formatar a string para URL (substituir espaços por + e . por +)
-            // A função encodeURIComponent é a maneira mais robusta, mas o replace funciona para este caso.
-            const encodedAddress = rawAddress.replace(/ /g, '+').replace(/\./g, '');
-            // Para ser idêntico ao seu exemplo, removemos os pontos e usamos + para espaços.
-
-            // 4. Montar a URL completa
-            // O início da URL do Google Maps para embed
-            const baseUrl = "https://maps.google.com/maps?"; 
-            const finalUrl = `${baseUrl}output=embed&q=${encodedAddress}`;
-            
-            // 5. Obter o iframe e atualizar o src
-            const mapIframe = document.getElementById('google-map-iframe');
-            if (mapIframe) {
-                mapIframe.src = finalUrl;
-            } else {
-                console.error("Iframe com ID 'google-map-iframe' não encontrado.");
-            }
-        }
-
-        // Executar a função assim que o DOM estiver completamente carregado
-        document.addEventListener('DOMContentLoaded', atualizarMapa);
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
+    
+    
 </body>
 </html>
-

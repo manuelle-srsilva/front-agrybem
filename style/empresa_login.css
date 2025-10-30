@@ -18,24 +18,19 @@ body {
     padding: 0 20px;
 }
 
-/* Header */
 .header {
     background-color: #D9D9D9;
     padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.295);
 }
 
 .header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.logo img {
-    height: 50px;
 }
 
 .logo {
@@ -53,6 +48,7 @@ body {
 .logo-highlight {
     color: #5A8F3A;
 }
+
 .nav {
     display: flex;
     align-items: center;
@@ -74,10 +70,10 @@ body {
 .nav-button {
     background-color: #315901;
     color: white;
-    padding: 10px 24px;
+    padding: 10px 20px;
     border-radius: 8px;
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 400;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
@@ -85,20 +81,7 @@ body {
     background-color: #4a7a2f;
     transform: translateY(-2px);
 }
-
-
-.voltar-inicio {
-    text-decoration: none;
-    color: #333;
-    font-weight: 400;
-    font-size: 16px;
-    transition: color 0.3s;
-}
-
-.voltar-inicio:hover {
-    color: #6b8e23;
-}
-
+/* até aqui*/   
 /* Main Section */
 .main-section {
   background-image: url("/img/login_empresa_img.png");
@@ -243,6 +226,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+.recuperacao-senha a {
+    font-size: 12px;
+       text-decoration: none;
+ color: #008b00;
 }
 
 .form-group label {
@@ -439,6 +428,12 @@ body {
 
 .partner-button-secondary:hover {
     background-color: #07cc00;
+}
+
+.inform-suporte{
+    text-align: center;
+    padding: 15px 30px;
+    
 }
 
 /* Seção 3: Passos */
@@ -678,12 +673,12 @@ body {
 /* --- Seção de Perguntas Frequentes (FAQ) --- */
 .faq-section {
     background-color: #ffffff; /* Cor de fundo suave para destacar a seção */
-    padding: 80px 0;
+    padding: 100px 0;
 }
 
 .faq-section .section-title {
     margin-bottom: 40px;
-    font-size: 36px;
+    font-size: 35px;
     color: #1a4d2e; /* Cor escura do tema */
 }
 
@@ -697,7 +692,7 @@ body {
     margin-bottom: 10px;
     border-radius: 30px;
     overflow: hidden;
-    background-color: rgb(192, 191, 191);
+    background-color: rgb(211, 211, 211);
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
@@ -709,7 +704,7 @@ body {
     cursor: pointer;
     font-weight: 600;
     color: #333;
-    font-size: 18px;
+    font-size: 15px;
     background-color: #eeeded;
     transition: background-color 0.3s ease;
 }
@@ -718,13 +713,13 @@ body {
     background-color: #e0e0e0;
 }
 
-.accordion-icon {
-    font-size: 24px;
-    font-weight: 300;
-    color: #6b8e23; /* Cor de destaque do tema */
-    transition: transform 0.3s ease;
-}
 
+.accordion-icon {
+  width: 16px; /* Tamanho do ícone */
+  height: 16px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
 /* Esconde o conteúdo por padrão */
 .accordion-content {
     max-height: 0;
@@ -734,7 +729,7 @@ body {
 }
 
 .accordion-content p {
-    padding: 15px 0;
+    padding: 12px 0;
     margin: 0;
     line-height: 1.6;
     color: #555;
@@ -749,7 +744,7 @@ body {
 }
 
 .accordion-toggle:checked ~ .accordion-header .accordion-icon {
-    transform: rotate(45deg); /* Gira o '+' para um 'x' */
+    transform: rotate(180deg); /* Gira a seta para baixo */
 }
 
 /* Ajuste para telas menores */
@@ -769,5 +764,329 @@ body {
 
     .accordion-content p {
         padding: 10px 0;
+    }
+}
+
+
+/* --- Novos Estilos para a Página de Suporte --- */
+
+/* Seção Principal de Suporte */
+.support-main-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.support-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a4d2e; /* Cor principal do tema */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.support-subtitle {
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Grid de Opções */
+.support-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.support-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e8f5e0; /* Cor suave do tema */
+}
+
+.card-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #6b8e23; /* Cor de destaque */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Ícones brancos */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+}
+
+/* Seção de Busca */
+.support-search {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 15px 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #1a4d2e; /* Cor escura do tema */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0f3320;
+}
+
+.contato-eqp{
+     font-size: 25px;
+    font-weight: 500px;
+    color: #1a1a1a;
+    margin-bottom: 200px;
+    margin-top: 300px;
+    text-align: start;
+}
+
+.corpo-text{
+    font-size: 20px;
+    text-align: justify;
+   margin-top: 10px;
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .support-title {
+        font-size: 36px;
+    }
+
+    .support-subtitle {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .support-search {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .search-input {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .search-button {
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+}
+
+
+/* --- Estilos para o Ícone de Engrenagem no Header --- */
+
+.nav {
+    /* Garante que os itens do nav fiquem alinhados */
+    align-items: center; 
+}
+
+.nav-icon-link {
+    /* Estilo para o link do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espaçamento entre o ícone e o botão */
+    transition: transform 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    /* Estilo para a imagem do ícone */
+    width: 28px; /* Tamanho do ícone */
+    height: 28px;
+    filter: invert(15%) sepia(20%) saturate(600%) hue-rotate(80deg) brightness(90%) contrast(90%); /* Tonalidade verde/escura para o ícone */
+    transition: filter 0.3s ease;
+}
+
+.nav-icon-link:hover .nav-icon {
+    filter: invert(30%) sepia(40%) saturate(1000%) hue-rotate(80deg) brightness(80%) contrast(90%); /* Destaque no hover */
+}
+
+/* Ajuste para garantir que o nav-button não perca o estilo */
+.nav-button {
+    /* Mantém o estilo do botão */
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* --- Estilos para o Ícone de Engrenagem no Header --- */
+
+.nav {
+    /* Garante que os itens do nav fiquem alinhados */
+    align-items: center; 
+}
+
+.nav-icon-link {
+    /* Estilo para o link do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espaçamento entre o ícone e o botão */
+    transition: transform 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    /* Estilo para a imagem do ícone */
+    width: 28px; /* Tamanho do ícone */
+    height: 28px;
+    /* Aplicando um filtro para dar uma tonalidade verde/escura ao ícone, se ele for branco/preto */
+    filter: invert(15%) sepia(20%) saturate(600%) hue-rotate(80deg) brightness(90%) contrast(90%); 
+    transition: filter 0.3s ease;
+}
+
+.nav-icon-link:hover .nav-icon {
+    filter: invert(30%) sepia(40%) saturate(1000%) hue-rotate(80deg) brightness(80%) contrast(90%); /* Destaque no hover */
+}
+
+/* Ajuste para garantir que o nav-button não perca o estilo */
+.nav-button {
+    /* Mantém o estilo do botão */
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Estilos para a Seção de Conteúdo Informativo (contato-eqp) --- */
+
+.contato-eqp {
+    max-width: 900px;
+    margin: 0 auto 50px auto; /* Centraliza e adiciona margem inferior */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #6b8e23; /* Linha verde de destaque */
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a4d2e; /* Cor principal do tema */
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.info-text p, .info-text ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-text ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+.info-text li {
+    margin-bottom: 8px;
+}
+
+.tip-text {
+    font-style: italic;
+    color: #6b8e23;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+/* Ajuste para o novo FAQ */
+.faq-section .section-title {
+    font-size: 30px;
+    color: #1a4d2e;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Ajuste para o acordeão no novo FAQ */
+.faq-section .accordion {
+    max-width: 900px;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .info-title {
+        font-size: 20px;
+    }
+
+    .info-text p, .info-text ul {
+        font-size: 15px;
     }
 }

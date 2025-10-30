@@ -21,6 +21,7 @@ body {
 /* globallll para todas as Páginas*/
 /* Header */
 .header {
+    
     background-color: #D9D9D9;
     padding: 20px 0;
     position: sticky;
@@ -377,7 +378,7 @@ body {
 .cta-image {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+   
 }
 
 .cta-img {

@@ -84,11 +84,11 @@ html, body {
 }
 
 /* Menu Container and Toggle */
-.voltar-container {
+.menu-container {
     position: relative;
 }
 
-.voltar-toggle {
+.menu-toggle {
     background: none;
     border: none;
     cursor: pointer;
@@ -101,21 +101,72 @@ html, body {
     transform: translateX(50px); 
 }
 
-.voltar-toggle:hover {
+.menu-toggle:hover {
     color: #5A8F3A;
 }
 
-.voltar-icon-img {
+.menu-icon-img {
     width: 24px;
     height: 24px;
+    object-fit: contain;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    overflow: hidden;
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+    color: #5A8F3A;
+}
+
+.menu-item-icon {
+    width: 20px;
+    height: 20px;
     object-fit: contain;
 }
 
 /* até aqui*/
 /* ===== HERO SECTION ===== */
 .hero {
+    position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('/img/foto_pag_produto.png') center/cover;
+                url('/img/clienete\ pag\ principal.png') center/cover;
     height: 550px;
     display: flex;
     align-items: center;
@@ -123,18 +174,75 @@ html, body {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  position: relative; /* permite controlar sobreposição */
+  z-index: 2; /* fica acima da próxima seção */
 }
 
 
 .hero-title {
       position: absolute;
     bottom: 95px; /* distância do fundo */
-    left: 30px;   /* distância da esquerda */
+    left: 50px;   /* distância da esquerda */
     color: white;
+  
+    font-weight: 70px;
     font-size: 40px;
-    font-weight: 700;
-    text-shadow: 2px 2p0x 8px rgba(0, 0, 0, 0.5);
+
+   
     
+}
+
+/* Products Section */
+.products {
+    background-color: #D9D9D9;
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 500;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.highlight {
+    color: #5A8F3A;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    
+}
+
+.product-card {
+    background-color: white;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 11px 0px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+     box-shadow: 
+    0 0 10px #8d8d8d,
+    0 0 10px #8d8d8d,
+    0 0 10px #8d8d8d,
+    0 0 10px #8d8d8d;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.product-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
 }
 
 /* ===== PROFESSIONAL PANEL ===== */
@@ -153,17 +261,18 @@ html, body {
 }
 
 .panel-title {
-    font-size: 32px;
-    font-weight: 70;
+    font-size: 27px;
+    font-weight: 600;
     color: #1a1a1a;
     margin-bottom: 40px;
+    margin-top: 60px;
 }
 
 .button-group {
     display: flex;
     gap: 90px;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 400px;
     margin: 0 auto;
     padding: 20px;
      
@@ -334,22 +443,10 @@ html, body {
 .search-btn:hover {
     background-color: #4a7a2f;
 }
-.lupa-toggle {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-     width: 25px;   /* largura do ícone */
-  height: 30px;  /* altura do ícone */
-transform: translateY(10px);
- 
- 
-}
 
 /* ===== CARDS SECTION ===== */
 .cards-section {
-    background-color: #f5f5f5;
-    padding: 150px ;
+    padding: 50px 20px;
 }
 
 .cards-grid {
@@ -367,6 +464,7 @@ transform: translateY(10px);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     cursor: pointer;
+    position: relative; /* Adicionado para posicionamento do ícone */
 }
 
 .card:hover {
@@ -399,13 +497,16 @@ transform: translateY(10px);
 .card-title {
     font-size: 18px;
     font-weight: 600;
-    color: #1a1a1a;
     margin-bottom: 10px;
 }
 
 .card-category {
     font-size: 14px;
     color: #666666;
+}
+
+.card-link{
+    text-decoration: none;
 }
 
 /* ===== FOOTER ===== */
@@ -445,8 +546,6 @@ transform: translateY(10px);
     font-size: 16px;
     text-align: center;
 }
-
-
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
@@ -584,3 +683,212 @@ transform: translateY(10px);
     }
 }
 
+/* ======================================= */
+/* ===== ESTILOS DO MODAL DE EDIÇÃO/EXCLUSÃO (NOVO) ===== */
+/* ======================================= */
+
+/* Overlay do Modal */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escuro semi-transparente */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000; /* Z-index alto para garantir que fique sobre tudo */
+    opacity: 0; /* Começa invisível */
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Animação de entrada (Fade-in) */
+.modal-overlay.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+/* Conteúdo do Modal */
+.modal-content {
+    background-color: #f5f5f5; /* Fundo do modal cinza claro conforme a imagem */
+    padding: 40px;
+    border-radius: 25px; /* Bordas arredondadas */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra suave */
+    width: 90%;
+    max-width: 350px; /* Ajuste para parecer mais compacto como na imagem */
+    position: relative;
+    transform: translateY(-20px); /* Começa um pouco acima */
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espaçamento entre os elementos do modal */
+}
+
+/* Botão Excluir (Topo) */
+.btn-excluir-topo {
+    width: 100%;
+    padding: 20px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: white;
+    color: #D9534F; /* Vermelho */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-excluir-topo:hover {
+    background-color: #9b0000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    color: #ffffff;
+}
+
+/* Acordeão Container (para o Alterar e campos) */
+.accordion-container {
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    overflow: hidden;
+}
+
+/* Cabeçalho do Acordeão (Alterar) */
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    cursor: pointer;
+    font-weight: 700;
+    color: #D4A74B; /* Amarelo/Ouro da imagem */
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.accordion-header:hover {
+    background-color: #c48200; /* Cor de fundo suave ao passar o mouse */
+    color: #ffffff;
+}
+
+.accordion-title {
+    font-size: 18px;
+}
+
+.accordion-icon {
+    font-size: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active .accordion-icon {
+    transform: rotate(180deg);
+}
+
+/* Conteúdo do Acordeão (Campos) */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out; /* Animação suave */
+    padding: 0 20px;
+}
+
+.accordion-content.active {
+    max-height: 500px; /* Valor grande o suficiente */
+    padding-top: 15px;
+    padding-bottom: 20px;
+}
+
+/* Estilos do Formulário de Edição (dentro do acordeão) */
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.modal-form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #444;
+    text-align: center;
+    font-size: 16px;
+}
+
+.modal-form input[type="text"] {
+    width: 100%;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Bordas arredondadas nos inputs */
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+/* Botão OK (Base) */
+.btn-ok-base {
+    width: 50%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 15px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #509100; /* Verde escuro */
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: block;
+  margin: 0 auto;
+}
+
+.btn-ok-base:hover {
+    background-color: #143600;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* ======================================= */
+/* ===== ÍCONE DE LÁPIS NO CARD ===== */
+/* ======================================= */
+
+.edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #666; /* Cor #666 */
+    font-size: 20px;
+    transition: color 0.3s ease, transform 0.2s ease;
+    z-index: 10; /* Garante que fique acima da imagem/conteúdo */
+    padding: 5px; /* Área de clique maior */
+    border-radius: 50%;
+}
+
+.edit-icon:hover {
+    color: #5A8F3A; /* Verde ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Ícone de fonte (ex: Font Awesome) */
+.edit-icon i {
+    display: block;
+}
+
+/* Animação de Fechamento (Fade-out) */
+.modal-overlay.closing {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal-overlay.closing .modal-content {
+    transform: translateY(-20px);
+    opacity: 0;
+}

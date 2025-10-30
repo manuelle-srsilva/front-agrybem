@@ -99,6 +99,7 @@ html, body {
     padding: 8px;
     transition: color 0.3s ease;
     transform: translateX(50px); 
+
 }
 
 .menu-toggle:hover {
@@ -115,7 +116,7 @@ html, body {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    right: 0;
+    right: -50px; /* empurra 20px para a direita */
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -127,6 +128,10 @@ html, body {
     transition: all 0.3s ease;
     z-index: 1001;
     overflow: hidden;
+    background: rgba(255, 255, 255, 0.473); /* Fundo branco transparente */
+  backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+
 }
 
 .dropdown-menu.active {
@@ -143,7 +148,7 @@ html, body {
     color: #333;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    border-bottom: 1px solid #f0f0f0;
+    border-bottom: 1px solid #ffffff60;
 }
 
 .menu-item:last-child {
@@ -163,10 +168,13 @@ html, body {
 
 /* até aqui*/
 /* ===== HERO SECTION ===== */
+/* ===== HERO SECTION ===== */
+
+
 .hero {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('/img/clienete\ pag\ principal.png') center/cover;
+                url('/img/Banner\ para\ loja\ de\ cosméticos\ orgânico\ verde.png') center/cover;
     height: 550px;
     display: flex;
     align-items: center;
@@ -174,24 +182,36 @@ html, body {
     color: white;
     text-align: center;
     padding: 40px 20px;
+    border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+
+  position: relative; /* permite controlar sobreposição */
+  z-index: 2; /* fica acima da próxima seção */
 }
+
+
 
 
 .hero-title {
-      position: absolute;
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Removendo margem padrão */
+    padding: 0;
+     position: absolute;
     bottom: 95px; /* distância do fundo */
     left: 30px;   /* distância da esquerda */
     color: white;
-  
-    font-weight: 70px;
-   
-    
 }
+
+    
+
 
 /* Products Section */
 .products {
     background-color: #D9D9D9;
-    padding: 80px 0;
+    padding: 160px 0;
 }
 
 .section-title {
@@ -322,70 +342,116 @@ html, body {
 
 
 
-/* Donation Section */
 .donation {
-    background-color: #133C1F;
-    padding: 40px 0;
+    position: relative;
+    background: #005e32;
+    background-size: cover;
+    background-position: center;
+    height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .donation-container {
+    position: relative;
+    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Caixa com efeito Blur */
+.donation-blur-box {
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-radius: 20px;
+    padding: 60px 50px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.donation-content {
+    text-align: left;
 }
 
 .donation-title {
-    font-size: 42px;
+    font-size: 35px;
     font-weight: 700;
     color: white;
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
 }
 
 .donation-highlight {
-    color: #5A8F3A;
+    color: #9bff5d;
+}
+
+.donation-subtitle {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    font-weight: 500;
 }
 
 .donation-text {
-    font-size: 18px;
+    font-size: 16px;
     line-height: 1.8;
-    color: white;
+    color: rgba(255, 255, 255, 0.85);
     margin-bottom: 40px;
+    text-align: justify;
 }
 
 .donation-button {
-    background-color: #CCCCCC;
-    color: #007411;
+    background-color: #ffffff;
+    color: #009c17;
     padding: 16px 40px;
     border: none;
     border-radius: 12px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Garante que funcione bem com <a> */
 }
 
 .donation-button:hover {
-    background-color: #9b9b9b;
-    transform: translateY(-2px);
+    background-color: #009c17;
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
-.donation-image {
+
+/* Moldura da Imagem */
+.donation-image-frame {
+    position: relative;
+    width: 100%;
+    height: 400px;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    border: 3px solid rgba(255, 255, 255, 0.3);
 }
 
 .donation-img {
     width: 100%;
-    height: auto;
+    height: 100%;
     display: block;
     object-fit: cover;
+    object-position: cente;
 }
 
 /* ===== SEARCH SECTION ===== */
 .search-section {
-    background-color: #ffffff;
+    background-color: #f5f5f5;
     padding: 60px 20px;
     text-align: center;
 }
@@ -395,6 +461,7 @@ html, body {
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 40px;
+    margin-top: 90px;
     
 }
 

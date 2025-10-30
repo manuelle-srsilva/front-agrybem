@@ -144,7 +144,7 @@ body {
 /* ===== FORMULÁRIO ===== */
 .form-container {
     background-color: #e8e8e8;
-    border: 1px solid #adadad;
+    border: 1px solid #d3d3d3;
     border-radius: 20px;
     padding: 50px 40px;
     width: 1000%;
@@ -155,8 +155,8 @@ body {
 .form-title {
     text-align: center;
     font-size: 21px;
-    font-weight: 700;
-    color: #1a1a1a;
+    font-weight: 550;
+    color: #3a3a3a;
     margin-bottom: 40px;
 }
 
@@ -175,7 +175,7 @@ body {
 .form-label {
     font-size: 16px;
     font-weight: 600;
-    color: #2e2e2e;
+    color: #444444;
      text-align: center;
 }
 .esqueci-cep {
@@ -189,8 +189,8 @@ body {
 
 .form-input {
     padding: 10px 20px;
-    border: 1px solid #adadad;
-    border-radius: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 25px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;

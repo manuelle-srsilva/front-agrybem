@@ -144,7 +144,7 @@ body {
 /* ===== FORMULÁRIO ===== */
 .form-container {
     background-color: #e8e8e8;
-    border: 1px solid #adadad;
+    border: 1px solid #d3d3d3;
     border-radius: 20px;
     padding: 50px 40px;
     width: 1000%;
@@ -156,7 +156,7 @@ body {
     text-align: center;
     font-size: 21px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #3a3a3a;
     margin-bottom: 40px;
 }
 
@@ -195,8 +195,8 @@ body {
     /* importante: garantir que padding seja contado dentro do height */
     box-sizing: border-box;
 
-    border: 1px solid #adadad;
-    border-radius: 20px;
+    border: 1px solid #d6d6d6;
+    border-radius: 25px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;

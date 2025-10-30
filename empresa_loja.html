@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrybem - Página Principal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/loja.css">
+   
+</head>
+<body>
+    <!-- Header -->
+  <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+            </div>
+            <nav class="nav">
+             
+                <a href="empresa_painel_profissional.html" class="nav-button">Voltar</a>
+              
+            </nav>
+        </div>
+    </header>
+    
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+       
+        </div>
+    </section>
+    <!-- CONTEÚDO DO PERFIL INTEGRADO (Sem tag <main> para evitar conflitos) -->
+        <!-- HEADER SECTION WITH LOGO AND TITLE -->
+        <section class="header-section">
+            <div class="container">
+                <div class="header-top">
+                    <div class="logo-institution">
+                       
+                        <img src="img/cesta rural.png" alt="Logo da Empresa" class="logo-img">
+                    </div>
+
+                    <div class="header-info">
+                        <h1 class="institution-title">Cesta Rural</h1>
+        
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+        <div class="comment-feed">
+            <a href="pag_comentario.html"> Comentários</a>
+        </div>
+
+        <!-- DESCRIPTION CARD -->
+        <section class="card-section">
+            <div class="container">
+                <div class="card" data-card="description">
+                  
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <div class="form-field">
+                       
+                        <textarea id="company-description" disabled>Somos especializados na venda de legumes, verduras, raízes e com destaque em frutas. Direto da colheita para você!</textarea>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- INSTITUTION INFO CARD -->
+        <section class="card-section">
+            <div class="container">
+                <div class="card" data-card="institution">
+                   
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <form class="institution-form" id="institutionForm">
+                        
+
+                        <div class="form-field">
+                            <label for="company-name">Nome </label>
+                            <input type="text" id="company-name" value="Cesta Rural" disabled>
+                        </div>
+
+                       
+
+                        <div class="form-field">
+                            <label for="phone">Telefone</label>
+                            <input type="tel" id="phone" value="(71)9 9999-9999" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="hours">Horário de Funcionamento</label>
+                            <input type="text" id="hours" value="Seg - Sex: 07:00 - 17:00 • Sáb: 07:00 - 12:00 • Dom: Fechado" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="whatsapp">Link para WhatsApp</label>
+                            <input type="text" id="whatsapp" value="" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADDRESS CARD -->
+        <section class="card-section">
+            <div class="container">
+                <div class="card" data-card="address">
+                    <div class="card-header">
+                        <h2 class="card-title">Endereço</h2>
+                      
+                    </div>
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                    <form class="address-form" id="addressForm">
+                        <div class="form-field">
+                            <label for="cep">CEP</label>
+                            <input type="text" id="cep" value="42835-000" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="street">Rua</label>
+                            <input type="text" id="street" value="R. Elvo Urbano Central" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="number">Número</label>
+                            <input type="text" id="number" value="789" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="neighborhood">Bairro</label>
+                            <input type="text" id="neighborhood" value="Centro" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="city">Cidade</label>
+                            <input type="text" id="city" value="Camaçari" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="state">Estado</label>
+                            <input type="text" id="state" value="BA" disabled>
+                        </div>
+
+                        <div class="form-field">
+                            <label for="reference">Ponto de Referência</label>
+                            <input type="text" id="reference" value="Praça Abrantes" disabled>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+      <!-- MAP SECTION -->
+        <section class="map-section">
+            <div class="container">
+                <div class="map-placeholder">
+                    <iframe
+                        id="google-map-iframe"
+                        width="600"
+                        height="450"
+                        style="border:0"
+                        loading="lazy"
+                        allowfullscreen
+                        referrerpolicy="no-referrer-when-downgrade"
+                        src="https://www.google.com/maps/embed/v1/place?key=AIzaSyC0tzkSQhRrMOcoMZ1XU0Ty4RwCER5gxLo
+                            &q=R.+Costa+Pinto,30-Centro,Camaçari-BA,42800-040">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+    <!-- FIM DO CONTEÚDO DO PERFIL INTEGRADO -->
+    <!-- Seção de Pesquisa -->
+    <section class="search-section">
+        
+        <h2 class="search-title">Pesquise seu produto por categoria</h2>
+      
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Pesquisar...">
+          <button class="menu-toggle" id="menuToggle">
+                        <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
+          </button>
+         </div>
+         
+    </section>
+    <div class="informacao-secao">
+         <p>Clique no card para saber preço e categoria</p> 
+    </div>
+      
+     <!-- Seção de Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+          
+
+            <div class="product-cards-container">
+                <!-- Card de Produto 1 -->
+                <div class="product-card" data-product-id="1" data-product-name="Banana" data-product-category="Fruta" data-product-price="17.50" data-product-image="img/Post instagram dia do feirante moderno verde (21) 1.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/Post instagram dia do feirante moderno verde (21) 1.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+
+                        <h3 class="product-name">Maçã</h3>
+                     <h3 class="product-description">Fruta</br>17,50 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="1">+</button>
+                </div>
+
+                <!-- Card de Produto 2 -->
+                <div class="product-card" data-product-id="2" data-product-name="Tomate" data-product-category="Legume" data-product-price="6.00" data-product-image="img/tomate.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/Post instagram dia do feirante moderno verde (23) 1.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+
+                        <h3 class="product-name">Abacaxi</h3>
+                     <h3 class="product-description">Fruta</br>R$ 6,00 kg</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="2">+</button>
+                </div>
+
+                <!-- Card de Produto 3 -->
+                <div class="product-card" data-product-id="3" data-product-name="Alface" data-product-category="Verdura" data-product-price="3.50" data-product-image="img/alface.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/alface.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+
+                        <h3 class="product-name">Alface</h3>
+                     <h3 class="product-description">Verdura</br>3,50 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="3">+</button>
+                </div>
+
+                <!-- Card de Produto 4 -->
+                <div class="product-card" data-product-id="4" data-product-name="Batata" data-product-category="Raiz" data-product-price="4.20" data-product-image="img/batata.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/batata.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+
+                        <h3 class="product-name">Batata</h3>
+                     <h3 class="product-description">Raiz</br>4,20 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="4">+</button>
+                </div>
+
+                <!-- Card de Produto 5 -->
+                <div class="product-card" data-product-id="5" data-product-name="Maçã" data-product-category="Fruta" data-product-price="9.90" data-product-image="img/maca.png">
+                    <div class="product-image-placeholder">
+                                             <img src="img/maca.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+
+                        <h3 class="product-name">Maçã</h3>
+                     <h3 class="product-description">Fruta</br>9,90 R$</h3>
+                        
+                    </div>
+                    <button class="add-to-cart-btn" data-product-id="5">+</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer fixo para todas as pag -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-logo">
+                
+                <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
+            </div>
+            <div class="footer-tagline">
+                Mais que produção, uma relação com você!
+            </div>
+        </div>
+    </footer>
+  
+
+     <!-- Seção de Copyright (Nova) -->
+    <section class="copyright-section">
+        <div class="container copyright-container">
+            <!-- Coluna 1: Copyright e Direitos -->
+            <div class="copyright-info">
+                <p class="copyright-text">
+                    &copy;  2025 - Agrybem 
+                </p>
+                <p class="copyright-text-small">
+                    Agrybem Agência de Negócios Agrícolas e Bem-Estar 
+                </p>
+            </div>
+
+            <!-- Coluna 2: CNPJ e Endereço (Adaptado para o contexto Agrybem) -->
+            <div class="copyright-address">
+                <p class="copyright-text-small">
+                    Camaçari/BA  | agrybem@gmail.com
+                </p>
+            </div>
+
+            <!-- Coluna 3: Ícones Sociais -->
+            <div class="copyright-social">
+                
+                <a href="https://www.instagram.com/agrybem?igsh=MW55dW04M3B2bXJvMA%3D%3D&utm_source=qr" target="_blank">
+                    <img src="img/instagram (1).png" alt="Instagram Agrybem" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Api Vlibras -->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    
+    
+</body>
+</html>

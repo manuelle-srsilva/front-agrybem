@@ -306,6 +306,11 @@ body {
     color: #6b8e23;
 }
 
+.recuperacao-senha a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #008b00;
+}
 /* Footer */
 .footer {
     background-color: #D9D9D9;

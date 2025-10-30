@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/empresa_painel_profissional.css  ">
+    <link rel="stylesheet" href="style/empresa_painel_profissional.css">
 </head>
 <body>
     <!-- Header -->
@@ -28,6 +28,19 @@
                             <img src="img/perfil.png" alt="Perfil" class="menu-item-icon">
                             <span>Perfil</span>
                         </a>
+                        <a href="empresa_produto.html" class="menu-item">
+                            <img src="img/sacolas-de-compras.png" alt="Meus produtos" class="menu-item-icon">
+                            <span>Produtos</span>
+                        </a>
+                         <a href="empresa_loja.html" class="menu-item">
+                            <img src="img/loja empresa.png" alt="Sair" class="menu-item-icon">
+                            <span>minha loja</span>
+                        </a>
+                         <a href="empresa_suporte_log.html" class="menu-item">
+                            <img src="img/engrenagem (1).png" alt="Sair" class="menu-item-icon">
+                            <span>Suporte</span>
+                        </a>
+        
                         <a href="empresa_login.html" class="menu-item">
                             <img src="img/sair.png" alt="Sair" class="menu-item-icon">
                             <span>Sair</span>
@@ -41,22 +54,66 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1 class="hero-title">Orgulho de ter você com a gente!</h1>
+            <div class="hero-blur-box">
+                <h1 class="hero-title">Orgulho em ter você com a gente!</h1>
+            </div>
         </div>
     </section>
 
-    <!-- Painel Profissional -->
-    <section class="professional-panel">
-    <h2 class="panel-title">Painel profissional</h2>
+    <!-- Seção de Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="featured-title">Gestão do Seu Negócio no Agrybem</h2>
+            <p class="featured-subtitle">Eleve a visibilidade dos seus produtos e do seu negócio</p>
 
-    <div class="button-group">
-        <a href="loja.html" class="btn btn-primary">Minha loja</a>
-    </div>
+            <div class="product-cards-container">
+                <!-- Card de Produto 1 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                                             <img src="img/product-1.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                        <div class="product-rating">
+                            <span>★★★★★</span> (5/5)
+                        </div>
+                        <h3 class="product-name">Cadastro de Produtos</h3>
+                        <p class="product-description">Gerencie seu portfólio de forma eficiente. Cadastre, edite e mantenha seus produtos atualizados para ampliar sua visibilidade no Agrybem.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
 
-    <div class="button-group">
-        <a href="empresa_produto.html" class="btn btn-secondary">Meus Produtos</a>
-    </div>
-</section>
+                <!-- Card de Produto 2 -->
+                <div class="product-card-2">
+                    <div class="product-image-placeholder">
+                        <img src="img/product-2.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                        <div class="product-rating">
+                            <span>★★★★★</span> (5/5)
+                        </div>
+                        <h3 class="product-name-2">Perfil Profissional</h3>
+                        <p class="product-description-2">Construa uma presença sólida na plataforma. Um perfil completo reforça a credibilidade do seu negócio e facilita novas conexões comerciais.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+
+                <!-- Card de Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                         <img src="img/product-3.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                        <div class="product-rating">
+                            <span>★★★★★</span> (5/5)
+                        </div>
+                        <h3 class="product-name">Estratégias de Destaque</h3>
+                        <p class="product-description">Aprimore sua vitrine digital com boas práticas de apresentação. Utilize descrições objetivas e imagens de qualidade para atrair mais clientes.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Divisor -->
      <section class="barra-diviso"> 
@@ -66,169 +123,27 @@
      </section>
     
     
-    <!-- Seção DOE -->
-   <section class="donation">
+    <!-- Seção DOE - MODIFICADA COM ESTILO PINTEREST -->
+    <section class="donation">
+        <div class="donation-background"></div>
+        
         <div class="container donation-container">
-            <div class="donation-content">
-                <h2 class="donation-title">Doe com o Agry<span class="donation-highlight">bem</span>!</h2>
-                <p class="donation-text">No Agrybem, agricultores e comerciantes podem doar alimentos em bom estado,
-                     e instituições cadastradas como ONGs e igrejas podem receber as doações.</p>
-                <button class="donation-button">Participar</button>
+            <!-- Conteúdo com Blur -->
+            <div class="donation-blur-box">
+                <div class="donation-content">
+                    <h2 class="donation-title">Doe com o Agry<span class="donation-highlight">bem</span>!</h2>
+                    <p class="donation-text">No Agrybem, agricultores e comerciantes podem doar alimentos em bom estado, e instituições cadastradas como ONGs e igrejas podem receber as doações.</p>
+                    <button class="donation-button">Participar</button>
+                </div>
             </div>
-            <div class="donation-image">
+
+            <!-- Imagem com Moldura -->
+            <div class="donation-image-frame">
                 <img src="img/agricultordoação" alt="Agricultor com vegetais" class="donation-img">
             </div>
         </div>
     </section>
 
-    <!-- Seção de Pesquisa -->
-    <section class="search-section">
-        
-        <h2 class="search-title">Explore negócios parceiros</h2>
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Pesquisar...">
-          <button class="menu-toggle" id="menuToggle">
-                        <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
-          </button>
-         </div>
-    </section>
-
-    <!-- Grade de Cartões -->
-    <section class="cards-section">
-        <div class="cards-grid">
-            <!-- Cartão 1 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="img/cesta rural.png" alt="Crédito Rural">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Cesta Rural</h3>
-                    <p class="card-category">Camaçari (Centro)</p>
-                </div>
-            </div>
-
-            <!-- Cartão 2 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Sementes" alt="Sementes">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Sementes de Milho</h3>
-                    <p class="card-category">Categoria: Insumos</p>
-                </div>
-            </div>
-
-            <!-- Cartão 3 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Maquinário" alt="Maquinário">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Maquinário Agrícola</h3>
-                    <p class="card-category">Categoria: Equipamentos</p>
-                </div>
-            </div>
-
-            <!-- Cartão 4 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Fertilizantes" alt="Fertilizantes">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Fertilizantes Orgânicos</h3>
-                    <p class="card-category">Categoria: Insumos</p>
-                </div>
-            </div>
-
-            <!-- Cartão 5 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Consultoria" alt="Consultoria">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Consultoria Agrícola</h3>
-                    <p class="card-category">Categoria: Serviços</p>
-                </div>
-            </div>
-
-            <!-- Cartão 6 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Pesticidas" alt="Pesticidas">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Pesticidas Naturais</h3>
-                    <p class="card-category">Categoria: Insumos</p>
-                </div>
-            </div>
-
-            <!-- Cartão 7 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Irrigação" alt="Irrigação">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Sistemas de Irrigação</h3>
-                    <p class="card-category">Categoria: Equipamentos</p>
-                </div>
-            </div>
-
-            <!-- Cartão 8 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Armazenamento" alt="Armazenamento">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Armazenamento de Grãos</h3>
-                    <p class="card-category">Categoria: Infraestrutura</p>
-                </div>
-            </div>
-
-            <!-- Cartão 9 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Transporte" alt="Transporte">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Transporte Agrícola</h3>
-                    <p class="card-category">Categoria: Logística</p>
-                </div>
-            </div>
-
-            <!-- Cartão 10 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Seguros" alt="Seguros">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Seguros Agrícolas</h3>
-                    <p class="card-category">Categoria: Seguros</p>
-                </div>
-            </div>
-
-            <!-- Cartão 11 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Tecnologia" alt="Tecnologia">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Tecnologia Agrícola</h3>
-                    <p class="card-category">Categoria: Tecnologia</p>
-                </div>
-            </div>
-
-            <!-- Cartão 12 -->
-            <div class="card">
-                <div class="card-image">
-                    <img src="https://via.placeholder.com/200x150?text=Mercado" alt="Mercado">
-                </div>
-                <div class="card-content">
-                    <h3 class="card-title">Mercado de Produtos</h3>
-                    <p class="card-category">Categoria: Comercialização</p>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
@@ -242,7 +157,36 @@
         </div>
     </footer>
 
+    <!-- Seção de Copyright (Nova) -->
+    <section class="copyright-section">
+        <div class="container copyright-container">
+            <!-- Coluna 1: Copyright e Direitos -->
+            <div class="copyright-info">
+                <p class="copyright-text">
+                    &copy;  2025 - Agrybem 
+                </p>
+                <p class="copyright-text-small">
+                    Agrybem Agência de Negócios Agrícolas e Bem-Estar 
+                </p>
+            </div>
+
+            <!-- Coluna 2: CNPJ e Endereço (Adaptado para o contexto Agrybem) -->
+            <div class="copyright-address">
+                <p class="copyright-text-small">
+                    Camaçari/BA  | agrybem@gmail.com
+                </p>
+            </div>
+
+            <!-- Coluna 3: Ícones Sociais -->
+            <div class="copyright-social">
+                
+                <a href="https://www.instagram.com/agrybem?igsh=MW55dW04M3B2bXJvMA%3D%3D&utm_source=qr" target="_blank">
+                    <img src="img/instagram (1).png" alt="Instagram Agrybem" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
    <script src="/js/menu_profissional.js"></script>
 </body>
-</html>
-
+</html> 

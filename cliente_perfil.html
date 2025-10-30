@@ -14,7 +14,6 @@
                 <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
             </div>
             <nav class="nav">
-             
                 <a href="clientepagprincipal.html" class="nav-button">Voltar</a>
             </nav>
         </div>
@@ -22,52 +21,71 @@
 
     <!-- MAIN CONTENT -->
     <main class="main-content">
-       
-
         <!-- HEADER SECTION WITH LOGO AND TITLE -->
         <section class="header-section">
-
             <div class="container">
-                    <div class="header-info">
-                        <h1 class="institution-title">Maria Lurdes</h1>
-                        <button class="edit-button">✎</button>
+                <div class="header-top">
+                    <div class="logo-institution">
+                        <button class="photo-edit-button" title="Trocar Foto">✎</button>
+                        <img src="img/Moça perfil.png" alt="Logo da Empresa" class="logo-img">
                     </div>
 
+                    <div class="header-info">
+                        <h1 class="institution-title">Maria Lurdes</h1>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- INSTITUTION INFO SECTION -->
-        <section class="info-section">
+       
+
+        <!-- INSTITUTION INFO CARD -->
+        <section class="card-section">
             <div class="container">
-                <h2 class="section-title">Suas Informações</h2>
-                <div class="form-group">
-                    <form class="institution-form">
-                        <div class="form-field">
-                            <label for="responsible">Nome</label>
-                            <input type="text" id="responsible" placeholder="Maria Lurdes" disabled>
+                <div class="card" data-card="institution">
+                    <div class="card-header">
+                        <h2 class="card-title">Informações Pessoais</h2>
+                        <button class="card-edit-button" title="Editar">✎</button>
+                    </div>
+                    <!-- REMOVIDO: style="display: none;" -->
+                    <div class="card-actions">
+                        <button class="card-save-button" title="Salvar">✓</button>
+                        <button class="card-cancel-button" title="Cancelar">✕</button>
+                    </div>
+                      <div class="form-field">
+                            <label for="company-name">Nome </label>
+                            <input type="text" id="company-name" value="Maria Lurdes" disabled>
                         </div>
 
                         <div class="form-field">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" placeholder="marialurdes@gmail.com" disabled>
+                            <label for="company-name">E-mail</label>
+                            <input type="text" id="company-name" value="mariaLurdes@gmail.com" disabled>
                         </div>
 
-                      
+                         <div class="form-field">
+                            <label for="company-name">Telefone</label>
+                            <input type="text" id="company-name" value="71986950177" disabled>
+                        </div>
+
+        
+
                         <div class="form-field">
                             <label for="password">Senha</label>
-                            <input type="password" id="password" placeholder="908765433" disabled>
+                            <input type="text" id="password" value="every345" disabled>
                         </div>
                     </form>
                 </div>
             </div>
         </section>
 
-       
+      
+
+     
+
     <!-- FOOTER -->
-   <footer class="footer">
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
-                
                 <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
             </div>
             <div class="footer-tagline">
@@ -75,6 +93,7 @@
             </div>
         </div>
     </footer>
+  
+    <script src="js/empresa_perfil.js"></script>
 </body>
 </html>
-
