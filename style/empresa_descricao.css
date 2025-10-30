@@ -1,3 +1,52 @@
+/* Container das opções */
+.categoria-opcoes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Cada item da lista */
+.categoria-item {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 8px 15px;
+  cursor: pointer;
+  transition: 0.3s;
+  border: 1px solid #ccc;
+}
+
+.categoria-item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Esconde o radio padrão */
+.categoria-item input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  background-color: #ccc;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  margin-right: 12px;
+  position: relative;
+  cursor: pointer;
+}
+
+/* Quando estiver selecionado */
+.categoria-item input[type="radio"]:checked {
+  background-color: #0a4302;
+}
+
+/* Texto */
+.categoria-item span {
+  font-size: 16px;
+  color: #333;
+  user-select: none;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -144,7 +193,7 @@ body {
 /* ===== FORMULÁRIO ===== */
 .form-container {
     background-color: #e8e8e8;
-    border: 1px solid #d3d3d3;
+    border: 1px solid #adadad;
     border-radius: 20px;
     padding: 50px 40px;
     width: 1000%;
@@ -156,7 +205,7 @@ body {
     text-align: center;
     font-size: 21px;
     font-weight: 700;
-    color: #3a3a3a;
+    color: #1a1a1a;
     margin-bottom: 40px;
 }
 
@@ -187,23 +236,23 @@ body {
 }
 
 .form-input {
-      padding: 18px 20px;
-
-    /* define uma altura fixa para manter o mesmo tamanho visual que você quer */
-    height: 220px; /* ajuste esse valor até ficar igual à sua caixa desejada */
-
-    /* importante: garantir que padding seja contado dentro do height */
-    box-sizing: border-box;
-
-    border: 1px solid #d6d6d6;
-    border-radius: 25px;
+    /* Estilos comuns para input e textarea */
+    padding: 20px; /* Reduzido de 50px para 20px para iniciar no topo */
+    border: 1px solid #adadad;
+    border-radius: 20px;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
     background-color: #ffffff;
     transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    resize: none;      
-    line-height: 1.4;   
-    vertical-align: top;/* redundante aqui, mas seguro */
+    width: 100%; /* Garantir que o textarea ocupe a largura total */
+}
+
+/* Estilos específicos para o textarea */
+textarea.form-input {
+    resize: vertical; /* Permite redimensionamento vertical pelo usuário */
+    min-height: 150px; /* Altura mínima para o campo de descrição */
+    line-height: 1.5; /* Melhorar a leitura */
+    vertical-align: top; /* Garante que o texto comece no topo */
 }
 
 .form-input:focus {
@@ -229,7 +278,7 @@ body {
     align-items: center;
     cursor: pointer;
     transition: all 0.3s ease;
-    transform: translateY(100px);
+    transform: translateY(250px);
 
 }
 
@@ -258,6 +307,7 @@ body {
 
 .footer-logo {
     display: flex;
+    justify-content: center;
     align-items: center;
     gap: 8px;
 }
@@ -279,6 +329,92 @@ body {
     font-weight: 600;
     font-size: 16px;
     text-align: center;
+}
+.upload-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.upload-input {
+    display: none;
+}
+
+.upload-label {
+    background-color: #ffffff;
+    border: 1px solid #adadad;
+    border-radius: 20px;
+    width: 300px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: border-color 0.3s ease, transform 0.2s ease;
+}
+
+.upload-label:hover {
+    border-color: #5A8F3A;
+    transform: scale(1.02);
+}
+
+.upload-label p {
+    margin-top: 10px;
+    font-weight: 500;
+    color: #1a1a1a;
+}
+/* ===== UPLOAD DE FOTO ===== */
+.upload-box {
+  width: 100%;
+  height: 180px;
+  background-color: #ffffff;
+  border: 1px solid #adadad;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.upload-box:hover {
+  border-color: #5A8F3A;
+  box-shadow: 0 0 8px rgba(90, 143, 58, 0.2);
+}
+
+.upload-icon {
+  width: 35px;
+  opacity: 0.7;
+}
+
+/* ===== BOTÃO OK ===== */
+.form-button-ok {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ok-button {
+   display: inline-block;
+  width: 100px;              /* tamanho pequeno */
+  background-color: #003b16; /* verde escuro */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;     /* remove o sublinhado */
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  
+ 
+  transition: background-color 0.3s ease;
+}
+
+.ok-button:hover {
+  background-color: #04681a;
 }
 
 /* ===== RESPONSIVIDADE ===== */
@@ -372,28 +508,4 @@ body {
         font-size: 18px;
         margin-bottom: 20px;
     }
-
-    .form-label {
-        font-size: 14px;
-    }
-
-    .form-input {
-        padding: 12px 15px;
-        font-size: 14px;
-    }
-
-    .nav-button-side {
-        width: 45px;
-        height: 45px;
-    }
-
-    .footer-logo-text {
-        font-size: 18px;
-    }
-
-    .footer-tagline {
-        font-size: 12px;
-        padding: 8px 10px;
-    }
 }
-

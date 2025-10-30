@@ -231,6 +231,35 @@ body {
 
 }
 
+/* ===== BOTÃO OK ===== */
+.form-button-ok {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ok-button {
+   display: inline-block;
+  width: 100px;              /* tamanho pequeno */
+  background-color: #003b16; /* verde escuro */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;     /* remove o sublinhado */
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  
+ 
+  transition: background-color 0.3s ease;
+}
+
+.ok-button:hover {
+  background-color: #04681a;
+}
+
 
 
 /* ===== FOOTER ===== */

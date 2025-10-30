@@ -1,0 +1,151 @@
+/* Estilos específicos para a página de Checkout */
+
+.checkout-page-content {
+    padding: 40px 0;
+    min-height: 60vh;
+}
+
+.checkout-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.checkout-grid {
+    display: grid;
+    grid-template-columns: 1fr 350px; /* Card de Pedido maior e Card de Agendamento menor */
+    gap: 30px;
+}
+
+.checkout-card {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #315901; /* Cor verde da marca */
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+/* Estilos do Card de Resumo do Pedido */
+.order-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 16px;
+    color: #333;
+}
+
+.order-item:last-of-type {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 500;
+    flex-grow: 1;
+}
+
+.item-quantity-price {
+    white-space: nowrap;
+    text-align: right;
+}
+
+.summary-total-line {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 2px solid #5A8F3A; /* Cor de destaque para o total */
+}
+
+.summary-total-label {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.summary-total-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: #315901;
+}
+
+.empty-order-message {
+    text-align: center;
+    font-size: 16px;
+    color: #666;
+    padding: 20px 0;
+}
+
+.empty-order-message a {
+    color: #5A8F3A;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Estilos do Card de Agendamento */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input[type="date"],
+.form-group input[type="time"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que padding não aumente a largura total */
+}
+
+.confirm-order-btn {
+    width: 100%;
+    padding: 15px;
+    background-color: #5A8F3A;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 18px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
+}
+
+.confirm-order-btn:hover:not(:disabled) {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+.confirm-order-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .checkout-grid {
+        grid-template-columns: 1fr; /* Coluna única em telas menores */
+    }
+    
+    .schedule-card {
+        order: -1; /* Coloca o agendamento acima do resumo em mobile */
+    }
+}
