@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/formulario.css">
+    <link rel="stylesheet" href="style/empresa_cadastro_produto.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -17,13 +17,12 @@
                 <div class="logo">
                     <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
                 </div>
-                <nav class="nav">
-                    <a href="doacao_login.html" class="nav-button">Voltar ao Início</a>
-                </nav>
-            </div>
-        </header>
+                 <nav class="nav">  
+                <a href="doacao_login.html" class="nav-button">Voltar</a>
+            </nav>
 
-        <!-- Barra de Progresso -->
+        </header>
+         <!-- Barra de Progresso -->
         <div class="progress-bar-container">
             <div class="progress-step active">
                 <div class="progress-fill"></div>
@@ -39,21 +38,17 @@
             </div>
         </div>
 
+        
+
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <!-- Botão Anterior (Esquerda) -->
-           <a href="doacao_login.html" class="nav-link">
-  <button class="nav-button-side nav-button-prev">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-  </button>
-</a>
+       
             
 
             <!-- Formulário -->
             <div class="form-container">
-                <h1 class="form-title">Cadastre sua instituição aqui!</h1>
+                <h1 class="form-title">Cadastre sua conta aqui!</h1>
                 
                 <form class="form">
                     <div class="form-group">
@@ -66,45 +61,35 @@
                         <input type="email" id="email" name="email" class="form-input" placeholder="">
                     </div>
 
+                     <div class="form-group">
+                        <label for="cnpj" class="form-label">CNPJ  </label>
+                        <input type="text" id="cepfcnpj" name="cpfcnpj" class="form-input" placeholder="">
+                    </div>
+
+                     <div class="form-group">
+                        <label for="Link" class="form-label">Links para contato</label>
+                        <input type="text" id="link" name="link" class="form-input" placeholder="">
+                    </div>
+                    
+                    
                     <div class="form-group">
-                        <label for="cnpj" class="form-label">CNPJ</label>
-                        <input type="text" id="cnpj" name="cnpj" class="form-input" placeholder="">
-    
+                        <label for="senha" class="form-label">senha</label>
+                        <input type="password" id="senha" name="senha" class="form-input" placeholder="">
                     </div>
-
+                    
                     <div class="form-group">
-                        <label for="senha" class="form-label">Telefone </label>
-                        <input type="text" id="Telefone" name="senha" class="form-input" placeholder="">
+                        <label for="senha" class="form-label">Confirmação de senha</label>
+                        <input type="password" id="senha" name="senha" class="form-input" placeholder="">
                     </div>
 
-                    <div class="form-group">
-                        <label for="confirmacao-senha" class="form-label">Links para WhatsApp</label>
-                        <input type="text" id="confirmacao-senha" name="form-input" class="form-input" placeholder="">
-                    </div>
+                    
 
-                    <div class="form-group">
-                        <label for="confirmacao-senha" class="form-label">Funcionamento</label>
-                        <input type="text" id="confirmacao-senha" name="form-input" class="form-input" placeholder="EX: 08:00 ás 17:00 de seg á sex ">
-                    </div>
+                  
 
-                      <div class="form-group">
-                        <label for="confirmacao-senha" class="form-label">Senha</label>
-                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
-                    </div>
-
-                      <div class="form-group">
-                        <label for="confirmacao-senha" class="form-label">Confirmação de Senha</label>
-                        <input type="password" id="confirmacao-senha" name="confirmacao-senha" class="form-input" placeholder="">
-                    </div>
-                </form>
-            </div>
-
-            <!-- Botão Próximo (Direita) -->
-           <a href="doacao_endereco.html" class="nav-button-side nav-button-next">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polyline points="9 18 15 12 9 6"></polyline>
-  </svg>
-</a>
+<!-- BOTÃO OK -->
+<div class="form-group form-button-ok">
+  <a href="doacao_endereco.html" class="ok-button">OK</a>
+</div>
         </main>
 
         <!-- Footer -->
