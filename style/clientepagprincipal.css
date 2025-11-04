@@ -608,139 +608,175 @@ html, body {
     text-align: center;
 }
 
-/* ===== RESPONSIVIDADE ===== */
-@media (max-width: 768px) {
-    .hero-title {
-        font-size: 32px;
-    }
+/* ======================================
+   CLIENTE PAG PRINCIPAL - RESPONSIVIDADE
+   ====================================== */
 
-    .panel-title {
-        font-size: 24px;
-    }
+/* =========================
+   Ajustes responsivos para clientepagprincipal.html
+   ========================= */
 
-    .button-group {
-        flex-direction: column;
-    }
+/* --- Header: mantém elementos lado a lado em mobile --- */
+@media screen and (max-width: 480px) {
+  .header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 8px 12px;
+  }
 
-    .btn {
-        min-width: auto;
-    }
-
-    .doe-content {
-        flex-direction: column;
-        gap: 30px;
-    }
-
-    .doe-title {
-        font-size: 24px;
-    }
-
-    .search-title {
-        font-size: 22px;
-    }
-
-    .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 20px;
-    }
-
-    .menu-toggle {
-        display: block;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .footer-tagline {
-        font-size: 14px;
-        padding: 8px 15px;
-    }
-
-    .donation-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
+  .logo .logo-text { font-size: 1.15rem; }
+  .nav { display: flex; align-items: center; gap: 8px; }
+  .nav .nav-link { font-size: 0.9rem; white-space: nowrap; }
+  .menu-container { display: inline-flex; align-items: center; }
 }
 
-@media (max-width: 480px) {
-    .hero {
-        height: 250px;
-    }
+/* --- 1) Remover a imagem lateral da seção de doação no mobile --- */
+@media screen and (max-width: 480px) {
+  /* esconde o frame/imagem lateral */
+  .donation-image-frame,
+  .donation-image-frame img,
+  .donation-img {
+    display: none !important;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 
-    .hero-title {
-        font-size: 24px;
-    }
+  /* ajusta o conteúdo do card para ocupar o espaço */
+  .donation-blur-box,
+  .donation-content {
+    
+    max-width: 100% !important;
+  }
 
-    .panel-title {
-        font-size: 20px;
-        margin-bottom: 25px;
-    }
-
-    .button-group {
-        gap: 10px;
-        flex-direction: column;
-    }
-
-    .btn {
-        padding: 12px 20px;
-        font-size: 14px;
-    }
-
-    .doe-section {
-        padding: 40px 15px;
-    }
-
-    .doe-title {
-        font-size: 20px;
-    }
-
-    .doe-description {
-        font-size: 14px;
-    }
-
-    .search-section {
-        padding: 40px 15px;
-    }
-
-    .search-title {
-        font-size: 18px;
-        margin-bottom: 25px;
-    }
-
-    .search-container {
-        flex-direction: column;
-    }
-
-    .search-input,
-    .search-btn {
-        width: 100%;
-    }
-
-    .cards-section {
-        padding: 40px 15px;
-    }
-
-    .cards-grid {
-        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-        gap: 15px;
-    }
-
-    .card-image {
-        height: 150px;
-    }
-
-    .card-title {
-        font-size: 16px;
-    }
-
-    .card-category {
-        font-size: 12px;
-    }
-
-    .footer-logo-text {
-        font-size: 18px;
-    }
+  /* garante que o background da seção continue atrás do card */
+  .donation {
+    display: block;
+    padding: 18px 12px 36px;
+    
+  }
 }
 
+/* Se quiser manter a imagem em vez de remover, com proporção preservada,
+   comente o bloco acima e descomente o bloco abaixo e adapte aspect-ratio
+   (ex: 3/4 ou 16/9) para combinar com seu layout desktop. */
+/*
+@media screen and (max-width: 480px) {
+  .donation-container {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    gap: 12px !important;
+  }
+
+  .donation-blur-box { flex: 1 1 56% !important; padding-right: 12px !important; }
+  .donation-image-frame { flex: 0 0 40% !important; max-width: 40% !important; }
+  .donation-image-frame { aspect-ratio: 3 / 4; overflow: hidden; border-radius: 12px; }
+  .donation-image-frame img { width: 100%; height: 100%; object-fit: cover; display: block; }
+}
+*/
+
+/* --- 2) Corrigir barra de pesquisa (input + botão) --- */
+@media screen and (max-width: 480px) {
+  .search-container {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    margin: 10px auto 24px;
+    padding: 0 12px;
+    box-sizing: border-box;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 12px 48px 12px 16px; /* espaço para o botão à direita */
+    border-radius: 28px;
+    border: 1px solid #e0e0e0;
+    font-size: 0.95rem;
+    box-sizing: border-box;
+    background: #fff;
+  }
+
+  /* o botão do ícone tem a mesma classe .menu-toggle no seu HTML;
+     aqui tratamos especificamente quando ele estiver dentro de .search-container */
+  .search-container > button.menu-toggle {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 36px;
+    min-width: 36px;
+    padding: 6px;
+    border-radius: 18px;
+    border: none;
+    background: transparent;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .search-container > button.menu-toggle img.menu-icon-img {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+}
+
+/* Se o botão da lupa for um input[type="submit"], use este seletor:
+.search-container input[type="submit"] { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); } */
+
+/* --- 3) Ajustes para a grade de produtos (manter proporção do desktop, permitir slide) --- */
+@media screen and (max-width: 480px) {
+  .products .container { padding: 0 8px 24px; box-sizing: border-box; }
+
+  /* transforma a grid em uma linha horizontal rolável com thumbs proporcionais */
+  .products-grid {
+    display: flex !important;
+    flex-direction: row;
+    gap: 14px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 8px;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .product-card {
+    flex: 0 0 auto;
+    width: 120px;              /* largura fixa por thumb para manter proporção */
+    border-radius: 12px;
+    background: transparent;
+    overflow: hidden;
+    box-shadow: none;
+  }
+
+  .product-img {
+    width: 100%;
+    height: 160px;            /* altura proporcional semelhante ao desktop */
+    object-fit: cover;        /* mantém recorte proporcional igual ao desktop */
+    border-radius: 12px;
+    display: block;
+  }
+
+  /* título da seção centralizado como no desktop mobile do protótipo */
+  .section-title {
+    text-align: center;
+    font-size: 1.05rem;
+    margin: 18px 0 12px;
+    padding: 0 12px;
+  }
+}
+
+/* Ajustes finos para telas extra pequenas (<=360px) */
+@media screen and (max-width: 360px) {
+  .product-card { width: 104px; }
+  .product-img  { height: 140px; }
+  .donation-blur-box { padding: 14px !important; }
+  .search-input { padding: 10px 44px 10px 12px; font-size: 0.92rem; }
+  .logo .logo-text { font-size: 1.05rem; }
+}

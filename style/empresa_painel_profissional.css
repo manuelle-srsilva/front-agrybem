@@ -808,3 +808,14 @@ html, body {
     filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
     transform: scale(1.1);
 }
+.product-cards-container{
+            display: flex !important;
+        flex-direction: row;
+        gap: 14px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+

@@ -351,28 +351,9 @@ body {
      transform: translatex( 160px);
     
 }
-/* Responsividade básica */
-@media (max-width: 1024px) {
-    .main-container {
-        flex-direction: column;
-        gap: 40px;
-    }
-    
-    .left-content {
-        align-items: center;
-        text-align: center;
-    }
-    
-    .keywords {
-        align-items: center;
-    }
-    
-    .right-content {
-        justify-content: center;
-    }
-    
-    .main-section {
-        background-size: contain;
-    }
+@media screen and (max-width: 768px) {
+  body { transform: scale(0.85); zoom: 0.85; overflow-x: hidden; }
+  .login-box { width: 90%; max-width: 400px; margin: auto; }
+  input, button { font-size: 0.9rem; }
 }
-
+@media screen and (max-width: 480px) { body { transform: scale(0.75); zoom: 0.75; } }

@@ -482,7 +482,7 @@ body {
     }
 
     .header-top {
-        flex-direction: column;
+        flex-direction: space-between;
     }
 
     .logo-img {
