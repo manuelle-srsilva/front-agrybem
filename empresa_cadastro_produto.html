@@ -7,7 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/empresa_cadastro_produto.css">
+	<link rel="stylesheet" href="style/empresa_cadastro_produto.css">
+	    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="page-wrapper">
@@ -38,81 +39,114 @@
                 <form class="form">
                     <div class="form-group">
                         <label for="nome" class="form-label">Nome  </label>
-                        <input type="text" id="nome" name="nome" class="form-input" placeholder="">
+                        <input type="text" id="nome" name="nome" class="form-input" placeholder="Ex: Tomate Cereja">
                     </div>
 
-                    <div class="form-group">
-                        <label for="email" class="form-label">Preço</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="">
+                    <!-- NOVO CAMPO: Unidade de Medida (Acordeão - CSS PURE) -->
+                    <div class="accordion-group">
+                        <input type="checkbox" id="acc-unidade" class="accordion-toggle" hidden>
+                        <label for="acc-unidade" class="accordion-header">
+                          
+                            <span class="form-label">Unidade de Medida</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <div class="form-group">
+                                <select id="unidadeMedida" name="unidadeMedida" class="form-input">
+                                    
+                                    <option value="kg">kg </option>
+
+                                    <option value="un">un</option>
+                                </select>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- CAMPO EXISTENTE: Preço (Ajustado para number com prefixo) -->
                     <div class="form-group">
-  <label for="categoria" class="form-label">Categoria</label>
-  <div class="categoria-opcoes">
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Fruta">
-      <span>Fruta</span>
-    </label>
+                        <label for="preco" class="form-label">Preço</label>
+                        <div class="input-with-prefix">
+                            <span class="prefix">R$</span>
+                            <input type="number" id="preco" name="preco" class="form-input" placeholder="0.00" step="0.01">
+                        </div>
+                    </div>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Legume">
-      <span>Legume</span>
-    </label>
+                    <!-- CAMPO EXISTENTE: Categoria (Acordeão - CSS PURE) -->
+                    <div class="accordion-group">
+                        <input type="checkbox" id="acc-categoria" class="accordion-toggle" hidden>
+                        <label for="acc-categoria" class="accordion-header">
+                            <span class="form-label">Categoria</span>
+                            <i class="fas fa-chevron-down accordion-icon"></i>
+                        </label>
+                        <div class="accordion-content">
+                            <div class="categoria-opcoes">
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Fruta">
+                                    <span>Fruta</span>
+                                </label>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Verdura">
-      <span>Verdura</span>
-    </label>
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Legume">
+                                    <span>Legume</span>
+                                </label>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Raiz">
-      <span>Raiz</span>
-    </label>
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Verdura">
+                                    <span>Verdura</span>
+                                </label>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Grãos e Cereais">
-      <span>Grãos e Cereais</span>
-    </label>
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Raiz">
+                                    <span>Raiz</span>
+                                </label>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Ervas e Temperos">
-      <span>Ervas e Temperos</span>
-    </label>
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Grãos e Cereais">
+                                    <span>Grãos e Cereais</span>
+                                </label>
 
-    <label class="categoria-item">
-      <input type="radio" name="categoria" value="Oleaginosas">
-      <span>Oleaginosas</span>
-    </label>
-  </div>
-</div>
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Ervas e Temperos">
+                                    <span>Ervas e Temperos</span>
+                                </label>
+
+                                <label class="categoria-item">
+                                    <input type="radio" name="categoria" value="Oleaginosas">
+                                    <span>Oleaginosas</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
 
 <!-- UPLOAD DE FOTO -->
-<div class="form-group">
+<div class="form-group upload-group">
   <label class="form-label">Foto</label>
   <div class="upload-box" onclick="document.getElementById('uploadFoto').click()">
     <img src="img/upload-de-arquivo 2.png" alt="Upload" class="upload-icon">
-    <input type="file" id="uploadFoto" name="foto" accept="" style="display: none;">
+    <input type="file" id="uploadFoto" name="foto" accept="image/*" style="display: none;">
   </div>
 </div>
 
 <!-- BOTÃO OK -->
-<div class="form-group form-button-ok">
-  <a href="empresa_produto.html" class="ok-button">OK</a>
-</div>
+		<div class="form-group form-button-ok">
+		  <button type="submit" class="ok-button">OK</button>
+		</div>
+                </form>
+            </div>
         </main>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <div class="container footer-container">
-                <div class="footer-logo">
-                    <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
-                </div>
-                <div class="footer-tagline">
-                    Mais que produção, uma relação com você!
-                </div>
-            </div>
-        </footer>
-    </div>
+		        <!-- Footer -->
+			        <footer class="footer">
+		            <div class="container footer-container">
+	                <div class="footer-logo">
+	                    <span class="footer-logo-text">Agry<span class="footer-logo-highlight">bem</span></span>
+	                </div>
+	                <div class="footer-tagline">
+	                    Mais que produção, uma relação com você!
+	                </div>
+	            </div>
+	        </footer>
+	    </div>
+    <script src="script.js"></script>
 </body>
 </html>
-

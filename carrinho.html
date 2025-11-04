@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/loja.css">
     <link rel="stylesheet" href="style/carrinho.css">
-    <script src="js/carrinho.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -27,9 +26,9 @@
     <!-- Conteúdo do Carrinho -->
     <main class="cart-page-content">
         <div class="container">
-            <h1 class="cart-title">Seu Carrinho </h1>
+            <h1 class="cart-title">Seu Carrinho</h1>
 
-            <!-- Lista de Itens do Carrinho -->
+            <!-- Container de Itens do Carrinho -->
             <div id="cart-items-container">
                 <!-- Os itens do carrinho serão injetados aqui pelo JavaScript -->
                 <div class="empty-cart-message" id="empty-cart-message">
@@ -43,9 +42,12 @@
                     <span class="summary-total-label">Total Geral:</span>
                     <span class="summary-total-value" id="grand-total">R$ 0,00</span>
                 </div>
-                <button class="checkout-btn" disabled><a href="checkout.html"></a>Finalizar pedido</button>
+                <button class="checkout-btn" id="checkout-btn" disabled>Finalizar Pedido</button>
             </div>
         </div>
     </main>
+
+    <!-- Script do carrinho -->
+    <script src="js/carrinho.js" defer></script>
 </body>
 </html>
