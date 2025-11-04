@@ -376,12 +376,12 @@ body {
 /* ===== RESPONSIVE DESIGN ===== */
 @media (max-width: 768px) {
     .header .container {
-        flex-direction: column;
-        gap: 15px;
+        flex-direction: space-between;
+        gap: 150px;
     }
 
     .nav {
-        flex-direction: column;
+        flex-direction: s;
         gap: 15px;
         width: 100%;
     }
@@ -393,7 +393,7 @@ body {
     }
 
     .header-top {
-        flex-direction: column;
+        flex-direction: space-between;
         align-items: flex-start;
     }
 

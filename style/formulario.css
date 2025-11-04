@@ -388,3 +388,29 @@ body {
     }
 }
 
+@media screen and (max-width: 768px) {
+  html, body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  body {
+    transform: scale(0.85);
+    transform-origin: top center;
+  }
+
+  form, .container, .cadastro {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  input, select, textarea, button {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    transform: scale(0.75);
+  }
+}
