@@ -371,3 +371,10 @@ body {
     }
 }
 
+
+/* Estilos adicionados para o link "Esqueceu a senha?" */
+.recuperacao-senha a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #008b00;
+}

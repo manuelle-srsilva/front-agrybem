@@ -466,42 +466,52 @@ html, body {
 }
 
 .search-container {
-    display: flex;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-    
-}
+	    max-width: 500px;
+	    margin: 0 auto;
+	}
 
-.search-input {
-    flex: 1;
-    padding: 15px 20px;
-    border: 2px solid #d0d0d0;
-    border-radius: 25px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    transition: border-color 0.3s ease;
-}
+.search-input-wrapper {
+	    position: relative;
+	    width: 100%;
+	}
+
+	.search-input {
+	    width: 100%;
+	    padding: 15px 50px 15px 20px; /* Aumenta o padding à direita para o ícone */
+	    border: 2px solid #d0d0d0;
+	    border-radius: 25px;
+	    font-size: 16px;
+	    font-family: 'Poppins', sans-serif;
+	    transition: border-color 0.3s ease;
+	}
 
 .search-input:focus {
     outline: none;
     border-color: #5A8F3A;
 }
 
-.search-btn {
-    padding: 15px 20px;
-    background-color: #5A8F3A;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
+.search-btn-icon {
+	    position: absolute;
+	    right: 15px;
+	    top: 50%;
+	    transform: translateY(-50%);
+	    background: none;
+	    border: none;
+	    cursor: pointer;
+	    padding: 0;
+	    z-index: 10; /* Garante que o botão esteja acima do input */
+	}
 
-.search-btn:hover {
-    background-color: #4a7a2f;
-}
+	.search-icon-img {
+	    width: 24px; /* Tamanho do ícone */
+	    height: 24px;
+	    opacity: 0.6; /* Deixa o ícone mais sutil, como um placeholder */
+	    transition: opacity 0.3s ease;
+	}
+
+	.search-btn-icon:hover .search-icon-img {
+	    opacity: 0.8;
+	}
 
 /* ===== CARDS SECTION ===== */
 .cards-section {

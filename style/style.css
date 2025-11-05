@@ -356,9 +356,10 @@ html, body {
 
 /* ===== SEARCH SECTION ===== */
 .search-section {
-    background-color: #f5f5f5;
+    background-color: #f0f0f000;
     padding: 60px 20px;
     text-align: center;
+    margin-top: 50px;
 }
 
 .search-title {
@@ -366,61 +367,59 @@ html, body {
     font-weight: 700;
     color: #1a1a1a;
     margin-bottom: 40px;
-    margin-top: 90px;
-    
 }
 
 .search-container {
-	    max-width: 500px;
-	    margin: 0 auto;
-	}
+    display: flex;
+    gap: 10px;
+    max-width: 500px;
+    margin: 0 auto;
+}
 
-.search-input-wrapper {
-	    position: relative;
-	    width: 100%;
-	}
-
-	.search-input {
-	    width: 100%;
-	    padding: 15px 50px 15px 20px; /* Aumenta o padding à direita para o ícone */
-	    border: 2px solid #d0d0d0;
-	    border-radius: 25px;
-	    font-size: 16px;
-	    font-family: 'Poppins', sans-serif;
-	    transition: border-color 0.3s ease;
-	}
+.search-input {
+    flex: 1;
+    padding: 15px 20px;
+    border: 2px solid #d0d0d0;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
 
 .search-input:focus {
     outline: none;
     border-color: #5A8F3A;
+    box-shadow: 0 0 0 3px rgba(90, 143, 58, 0.1);
 }
 
-.search-btn-icon {
-	    position: absolute;
-	    right: 15px;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    background: none;
-	    border: none;
-	    cursor: pointer;
-	    padding: 0; 
-	    z-index: 10; /* Garante que o botão esteja acima do input */
-	}
+/* NOVO ESTILO: Substitui .menu-toggle e remove a cor verde */
+.search-icon-wrapper {
+    /* Estilos para manter o alinhamento e o tamanho */
+    background-color: transparent; /* Remove a cor verde */
+    border: none;
+    cursor: default; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0; /* Remove o padding que criava o fundo */
+    width: 50px; /* Mantém a largura para alinhamento */
+    height: 50px; /* Mantém a altura para alinhamento */
+    border-radius: 8px;
+    /* Ajuste para alinhar a lupa com o input */
+    margin-top: 0; 
+}
 
-	.search-icon-img {
-	    width: 24px; /* Tamanho do ícone */
-	    height: 24px;
-	    opacity: 0.6; /* Deixa o ícone mais sutil, como um placeholder */
-	    transition: opacity 0.3s ease;
-	}
-
-	.search-btn-icon:hover .search-icon-img {
-	    opacity: 0.8;
-	}
-
+.search-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    /* Remove o filtro invert(1) que deixava a lupa branca */
+    filter: none; 
+}
 
 
 /* ===== FEATURED PRODUCTS SECTION (Produtos em Destaque) ===== */
+
 
 .informacao-secao{
     text-align:center ;
@@ -496,7 +495,6 @@ html, body {
     -webkit-backdrop-filter: blur(4px);
     border-radius: 30px;
     /* Adicionado altura mínima para garantir que o conteúdo caiba */
-    min-height: 30%; 
     border-top-left-radius: 20px;   /* canto superior esquerdo */
   border-top-right-radius: 20px;  /* canto superior direito */
   border-bottom-left-radius: 0;   /* canto inferior esquerdo reto */
@@ -569,10 +567,12 @@ html, body {
     font-style: italic;
 }
 
-/* Estilos da Seção de Copyright */
+/* Estilos da Seção de Copyright (MODIFICADO) */
 .copyright-section {
-    background-color: #f5f5f5;
-    color: #888888;
+    /* Cor de fundo igual à cor da página */
+    background-color: #f5f5f5; 
+    /* Cor do texto ajustada para ser legível no fundo claro */
+    color: #1a1a1a; 
     padding: 15px 0;
     font-size: 12px;
 }
@@ -608,6 +608,8 @@ html, body {
     height: 24px;
     vertical-align: middle;
     transition: opacity 0.3s ease;
+    /* Ajuste para ícones sociais no fundo claro */
+    filter: none; /* Remove qualquer filtro que possa ter sido aplicado */
 }
 
 .social-icon:hover {

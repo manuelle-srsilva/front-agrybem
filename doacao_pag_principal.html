@@ -7,10 +7,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/doacao_pag_principal.css  ">
+    <link rel="stylesheet" href="style/doacao_pag_principal.css">
 </head>
 <body>
-    <!-- Header -->
+   <!-- Header -->
    <header class="header">
         <div class="container">
             <div class="logo">
@@ -18,7 +18,7 @@
                 <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
             </div>
             <nav class="nav">
-                <a href="#" class="nav-link">Mesa Solidária</a>
+                <a href="#" class="nav-link">Cesta Rural</a>
                 <div class="menu-container">
                     <button class="menu-toggle" id="menuToggle">
                         <img src="img/menu.png" alt="Menu" class="menu-icon-img">
@@ -28,6 +28,13 @@
                             <img src="img/perfil.png" alt="Perfil" class="menu-item-icon">
                             <span>Perfil</span>
                         </a>
+                         <a href="daocao_intituicao.html" class="menu-item">
+                            <img src="img/loja empresa.png" alt="Sair" class="menu-item-icon">
+                            <span>instituição</span>
+                        </a>
+
+    
+        
                         <a href="doacao_login.html" class="menu-item">
                             <img src="img/sair.png" alt="Sair" class="menu-item-icon">
                             <span>Sair</span>
@@ -45,30 +52,85 @@
 </h1>
         </div>
     </section>
+<!-- Seção de Produtos em Destaque -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="featured-title">Instituições que Transformam Vidas</h2>
+            <p class="featured-subtitle">Descubra projetos que fazem a diferença e espalham solidariedade pela sua região.</p>
 
-    <!-- Painel Profissional -->
-    <section class="professional-panel">
-    <h2 class="panel-title">Aqui, cada alimento doado se 
-transforma em esperança.</h2>
-
-    <div class="button-group">
-        <a href="daocao_intituicao.html" class="btn btn-primary">Ver minha instituição</a>
-    </div>
-</section>
-
-
-
-    <!-- Seção de Pesquisa -->
-    <section class="search-section">
+            <div class="product-cards-container">
+                <!-- Card de Produto 1 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                     <img src="img/dd.png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
         
-        <h2 class="search-title">Explore instituições</h2>
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Pesquisar...">
-          <button class="menu-toggle" id="menuToggle">
-                        <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
-          </button>
-         </div>
+                        <h3 class="product-name">Apoie Quem Cuida</h3>
+                        <p class="product-description">Conheça instituições dedicadas a ajudar quem mais precisa. Sua contribuição pode mudar histórias!</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+
+             
+
+                <!-- Card de Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                         <img src="img/doacao (1).png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                        
+                        <h3 class="product-name">Conecte-se ao Bem</h3>
+                        <p class="product-description">Encontre instituições próximas a você e fortaleça o impacto da solidariedade local.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+
+                   <!-- Card de Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                         <img src="img/doacao (2).png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                        <h3 class="product-name">Catálogo Solidário</h3>
+                        <p class="product-description">Um espaço para descobrir, apoiar e divulgar o trabalho de quem faz o bem todos os dias.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+
+                   <!-- Card de Produto 3 -->
+                <div class="product-card">
+                    <div class="product-image-placeholder">
+                         <img src="img/doacao (3).png" alt="">
+                    </div>
+                    <div class="product-info-overlay">
+                       
+                        <h3 class="product-name">Estratégias de Destaque</h3>
+                        <p class="product-description">Aprimore sua vitrine digital com boas práticas de apresentação. Utilize descrições objetivas e imagens de qualidade para atrair mais clientes.</p>
+                    </div>
+                    <button class="add-to-cart-btn">+</button>
+                </div>
+            </div>
+        </div>
     </section>
+
+   
+
+
+   <!-- Seção de Pesquisa -->
+        <section class="search-section">
+            
+            <h2 class="search-title">Descubra instituições perto de você.</h2>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" placeholder="Pesquisar...">
+                    <button class="search-btn-icon" id="searchIcon">
+                        <img src="img/lupa de pesquisa.png" alt="Pesquisar" class="search-icon-img">
+                    </button>
+                </div>
+            </div>
+        </section>
 
     <!-- Grade de Cartões -->
     <section class="cards-section">

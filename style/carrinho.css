@@ -55,6 +55,7 @@
 }
 
 .cart-item-name {
+    display: block; /* Adicionado para forçar a quebra de linha */
     font-size: 18px;
     font-weight: 600;
     color: #1a1a1a;
@@ -62,15 +63,17 @@
 }
 
 .cart-item-category {
+    display: block; /* Adicionado para forçar a quebra de linha */
     font-size: 14px;
     color: #666;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Ajustando margem para ficar mais junto */
 }
 
 .cart-item-base-price {
+    display: block; /* Adicionado para forçar a quebra de linha */
     font-size: 14px;
     color: #999;
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Adicionando margem inferior para separar do próximo elemento */
 }
 
 .cart-item-controls {
@@ -94,6 +97,7 @@
     border-radius: 4px;
     text-align: right;
     font-size: 14px;
+    /* Removendo o disabled visualmente, mas o atributo será removido no HTML */
 }
 
 .quantity-unit-group select {
@@ -102,6 +106,7 @@
     border-radius: 4px;
     font-size: 14px;
     background-color: #f9f9f9;
+    /* Removendo o disabled visualmente, mas o atributo será removido no HTML */
 }
 
 .item-total-price {
@@ -159,6 +164,7 @@
 }
 
 .checkout-btn {
+    display: block; /* Garante que o <a> ocupe a largura total */
     width: 100%;
     padding: 15px;
     background-color: #5A8F3A;
@@ -169,6 +175,8 @@
     font-weight: 700;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
 }
 
 .checkout-btn:hover:not(:disabled) {
@@ -179,6 +187,13 @@
 .checkout-btn:disabled {
     background-color: #ccc;
     cursor: not-allowed;
+}
+
+/* Reativando o cursor para inputs e selects */
+.quantity-unit-group input[type="number"]:disabled,
+.quantity-unit-group select:disabled {
+    cursor: pointer; /* Para simular a reatividade */
+    opacity: 1; /* Garantir que não fique esmaecido */
 }
 
 /* Responsividade */
