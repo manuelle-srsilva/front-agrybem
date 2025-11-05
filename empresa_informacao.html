@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Informações do Negócio</title>
+    <title>Cadastro Empresa</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style/formulario.css">
+    <link rel="stylesheet" href="style/empresa_cadastro_produto.css">
 </head>
 <body>
-    <div class="page-wrapper">
-        <!-- Header Fixo -->
+    <!-- Header Fixo -->
         <header class="header">
             <div class="container">
                 <div class="logo">
                     <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
                 </div>
-               
-            </div>
-        </header>
+                 <nav class="nav">  
+                <a href="empresa_cadastro.html" class="nav-button">Voltar</a>
+            </nav>
 
-        <!-- Barra de Progresso -->
+        </header>
+         <!-- Barra de Progresso -->
         <div class="progress-bar-container">
             <div class="progress-step active">
                 <div class="progress-fill"></div>
@@ -29,7 +29,7 @@
             <div class="progress-step active">
                 <div class="progress-fill"></div>
             </div>
-            <div class="progress-step">
+            <div class="progress-step ">
                 <div class="progress-fill"></div>
             </div>
             <div class="progress-step">
@@ -40,16 +40,12 @@
             </div>
         </div>
 
+        
+
         <!-- Conteúdo Principal -->
         <main class="main-content">
             <!-- Botão Anterior (Esquerda) -->
-           <a href="empresa_cadastro.html" class="nav-link">
-  <button class="nav-button-side nav-button-prev">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-      <polyline points="15 18 9 12 15 6"></polyline>
-    </svg>
-  </button>
-</a>
+       
             
 
             <!-- Formulário -->
@@ -63,30 +59,28 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="email" class="form-label">Telefone comercial</label>
-                        <input type="email" id="email" name="email" class="form-input" placeholder="">
+                        <label for="telefone" class="form-label">Telefone comercial</label>
+                        <input type="text" id="telefone" name="telefone" class="form-input" placeholder="">
                     </div>
 
-                    <div class="form-group">
-                        <label for="cnpj" class="form-label">Horário de funcionamento</label>
-                        <input type="text" id="cnpj" name="cnpj" class="form-input" placeholder="">
-    
+                     <div class="form-group">
+                        <label for="horário" class="form-label">Horário de funcionamento</label>
+                        <input type="text" id="horário" name="horário" class="form-input" placeholder="Ex: Seg - Sex: 07:00 - 17:00 ">
                     </div>
 
-                    <div class="form-group">
-                        <label for="senha" class="form-label">Link para contato</label>
-                        <input type="password" id="senha" name="senha" class="form-input" placeholder="">
+                     <div class="form-group">
+                        <label for="link" class="form-label">Link para contato</label>
+                        <input type="link" id="link" name="link" class="form-input" placeholder="">
                     </div>
+                    
+                    
 
-                </form>
-            </div>
+                  
 
-            <!-- Botão Próximo (Direita) -->
-           <a href="empresa_endereco.html" class="nav-button-side nav-button-next">
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-    <polyline points="9 18 15 12 9 6"></polyline>
-  </svg>
-</a>
+<!-- BOTÃO OK -->
+<div class="form-group form-button-ok">
+  <a href="empresa_endereco.html" class="ok-button">OK</a>
+</div>
         </main>
 
         <!-- Footer -->

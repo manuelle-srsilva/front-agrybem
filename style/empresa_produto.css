@@ -681,6 +681,9 @@ html, body {
     .footer-logo-text {
         font-size: 18px;
     }
+    .menu-icon-img{
+        content-visibility: hidden;
+    }
 }
 
 /* ======================================= */

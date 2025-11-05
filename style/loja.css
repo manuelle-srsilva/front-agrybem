@@ -63,8 +63,7 @@ html, body {
     display: flex;
     align-items: center;
     text-decoration: none;
-    transition: opacity 0.2s ease;
-    translate: 800px;
+    /* translate: 800px; - Removido para que o ícone fique no canto direito da nav */
 }
 
 .cart-icon-link:hover {
@@ -74,7 +73,7 @@ html, body {
 .cart-icon {
     width: 30px;
     height: 30px;
-    filter: invert(0.2); /* Escurece o ícone para o fundo D9D9D9 */
+    /* filter: invert(0.2); - Removido ou ajustado se a imagem for colorida */
 }
 
 .cart-count {
@@ -378,6 +377,7 @@ font-size: 20px;
 .search-input:focus {
     outline: none;
     border-color: #5A8F3A;
+    box-shadow: 0 0 0 3px rgba(90, 143, 58, 0.1);
 }
 
 .menu-toggle {
@@ -499,41 +499,30 @@ font-size: 20px;
 }
 
 .product-name {
-    font-size: 15px;
-    font-weight: 300;
-    margin-bottom: 5px; /* Reduzido a margem */
-    text-align: center;
-    
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 
-
-
 .product-description {
-    font-size: 15px;
-    font-weight: 300;
-    color: #cfcfcf;
-    margin-bottom: 5px; /* Reduzido a margem */
-   
+    font-size: 14px;
+    font-weight: 400;
 }
 
 .add-to-cart-btn {
     position: absolute;
-    top: 10px;
+    bottom: 10px;
     right: 10px;
     background-color: #5A8F3A;
     color: white;
     border: none;
     border-radius: 50%;
-    width: 30px;
-    height: 30px;
+    width: 35px;
+    height: 35px;
     font-size: 20px;
     font-weight: 700;
     cursor: pointer;
-    line-height: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.2s ease, transform 0.2s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
     z-index: 10;
 }
 
@@ -542,11 +531,12 @@ font-size: 20px;
     transform: scale(1.1);
 }
 
-/* Footer */
+/* Estilos do Footer */
 .footer {
-    background-color: #002c0b;
-    padding: 3px 0;
-    border-top: 1px solid #e0e0e0;
+    background-color: #315901;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
 }
 
 .footer-container {
@@ -555,98 +545,66 @@ font-size: 20px;
     align-items: center;
 }
 
-.footer-logo {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
 .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: #ffffff;
 }
 
 .footer-logo-highlight {
-    color: #9bff5d;
+    color: #D9D9D9;
 }
 
 .footer-tagline {
-    
-    color: rgb(255, 255, 255);
-    padding: 20px 200px;
-    border-radius: 20px;
-    font-weight: 600;
-    font-size: 20px;
-     transform: translatex( 160px);
-    
+    font-size: 16px;
+    font-style: italic;
 }
-/* --- Seção de Copyright (Abaixo do Footer) --- */
+
+/* Estilos da Seção de Copyright */
 .copyright-section {
-    background-color: #e6e6e6; /* Cor de fundo cinza claro, similar à imagem */
-    padding: 20px 0;
-    border-top: 1px solid #d9d9d9;
-    font-size: 14px;
-    color: #666; /* Cor do texto cinza escuro */
+    background-color: #1a1a1a;
+    color: #cccccc;
+    padding: 15px 0;
+    font-size: 12px;
 }
 
 .copyright-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    /* O container já está definido para 1200px e centralizado */
+    flex-wrap: wrap;
 }
 
 .copyright-info,
-.copyright-address {
-    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
-    flex-basis: 33.33%; 
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.copyright-info {
-    text-align: left;
-}
-
-.copyright-address {
-    text-align: center;
-}
-
+.copyright-address,
 .copyright-social {
-    flex-basis: 33.33%;
-    display: flex;
-    justify-content: flex-end; /* Alinha os ícones à direita */
-    align-items: center;
-    gap: 15px;
+    margin: 5px 0;
 }
 
 .copyright-text {
-    margin: 0;
-    line-height: 1.4;
+    font-weight: 600;
+    margin-bottom: 3px;
 }
 
 .copyright-text-small {
-    margin: 0;
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: 11px;
 }
 
-/* Estilo para os ícones sociais dentro da seção de copyright */
-.copyright-social .social-icon {
-    width: 24px; /* Ícones menores para o rodapé */
+.copyright-social a {
+    margin-left: 15px;
+}
+
+.social-icon {
+    width: 24px;
     height: 24px;
-    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
-    transition: filter 0.3s ease, transform 0.3s ease;
+    vertical-align: middle;
+    transition: opacity 0.3s ease;
 }
 
-.copyright-social .social-icon:hover {
-    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
-    transform: scale(1.1);
+.social-icon:hover {
+    opacity: 0.7;
 }
 
+<<<<<<< HEAD
 /* ===== Página: Cliente Senha ===== */
 .senha-container {
   display: flex;
@@ -762,4 +720,98 @@ font-size: 20px;
     max-width: 1200px;
     margin: 0 auto;
     flex-wrap: wrap;
+=======
+/* Responsividade */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .hero-title {
+        left: 20px;
+        font-size: 24px;
+    }
+
+    .header-top {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .institution-title {
+        font-size: 28px;
+    }
+
+    .comment-feed {
+        translate: 0;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    .product-cards-container {
+        justify-content: center;
+    }
+
+    .product-card {
+        width: 45%; /* Ajuste para 2 cards por linha */
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .copyright-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-social {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-card {
+        width: 100%; /* 1 card por linha em telas muito pequenas */
+    }
+}
+
+/* Estilos do Ícone do Carrinho (Ajuste para garantir que fique no canto direito da nav) */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cart-icon-link {
+    /* Garante que o ícone do carrinho não seja afetado pelo translate: 800px; que estava no arquivo original */
+    translate: none; 
+}
+
+.cart-icon {
+    /* Garante que o ícone do carrinho seja visível */
+    filter: none; 
+}
+
+/* Adicionando um pequeno ajuste para o botão "Voltar" e o ícone do carrinho */
+.nav {
+    justify-content: flex-end; /* Alinha os itens da nav à direita */
+    flex-grow: 1; /* Permite que a nav ocupe o espaço restante */
+}
+
+.header .container {
+    justify-content: space-between; /* Garante que o logo fique à esquerda e a nav à direita */
+>>>>>>> 836c398e4bfcfd89bed2f5847b0c5ef7bee3f4ce
 }

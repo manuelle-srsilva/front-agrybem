@@ -542,6 +542,94 @@ html, body {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query) ... */
+    
+    /* CORREÇÃO PRIORITÁRIA: product-cards-container para Rolagem Horizontal (Mobile) */
+    .product-cards-container {
+        /* Sobrescreve o justify-content: center */
+        justify-content: flex-start;
+        /* Habilita a rolagem horizontal */
+        overflow-x: auto;
+        /* Garante que os cards não quebrem linha */
+        flex-wrap: nowrap; 
+        /* Diminui a distância entre os cards no mobile */
+        gap: 20px; 
+        /* Adiciona um pequeno padding nas laterais (do container pai) */
+        padding: 0 20px;
+        
+        /* Remove o padding-bottom desnecessário que estava no seu CSS no final */
+        padding-bottom: 0; 
+    }
+    
+    .featured-products {
+        padding: 60px 0; /* Ajusta o padding da seção */
+    }
+
+    /* Garante que os cards tenham um tamanho mínimo para rolagem */
+    .product-card, .product-card-2 {
+        min-width: 280px; /* Tamanho fixo para cards menores */
+        height: 300px;
+        flex-shrink: 0; /* Impede que o flexbox tente diminuir o card */
+    }
+    
+    .product-card-2 {
+        min-width: 300px; /* Mantém um pouco maior se for o caso */
+        height: 350px;
+    }
+    
+    .featured-title {
+        font-size: 28px;
+    }
+
+    .featured-subtitle {
+        margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query para 768px) ... */
+
+    /* CORREÇÃO PARA UNIFICAR O TAMANHO DOS CARDS NO MOBILE */
+    .product-card, 
+    .product-card-2 {
+        min-width: 280px; /* Define uma largura mínima consistente para todos os cards */
+        height: 350px;   /* Define uma altura consistente para todos os cards */
+        flex-shrink: 0;  /* Impede que o flexbox tente diminuir o card */
+        /* Remova quaisquer outras propriedades de largura/altura específicas para mobile */
+    }
+
+    /* Ajuste para o overlay, se necessário, para se adequar à nova altura do card */
+    .product-info-overlay {
+        padding: 30px 20px; /* Ajusta o padding para melhor visualização */
+        transform: translateY(calc(100% - 120px)); /* Mostra mais do overlay inicialmente */
+        /* (Ajuste o valor '120px' para controlar o quanto do overlay fica visível por padrão) */
+    }
+
+    /* Ajuste para os elementos internos do overlay, se necessário */
+    .product-rating {
+        top: -30px; /* Ajusta a posição do rating */
+        font-size: 11px;
+    }
+
+    .product-name, .product-name-2 {
+        font-size: 16px; /* Tamanho da fonte unificado */
+        margin-bottom: 10px; /* Ajusta margem inferior */
+    }
+    
+    .product-description, .product-description-2 {
+        font-size: 13px; /* Tamanho da fonte unificado */
+        margin-bottom: 15px;
+    }
+
+    .add-to-cart-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* ... (o restante das regras de 768px) ... */
+}
     .hero-title {
         font-size: 32px;
     }

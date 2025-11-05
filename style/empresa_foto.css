@@ -60,6 +60,41 @@ body {
     color: #5A8F3A;
 }
 
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
 /* ===== BARRA DE PROGRESSO ===== */
 .progress-bar-container {
     display: flex;
@@ -114,6 +149,18 @@ body {
     margin-bottom: 40px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
 /* ===== UPLOAD BOX ===== */
 .upload-box {
     display: flex;
@@ -150,27 +197,8 @@ body {
     color: #1a1a1a;
 }
 
-/* ===== BOTÕES DE NAVEGAÇÃO ===== */
-.nav-button-side {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #d0d0d0;
-    border: 3px solid #999999;
-    color: #999999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    transform: translateY(100px);
-}
-
-.nav-button-side:hover {
-    background-color: #c0c0c0;
-    border-color: #666666;
-    color: #666666;
-}
+/* Os botões de navegação lateral foram removidos do HTML, 
+   portanto, seus estilos não são mais necessários. */
 
 /* ===== FOOTER ===== */
 .footer {
@@ -201,6 +229,32 @@ body {
     color: #9bff5d;
 }
 
+/* Estilos para o Botão OK */
+.form-button-ok {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ok-button {
+   display: inline-block;
+  width: 100px;              
+  background-color: #003b16; 
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;     
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+}
+
+.ok-button:hover {
+  background-color: #04681a;
+}
+
 .footer-tagline {
     color: white;
     padding: 10px 20px;
@@ -213,4 +267,80 @@ body {
   body { transform: scale(0.85); zoom: 0.85; }
   .foto-container img { max-width: 100%; height: auto; object-fit: cover; }
 }
-@media screen and (max-width: 480px) { body { transform: scale(0.75); zoom: 0.75; } }
+@media screen and (max-width: 480px) { body { transform: scale(1); zoom: 0.75; } }
+
+/* Estilos para o Botão OK (copiados de empresa_descricao.css) */
+.form-button-ok {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.ok-button {
+   display: inline-block;
+  width: 100px;              /* tamanho pequeno */
+  background-color: #003b16; /* verde escuro */
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;     /* remove o sublinhado */
+  border-radius: 6px;
+  padding: 10px 0;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  align-self: center;
+  
+ 
+  transition: background-color 0.3s ease;
+}
+
+.ok-button:hover {
+  background-color: #04681a;
+}
+
+/* ===== RESPONSIVIDADE (Ajustar se necessário) ===== */
+@media (max-width: 768px) {
+    .main-content {
+        gap: 40px;
+        padding: 30px 20px;
+    }
+
+    .form-container {
+        padding: 30px 20px;
+        max-width: 100%;
+    }
+
+    .nav-button-side {
+        /* Esconder os botões laterais na versão final */
+        display: none; 
+    }
+}
+
+@media (max-width: 480px) {
+    .main-content {
+        gap: 20px;
+        padding: 20px 10px;
+        flex-direction: column;
+    }
+
+    .form-container {
+        padding: 20px 15px;
+    }
+}
+.footer {
+    background-color: #002c0b;
+    padding: 20px 0;
+    
+    /* Configuração para fixar na parte inferior da tela */
+    position: fixed; 
+    bottom: 0;      
+    left: 0;        
+    width: 100%;    
+    z-index: 1000;  
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
