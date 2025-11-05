@@ -734,3 +734,78 @@ html, body {
     }
 }
 
+
+/* ===========================
+   COPYRIGHT SECTION
+=========================== */
+.copyright-section {
+    background-color: #e6e6e6; /* Fundo cinza claro */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Texto cinza escuro */
+}
+
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.copyright-info,
+.copyright-address {
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.copyright-info {
+    text-align: left;
+}
+
+
+.copyright-address {
+    text-align: center;
+}
+
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* Ícones sociais */
+.copyright-social .social-icon {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%) opacity(70%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.1);
+}

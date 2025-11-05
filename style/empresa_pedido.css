@@ -162,16 +162,43 @@ body {
     margin: 0;
 }
 
-.card-status {
+/* 
+    O .card-status original foi substituído pelo .status-select no HTML.
+    Mantemos as classes de cor, mas adicionamos estilos para o novo elemento <select>.
+*/
+
+/* Estilos para o novo dropdown de status */
+.status-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-select {
+    /* Estilos baseados em .card-status */
     font-size: 14px;
     font-weight: 700;
     padding: 5px 10px;
     border-radius: 5px;
-    color: #333; /* Cor de texto padrão para status */
+    color: #333;
     white-space: nowrap;
+    cursor: pointer;
+    
+    /* Remove a aparência padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o outline no focus */
+    
+    /* Adiciona um ícone de seta para indicar que é um dropdown */
+    /* Usando um SVG codificado em base64 para evitar dependência de arquivo */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    padding-right: 25px; /* Espaço para o ícone */
 }
 
-/* Atualização dos Status */
+/* Cores dinâmicas para o select (mantendo as cores originais) */
 .status-pending {
     background-color: #ffc107; /* Amarelo para Pendente */
     color: #333;
@@ -182,8 +209,11 @@ body {
     color: white;
 }
 
-/* Removendo/Atualizando classes antigas para evitar conflito */
-/* .status-enviado, .status-recebido, .status-pendente foram substituídos */
+/* Estilo para as opções dentro do select */
+.status-select option {
+    background-color: white;
+    color: #333;
+}
 
 .card-meta {
     font-size: 16px;
@@ -265,4 +295,52 @@ body {
     .filter-item select {
         flex-grow: 1;
     }
+}
+
+/* Estilos adicionais para o novo dropdown de status */
+.status-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-select {
+    /* Estilos baseados em .card-status */
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    /* Remove a aparência padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o outline no focus */
+    
+    /* Adiciona um ícone de seta para indicar que é um dropdown */
+    /* Usando um SVG codificado em base64 para evitar dependência de arquivo */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    padding-right: 25px; /* Espaço para o ícone */
+}
+
+/* Cores dinâmicas para o select (mantendo as cores originais) */
+.status-select.status-pending {
+    background-color: #ffc107; /* Amarelo para Pendente */
+    color: #333;
+}
+
+.status-select.status-finished {
+    background-color: #5A8F3A; /* Verde para Finalizado */
+    color: white;
+}
+
+/* Estilo para as opções dentro do select */
+.status-select option {
+    background-color: white;
+    color: #333;
 }

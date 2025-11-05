@@ -541,13 +541,15 @@ html, body {
     transform: scale(1.1);
 }
 
-/* Estilos do Footer */
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
-    background-color: #315901;
-    color: white;
-    padding: 30px 0;
-    text-align: center;
+    background-color: #002c0b;
+    padding: 3px 0;
+    border-top: 1px solid #e0e0e0;
 }
+
 
 .footer-container {
     display: flex;
@@ -555,63 +557,109 @@ html, body {
     align-items: center;
 }
 
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+
 .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
+    color: #ffffff;
 }
+
 
 .footer-logo-highlight {
-    color: #D9D9D9;
+    color: #9bff5d;
 }
+
 
 .footer-tagline {
-    font-size: 16px;
-    font-style: italic;
+    color: rgb(255, 255, 255);
+    padding: 20px 200px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+    transform: translateX(160px);
 }
 
-/* Estilos da Seção de Copyright */
+
+/* ===========================
+   COPYRIGHT SECTION
+=========================== */
 .copyright-section {
-    background-color: #f5f5f5;
-    color: #888888;
-    padding: 15px 0;
-    font-size: 12px;
+    background-color: #e6e6e6; /* Fundo cinza claro */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Texto cinza escuro */
 }
+
 
 .copyright-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    gap: 20px;
 }
+
 
 .copyright-info,
-.copyright-address,
-.copyright-social {
-    margin: 5px 0;
+.copyright-address {
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
 }
+
+
+.copyright-info {
+    text-align: left;
+}
+
+
+.copyright-address {
+    text-align: center;
+}
+
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
 
 .copyright-text {
-    font-weight: 600;
-    margin-bottom: 3px;
+    margin: 0;
+    line-height: 1.4;
 }
+
 
 .copyright-text-small {
-    font-size: 11px;
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
 }
 
-.copyright-social a {
-    margin-left: 15px;
-}
 
-.social-icon {
+/* Ícones sociais */
+.copyright-social .social-icon {
     width: 24px;
     height: 24px;
-    vertical-align: middle;
-    transition: opacity 0.3s ease;
+    filter: grayscale(100%) opacity(70%);
+    transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.social-icon:hover {
-    opacity: 0.7;
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.1);
 }
 
 /* Responsividade */

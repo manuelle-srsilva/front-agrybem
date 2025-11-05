@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/empresa_pedido.css"> 
+
 </head>
 <body>
     <header class="header">
@@ -51,7 +52,13 @@
                     <div class="order-card">
                         <div class="card-header">
                             <h3 class="card-title">Pedido #2025001</h3>
-                            <span class="card-status status-pending">🟡 Pendente</span>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-pending" onchange="updateStatus(this)">
+                                    <option value="pending" selected>🟡 Pendente</option>
+                                    <option value="finished">🟢 Finalizado</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-meta">
                             <span class="meta-item"><span class="meta-label">Cliente:</span> Ana Paula Silva</span>
@@ -76,7 +83,13 @@
                     <div class="order-card">
                         <div class="card-header">
                             <h3 class="card-title">Pedido #2025004</h3>
-                            <span class="card-status status-pending">🟡 Pendente</span>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-pending" onchange="updateStatus(this)">
+                                    <option value="pending" selected>🟡 Pendente</option>
+                                    <option value="finished">🟢 Finalizado</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-meta">
                             <span class="meta-item"><span class="meta-label">Cliente:</span> Maria Oliveira</span>
@@ -102,7 +115,13 @@
                     <div class="order-card">
                         <div class="card-header">
                             <h3 class="card-title">Pedido #2025002</h3>
-                            <span class="card-status status-finished">🟢 Finalizado</span>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-finished" onchange="updateStatus(this)">
+                                    <option value="pending">🟡 Pendente</option>
+                                    <option value="finished" selected>🟢 Finalizado</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-meta">
                             <span class="meta-item"><span class="meta-label">Cliente:</span> João Victor Souza</span>
@@ -128,7 +147,13 @@
                     <div class="order-card">
                         <div class="card-header">
                             <h3 class="card-title">Pedido #2025003</h3>
-                            <span class="card-status status-finished">🟢 Finalizado</span>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-finished" onchange="updateStatus(this)">
+                                    <option value="pending">🟡 Pendente</option>
+                                    <option value="finished" selected>🟢 Finalizado</option>
+                                </select>
+                            </div>
                         </div>
                         <div class="card-meta">
                             <span class="meta-item"><span class="meta-label">Cliente:</span> Carla Ribeiro</span>
@@ -153,5 +178,7 @@
             </div>
         </div>
     </main>
+
+    <script src="js/pedido.js"></script>
 </body>
 </html>
