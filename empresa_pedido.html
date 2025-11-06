@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrybem - Pedidos Recebidos (Empreendedor)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style/empresa_pedido.css"> 
+
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+            </div>
+            <nav class="nav">
+                <a href="empresa_painel_profissional.html" class="nav-button">Voltar</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="orders-page-content">
+        <div class="container">
+            <h1 class="orders-title">Pedidos Recebidos </h1>
+            
+            <!-- Seção de Filtros -->
+            <div class="orders-filters">
+                <div class="filter-item">
+                    <label for="filter-date">Selecionar Data:</label>
+                    <input type="date" id="filter-date" value="2025-11-05">
+                </div>
+                <div class="filter-item">
+                    <label for="filter-status">Status:</label>
+                    <select id="filter-status">
+                        <option value="all">Todos</option>
+                        <option value="pending" selected>Pendentes</option>
+                        <option value="finished">Finalizados</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="orders-list">
+                
+                <!-- Grupo de Pedidos por Data: 05/11/2025 -->
+                <div class="order-group">
+                    <h2 class="group-title">📅 Pedidos de 05/11/2025</h2>
+
+                    <!-- Card de Pedido 1 (Pendente) -->
+                    <div class="order-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pedido #2025001</h3>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-pending" onchange="updateStatus(this)">
+                                    <option value="pending" selected>🟡 Pendente</option>
+                                    <option value="finished">🟢 Finalizado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-label">Cliente:</span> Ana Paula Silva</span>
+                            <span class="meta-item"><span class="meta-label">Telefone:</span> (81) 91234-5678</span>
+                            <span class="meta-item"><span class="meta-label">Data de Retirada:</span> 05/11/2025</span>
+                            <span class="meta-item"><span class="meta-label">Horário:</span> 11:00</span>
+                        </div>
+                        <ul class="card-items-list">
+                            <li class="item-list-title">Produtos:</li>
+                            <li class="card-item">
+                                <span class="item-name">Tomate Cereja Orgânico</span>
+                                <span class="item-quantity">2 kg</span>
+                            </li>
+                            <li class="card-item">
+                                <span class="item-name">Alface Crespa</span>
+                                <span class="item-quantity">3 un</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Card de Pedido 4 (Pendente) -->
+                    <div class="order-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pedido #2025004</h3>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-pending" onchange="updateStatus(this)">
+                                    <option value="pending" selected>🟡 Pendente</option>
+                                    <option value="finished">🟢 Finalizado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-label">Cliente:</span> Maria Oliveira</span>
+                            <span class="meta-item"><span class="meta-label">Telefone:</span> (81) 99876-5432</span>
+                            <span class="meta-item"><span class="meta-label">Data de Retirada:</span> 05/11/2025</span>
+                            <span class="meta-item"><span class="meta-label">Horário:</span> 16:30</span>
+                        </div>
+                        <ul class="card-items-list">
+                            <li class="item-list-title">Produtos:</li>
+                            <li class="card-item">
+                                <span class="item-name">Cenoura Orgânica</span>
+                                <span class="item-quantity">1 kg</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Grupo de Pedidos por Data: 06/11/2025 -->
+                <div class="order-group">
+                    <h2 class="group-title">📅 Pedidos de 06/11/2025</h2>
+
+                    <!-- Card de Pedido 2 (Finalizado) -->
+                    <div class="order-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pedido #2025002</h3>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-finished" onchange="updateStatus(this)">
+                                    <option value="pending">🟡 Pendente</option>
+                                    <option value="finished" selected>🟢 Finalizado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-label">Cliente:</span> João Victor Souza</span>
+                            <span class="meta-item"><span class="meta-label">Telefone:</span> (81) 93456-7890</span>
+                            <span class="meta-item"><span class="meta-label">Data de Retirada:</span> 06/11/2025</span>
+                            <span class="meta-item"><span class="meta-label">Horário:</span> 14:30</span>
+                        </div>
+                        <ul class="card-items-list">
+                            <li class="item-list-title">Produtos:</li>
+                            <li class="card-item">
+                                <span class="item-name">Ovos Caipiras</span>
+                                <span class="item-quantity">12 un</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <!-- Grupo de Pedidos por Data: 02/11/2025 -->
+                <div class="order-group">
+                    <h2 class="group-title">📅 Pedidos de 02/11/2025</h2>
+
+                    <!-- Card de Pedido 3 (Finalizado) -->
+                    <div class="order-card">
+                        <div class="card-header">
+                            <h3 class="card-title">Pedido #2025003</h3>
+                            <!-- NOVO DROPDOWN DE STATUS -->
+                            <div class="status-dropdown-container">
+                                <select class="status-select status-finished" onchange="updateStatus(this)">
+                                    <option value="pending">🟡 Pendente</option>
+                                    <option value="finished" selected>🟢 Finalizado</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-meta">
+                            <span class="meta-item"><span class="meta-label">Cliente:</span> Carla Ribeiro</span>
+                            <span class="meta-item"><span class="meta-label">Telefone:</span> (81) 95555-4444</span>
+                            <span class="meta-item"><span class="meta-label">Data de Retirada:</span> 02/11/2025</span>
+                            <span class="meta-item"><span class="meta-label">Horário:</span> 08:00</span>
+                        </div>
+                        <ul class="card-items-list">
+                            <li class="item-list-title">Produtos:</li>
+                            <li class="card-item">
+                                <span class="item-name">Pão Integral de Fermentação Natural</span>
+                                <span class="item-quantity">1 unidade</span>
+                            </li>
+                            <li class="card-item">
+                                <span class="item-name">Baguete Tradicional</span>
+                                <span class="item-quantity">2 unidades</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <script src="js/pedido.js"></script>
+</body>
+</html>

@@ -1,0 +1,1092 @@
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.295);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-highlight {
+    color: #5A8F3A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 400;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+/* até aqui*/   
+/* Main Section */
+.main-section {
+  background-image: url("/img/login_empresa_img.png");
+  background-size: cover;             /* cobre toda a largura */
+  background-repeat: no-repeat;
+  background-position: right center;  /* foca o agricultor à direita */
+  background-color: #e8f5e0;          /* cor de fundo suave */
+  min-height: 650px;                  /* garante altura boa */
+  display: flex;
+  align-items: center; 
+  margin-bottom: 0; /* Ajuste para remover o espaço em branco */
+
+}
+
+.main-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 80px;
+    position: relative;
+    z-index: 2;
+
+}
+
+/* Left Content */
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: -500px;
+}
+
+.keywords {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(-150px) translateY(150px);
+   
+}
+
+.keyword-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-keyword {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-box {
+    background-color: #6b8e23;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.icon-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.keyword-text-bordered {
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    padding: 15px 40px;
+}
+
+.keyword-text-plain {
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+}
+
+.keyword-text-highlight {
+    font-size: 42px;
+    font-weight: 600;
+    background-color: #00ff00;
+    color: #1a4d2e;
+    border-radius: 50px;
+    padding: 15px 60px;
+}
+
+/* Right Content - Login Box */
+.right-content {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    padding-top: 10px;
+    padding: 80px 40px;
+}
+
+.login-box {
+    background-color: #c8d5b9;
+    border-radius: 30px;
+    padding: 10px 30px;
+    width: 100%;
+    max-width: 400px;
+    transform: translateX(120px);
+     text-align: center;
+}
+
+.login-box h2 {
+    font-size: 18px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 10px;
+     transform: translateY(15px);
+}
+
+.subtitle {
+    font-size: 16px;
+    font-weight: 400;
+    color: #6b8e23;
+    text-align: center;
+    margin-bottom: 40px;
+    transform: translateY(15px);
+}
+
+/* Form Styles */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.recuperacao-senha a {
+    font-size: 12px;
+       text-decoration: none;
+ color: #008b00;
+}
+
+.form-group label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #333;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    outline: none;
+    transition: box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 0 3px rgba(107, 142, 35, 0.3);
+}
+
+.btn-entrar {
+    background-color: #1a4d2e;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 15px;
+    width: fit-content;
+    align-self: center;
+     text-decoration: none;
+
+}
+
+.btn-entrar:hover {
+    background-color: #0f3320;
+}
+
+.cadastro-link {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+     transform: translateY(-15px);
+}
+
+.cadastro-link a {
+    color: #1a4d2e;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cadastro-link a:hover {
+    color: #6b8e23;
+}
+
+/* --- Novas Seções de Parceiros (Partner Info) --- */
+
+/* Seção 1: Imagem e Texto */
+.partner-info-1 {
+    background-color: rgb(238, 238, 238);
+    padding:  150px 0;
+}
+
+.partner-info-1 .partner-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.partner-image-wrapper {
+    flex-shrink: 0;
+    width: 400px; /* Ajuste conforme a imagem */
+    height: 400px; /* Ajuste conforme a imagem */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #003f0a; /* Cor de fundo que parece na imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1); /* Para simular o encaixe na borda */
+}
+
+.partner-content {
+    flex-grow: 1;
+}
+
+.partner-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+  
+}
+
+.partner-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.partner-button {
+    display: inline-block;
+    background-color: #085a00; /* Cor do botão na imagem */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.partner-button:hover {
+    background-color: #30cc00;
+}
+
+/* Seção 2: Vantagens */
+
+.partner-title .section-title{
+      text-align: center;
+      
+}
+.section-title{
+       text-align: center;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+}
+.partner-info-2 {
+    background-color: #f7f7f7;
+    padding:  160px ;
+    text-align: start;
+}
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+   align-items: center;
+}
+
+.advantage-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    
+ 
+}
+
+.advantage-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.partner-button-secondary {
+    display: inline-block;
+    background-color: #0a7500;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+   justify-content: center; 
+}
+
+.partner-button-secondary:hover {
+    background-color: #07cc00;
+}
+
+.inform-suporte{
+    text-align: center;
+    padding: 15px 30px;
+    
+}
+
+/* Seção 3: Passos */
+.partner-info-3 {
+    background-color: white;
+    padding:  95px ;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    
+}
+
+.step-icon {
+    width: 120px; /* Ajuste conforme o ícone */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.step-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    
+}
+
+
+/* Footer */
+.footer {
+    background-color: #002c0b;
+    padding: 3px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-logo-highlight {
+    color: #9bff5d;
+}
+
+.footer-tagline {
+    
+    color: rgb(255, 255, 255);
+    padding: 20px 200px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 20px;
+     transform: translatex( 160px);
+    
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.icon:hover {
+  transform: scale(1.1);
+}
+/* Responsividade para as novas seções */
+@media (max-width: 768px) {
+    .partner-info-1 .partner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partner-image-wrapper {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    .partner-title {
+        font-size: 36px;
+    }
+
+    .advantages-grid,
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+}
+ 
+/* Responsividade básica */
+@media (max-width: 1024px) {
+    .main-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .left-content {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .keywords {
+        align-items: center;
+    }
+    
+    .right-content {
+        justify-content: center;
+    }
+    
+    .main-section {
+        background-size: contain;
+    }
+}
+
+
+
+/* --- Listras Decorativas (Decorative Stripes) --- */
+.decorative-stripes {
+    display: flex;
+    width: 100%;
+    height: 15px; /* Altura total das listras */
+    margin: 0; /* Remove qualquer margem da section */
+    padding: 0; /* Remove qualquer padding da section */
+}
+
+.stripe {
+    height: 100%;
+}
+
+.stripe-red {
+    background-color: #059400; /* Vermelho do iFood */
+    width: 70%; /* Proporção aproximada da listra vermelha */
+}
+
+.stripe-yellow {
+    background-color: #059400; /* Amarelo do iFood */
+    width: 30%; /* Proporção aproximada da listra amarela */
+}
+/* Ajuste para garantir que a seção anterior e a próxima estejam coladas */
+
+
+
+
+
+
+/* --- Seção de Copyright (Abaixo do Footer) --- */
+.copyright-section {
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Cor do texto cinza escuro */
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
+}
+
+.copyright-info,
+.copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright-info {
+    text-align: left;
+}
+
+.copyright-address {
+    text-align: center;
+}
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Estilo para os ícones sociais dentro da seção de copyright */
+.copyright-social .social-icon {
+    width: 24px; /* Ícones menores para o rodapé */
+    height: 24px;
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
+    transform: scale(1.1);
+}
+
+
+
+
+/* --- Seção de Perguntas Frequentes (FAQ) --- */
+.faq-section {
+    background-color: #ffffff; /* Cor de fundo suave para destacar a seção */
+    padding: 100px 0;
+}
+
+.faq-section .section-title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    color: #1a4d2e; /* Cor escura do tema */
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #f0f0f0; /* Borda suave */
+    margin-bottom: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgb(211, 211, 211);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+    background-color: #eeeded;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+
+.accordion-icon {
+  width: 16px; /* Tamanho do ícone */
+  height: 16px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+/* Esconde o conteúdo por padrão */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 25px;
+}
+
+.accordion-content p {
+    padding: 12px 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+/* Estado Ativo: Quando o checkbox está marcado */
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 500px; /* Valor grande o suficiente para o conteúdo expandir */
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+    padding: 0 25px 20px 25px;
+}
+
+.accordion-toggle:checked ~ .accordion-header .accordion-icon {
+    transform: rotate(180deg); /* Gira a seta para baixo */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 50px 0;
+    }
+
+    .accordion-header {
+        font-size: 16px;
+        padding: 15px 20px;
+    }
+
+    .accordion-content {
+        padding: 0 20px;
+    }
+
+    .accordion-content p {
+        padding: 10px 0;
+    }
+}
+
+
+/* --- Novos Estilos para a Página de Suporte --- */
+
+/* Seção Principal de Suporte */
+.support-main-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.support-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a4d2e; /* Cor principal do tema */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.support-subtitle {
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Grid de Opções */
+.support-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.support-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e8f5e0; /* Cor suave do tema */
+}
+
+.card-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #6b8e23; /* Cor de destaque */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Ícones brancos */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+}
+
+/* Seção de Busca */
+.support-search {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 15px 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #1a4d2e; /* Cor escura do tema */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0f3320;
+}
+
+.contato-eqp{
+     font-size: 25px;
+    font-weight: 500px;
+    color: #1a1a1a;
+    margin-bottom: 200px;
+    margin-top: 300px;
+    text-align: start;
+}
+
+.corpo-text{
+    font-size: 20px;
+    text-align: justify;
+   margin-top: 10px;
+}
+
+
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .support-title {
+        font-size: 36px;
+    }
+
+    .support-subtitle {
+        font-size: 18px;
+        margin-bottom: 40px;
+    }
+
+    .support-search {
+        flex-direction: column;
+        border-radius: 15px;
+    }
+
+    .search-input {
+        border-radius: 15px 15px 0 0;
+    }
+
+    .search-button {
+        border-radius: 0 0 15px 15px;
+        width: 100%;
+    }
+}
+
+
+/* --- Estilos para o Ícone de Engrenagem no Header --- */
+
+.nav {
+    /* Garante que os itens do nav fiquem alinhados */
+    align-items: center; 
+}
+
+.nav-icon-link {
+    /* Estilo para o link do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espaçamento entre o ícone e o botão */
+    transition: transform 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    /* Estilo para a imagem do ícone */
+    width: 28px; /* Tamanho do ícone */
+    height: 28px;
+    filter: invert(15%) sepia(20%) saturate(600%) hue-rotate(80deg) brightness(90%) contrast(90%); /* Tonalidade verde/escura para o ícone */
+    transition: filter 0.3s ease;
+}
+
+.nav-icon-link:hover .nav-icon {
+    filter: invert(30%) sepia(40%) saturate(1000%) hue-rotate(80deg) brightness(80%) contrast(90%); /* Destaque no hover */
+}
+
+/* Ajuste para garantir que o nav-button não perca o estilo */
+.nav-button {
+    /* Mantém o estilo do botão */
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+
+/* --- Estilos para o Ícone de Engrenagem no Header --- */
+
+.nav {
+    /* Garante que os itens do nav fiquem alinhados */
+    align-items: center; 
+}
+
+.nav-icon-link {
+    /* Estilo para o link do ícone */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 15px; /* Espaçamento entre o ícone e o botão */
+    transition: transform 0.2s ease;
+}
+
+.nav-icon-link:hover {
+    transform: scale(1.1);
+}
+
+.nav-icon {
+    /* Estilo para a imagem do ícone */
+    width: 28px; /* Tamanho do ícone */
+    height: 28px;
+    /* Aplicando um filtro para dar uma tonalidade verde/escura ao ícone, se ele for branco/preto */
+    filter: invert(15%) sepia(20%) saturate(600%) hue-rotate(80deg) brightness(90%) contrast(90%); 
+    transition: filter 0.3s ease;
+}
+
+.nav-icon-link:hover .nav-icon {
+    filter: invert(30%) sepia(40%) saturate(1000%) hue-rotate(80deg) brightness(80%) contrast(90%); /* Destaque no hover */
+}
+
+/* Ajuste para garantir que o nav-button não perca o estilo */
+.nav-button {
+    /* Mantém o estilo do botão */
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* --- Estilos para a Seção de Conteúdo Informativo (contato-eqp) --- */
+
+.contato-eqp {
+    max-width: 900px;
+    margin: 0 auto 50px auto; /* Centraliza e adiciona margem inferior */
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.info-block {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-left: 5px solid #6b8e23; /* Linha verde de destaque */
+    background-color: #e2e2e2;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.info-title {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a4d2e; /* Cor principal do tema */
+    margin-bottom: 15px;
+    padding-left: 10px;
+}
+
+.info-text p, .info-text ul {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.info-text ul {
+    list-style-type: disc;
+    margin-left: 40px;
+    padding-left: 0;
+}
+
+.info-text li {
+    margin-bottom: 8px;
+}
+
+.tip-text {
+    font-style: italic;
+    color: #6b8e23;
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px dashed #e0e0e0;
+}
+
+/* Ajuste para o novo FAQ */
+.faq-section .section-title {
+    font-size: 30px;
+    color: #1a4d2e;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* Ajuste para o acordeão no novo FAQ */
+.faq-section .accordion {
+    max-width: 900px;
+}
+
+/* Ajuste de responsividade */
+@media (max-width: 768px) {
+    .info-title {
+        font-size: 20px;
+    }
+
+    .info-text p, .info-text ul {
+        font-size: 15px;
+    }
+}

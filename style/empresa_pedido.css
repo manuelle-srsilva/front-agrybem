@@ -1,0 +1,346 @@
+/* Estilos gerais (reutilizados do HTML base) */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 700;
+    color: #315901; /* Cor verde da marca */
+}
+
+.logo-highlight {
+    color: #5A8F3A; /* Cor de destaque */
+}
+
+.nav-button {
+    text-decoration: none;
+    color: #5A8F3A;
+    font-weight: 600;
+    padding: 8px 15px;
+    border: 1px solid #5A8F3A;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.nav-button:hover {
+    background-color: #5A8F3A;
+    color: white;
+}
+
+/* Estilos específicos para a página de Pedidos */
+
+.orders-page-content {
+    padding: 40px 0;
+    min-height: 80vh;
+}
+
+.orders-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* --- Estilos para Filtros --- */
+.orders-filters {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 40px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    color: #555;
+}
+
+.filter-item label {
+    white-space: nowrap;
+}
+
+.filter-item input[type="date"],
+.filter-item select {
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    cursor: pointer;
+    transition: border-color 0.3s;
+}
+
+.filter-item input[type="date"]:focus,
+.filter-item select:focus {
+    border-color: #5A8F3A;
+    outline: none;
+}
+
+/* --- Estilos para Agrupamento por Data --- */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* Espaçamento entre os grupos de data */
+    max-width: 700px; /* Limita a largura da coluna de cards */
+    margin: 0 auto; /* Centraliza a coluna de cards */
+}
+
+.order-group {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre os cards dentro do grupo */
+}
+
+.group-title {
+    font-size: 22px;
+    font-weight: 700;
+    color: #315901; /* Cor verde da marca */
+    margin: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #5A8F3A;
+}
+
+/* --- Estilos para o Card de Pedido --- */
+.order-card {
+    background-color: #ffffff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.order-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #315901;
+    margin: 0;
+}
+
+/* 
+    O .card-status original foi substituído pelo .status-select no HTML.
+    Mantemos as classes de cor, mas adicionamos estilos para o novo elemento <select>.
+*/
+
+/* Estilos para o novo dropdown de status */
+.status-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-select {
+    /* Estilos baseados em .card-status */
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    /* Remove a aparência padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o outline no focus */
+    
+    /* Adiciona um ícone de seta para indicar que é um dropdown */
+    /* Usando um SVG codificado em base64 para evitar dependência de arquivo */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    padding-right: 25px; /* Espaço para o ícone */
+}
+
+/* Cores dinâmicas para o select (mantendo as cores originais) */
+.status-pending {
+    background-color: #ffc107; /* Amarelo para Pendente */
+    color: #333;
+}
+
+.status-finished {
+    background-color: #5A8F3A; /* Verde para Finalizado */
+    color: white;
+}
+
+/* Estilo para as opções dentro do select */
+.status-select option {
+    background-color: white;
+    color: #333;
+}
+
+.card-meta {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 15px;
+    line-height: 1.8; /* Aumentado para melhor leitura */
+}
+
+.meta-item {
+    display: block;
+}
+
+.meta-label {
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-right: 5px;
+}
+
+.card-items-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    border-top: 1px dashed #eee;
+    padding-top: 15px;
+}
+
+.item-list-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #315901;
+    margin-bottom: 10px;
+}
+
+.card-item {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 8px 0;
+    border-bottom: 1px dotted #eee;
+}
+
+.card-item:last-child {
+    border-bottom: none;
+}
+
+.item-name {
+    font-weight: 500;
+}
+
+.item-quantity {
+    color: #666;
+    font-weight: 600;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .orders-list {
+        max-width: 100%;
+    }
+    .orders-page-content {
+        padding: 20px 0;
+    }
+    .orders-title {
+        font-size: 28px;
+    }
+    .order-card {
+        padding: 20px;
+    }
+    .orders-filters {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .filter-item {
+        width: 100%;
+        justify-content: space-between;
+    }
+    .filter-item input[type="date"],
+    .filter-item select {
+        flex-grow: 1;
+    }
+}
+
+/* Estilos adicionais para o novo dropdown de status */
+.status-dropdown-container {
+    position: relative;
+    display: inline-block;
+}
+
+.status-select {
+    /* Estilos baseados em .card-status */
+    font-size: 14px;
+    font-weight: 700;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    
+    /* Remove a aparência padrão do select */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none; /* Remove a borda padrão */
+    outline: none; /* Remove o outline no focus */
+    
+    /* Adiciona um ícone de seta para indicar que é um dropdown */
+    /* Usando um SVG codificado em base64 para evitar dependência de arquivo */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="%23333" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg"><path d="M7 10l5 5 5-5z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 5px center;
+    padding-right: 25px; /* Espaço para o ícone */
+}
+
+/* Cores dinâmicas para o select (mantendo as cores originais) */
+.status-select.status-pending {
+    background-color: #ffc107; /* Amarelo para Pendente */
+    color: #333;
+}
+
+.status-select.status-finished {
+    background-color: #5A8F3A; /* Verde para Finalizado */
+    color: white;
+}
+
+/* Estilo para as opções dentro do select */
+.status-select option {
+    background-color: white;
+    color: #333;
+}

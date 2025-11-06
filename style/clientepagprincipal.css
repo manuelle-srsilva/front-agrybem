@@ -342,111 +342,72 @@ html, body {
 
 
 
+/* Donation Section */
 .donation {
-    position: relative;
-    background: #005e32;
-    background-size: cover;
-    background-position: center;
-    height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
+    background-color: #133C1F;
+    padding: 40px 0;
 }
 
 .donation-container {
-    position: relative;
-    z-index: 2;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
     align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-/* Caixa com efeito Blur */
-.donation-blur-box {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(15px);
-    -webkit-backdrop-filter: blur(15px);
-    border-radius: 20px;
-    padding: 60px 50px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-}
-
-.donation-content {
-    text-align: left;
 }
 
 .donation-title {
-    font-size: 35px;
+    font-size: 42px;
     font-weight: 700;
     color: white;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 30px;
 }
 
 .donation-highlight {
-    color: #9bff5d;
-}
-
-.donation-subtitle {
-    font-size: 18px;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 20px;
-    font-weight: 500;
+    color: #5A8F3A;
 }
 
 .donation-text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 1.8;
-    color: rgba(255, 255, 255, 0.85);
+    color: white;
     margin-bottom: 40px;
-    text-align: justify;
+       text-decoration: none; /* tira o sublinhado */
+    
 }
 
 .donation-button {
-    background-color: #ffffff;
-    color: #009c17;
+    background-color: #CCCCCC;
+    color: #007411;
     padding: 16px 40px;
     border: none;
     border-radius: 12px;
     font-size: 18px;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-    text-decoration: none; /* Remove o sublinhado */
-    display: inline-block; /* Garante que funcione bem com <a> */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* tira o sublinhado */
+      box-shadow: 0 2px 10px rgba(129, 28, 28, 0.295);
+  
+
 }
 
 .donation-button:hover {
-    background-color: #009c17;
-    color: #ffffff;
-    transform: scale(1.05);
+    background-color: #ffffff;
+    transform: translateY(-2px);
+       text-decoration: none; /* tira o sublinhado */
 }
 
-
-/* Moldura da Imagem */
-.donation-image-frame {
-    position: relative;
-    width: 100%;
-    height: 400px;
+.donation-image {
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
 }
 
 .donation-img {
     width: 100%;
-    height: 100%;
+    height: auto;
     display: block;
     object-fit: cover;
-    object-position: cente;
 }
 
 /* ===== SEARCH SECTION ===== */
@@ -466,77 +427,83 @@ html, body {
 }
 
 .search-container {
-    display: flex;
-    gap: 10px;
-    max-width: 500px;
-    margin: 0 auto;
-    
-}
+		    max-width: 500px;
+		    margin: 0 auto;
+		}
 
-.search-input {
-    flex: 1;
-    padding: 15px 20px;
-    border: 2px solid #d0d0d0;
-    border-radius: 25px;
-    font-size: 16px;
-    font-family: 'Poppins', sans-serif;
-    transition: border-color 0.3s ease;
-}
+.search-input-wrapper {
+		    position: relative;
+		    width: 100%;
+		}
+
+		.search-input {
+		    width: 100%;
+		    padding: 15px 50px 15px 20px; /* Aumenta o padding à direita para o ícone */
+		    border: 2px solid #d0d0d0;
+		    border-radius: 25px;
+		    font-size: 16px;
+		    font-family: 'Poppins', sans-serif;
+		    transition: border-color 0.3s ease;
+		}
 
 .search-input:focus {
     outline: none;
     border-color: #5A8F3A;
 }
 
-.search-btn {
-    padding: 15px 20px;
-    background-color: #5A8F3A;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    font-size: 18px;
-    transition: background-color 0.3s ease;
-}
+.search-btn-icon {
+		    position: absolute;
+		    right: 15px;
+		    top: 50%;
+		    transform: translateY(-50%);
+		    background: none;
+		    border: none;
+		    cursor: pointer;
+		}
 
-.search-btn:hover {
-    background-color: #4a7a2f;
+.search-icon-img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
 }
 
 /* ===== CARDS SECTION ===== */
 .cards-section {
     background-color: #f5f5f5;
-    padding: 50px 20px;
+    padding: 60px 20px 100px;
 }
 
 .cards-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+.card-link {
+    text-decoration: none;
+    color: inherit;
+}
+
 .card {
-    background-color: #ffffff;
-    border-radius: 12px;
+    background-color: white;
+    border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
-    
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .card-image {
     width: 100%;
-    height: 200px;
+    height: 180px;
     overflow: hidden;
-    background-color: #e0e0e0;
 }
 
 .card-image img {
@@ -551,31 +518,31 @@ html, body {
 }
 
 .card-content {
-    padding: 20px;
+    padding: 15px;
 }
 
 .card-title {
     font-size: 18px;
     font-weight: 600;
     color: #1a1a1a;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .card-category {
     font-size: 14px;
-    color: #666666;
+    color: #5A8F3A;
+    font-weight: 500;
 }
 
-.card-link{
-    text-decoration: none;
-}
-
-/* ===== FOOTER ===== */
+/* ===========================
+   FOOTER
+=========================== */
 .footer {
     background-color: #002c0b;
-    padding: 20px 0;
+    padding: 3px 0;
     border-top: 1px solid #e0e0e0;
 }
+
 
 .footer-container {
     display: flex;
@@ -583,11 +550,13 @@ html, body {
     align-items: center;
 }
 
+
 .footer-logo {
     display: flex;
     align-items: center;
     gap: 8px;
 }
+
 
 .footer-logo-text {
     font-size: 24px;
@@ -595,19 +564,61 @@ html, body {
     color: #ffffff;
 }
 
+
 .footer-logo-highlight {
     color: #9bff5d;
 }
 
+
 .footer-tagline {
     color: rgb(255, 255, 255);
-    padding: 10px 20px;
+    padding: 20px 200px;
     border-radius: 20px;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 20px;
+    transform: translateX(160px);
+}
+
+
+/* ===========================
+   COPYRIGHT SECTION
+=========================== */
+.copyright-section {
+    background-color: #e6e6e6; /* Fundo cinza claro */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Texto cinza escuro */
+}
+
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+
+.copyright-info,
+.copyright-address {
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.copyright-info {
+    text-align: left;
+}
+
+
+.copyright-address {
     text-align: center;
 }
 
+<<<<<<< HEAD
 /* ======================================
    CLIENTE PAG PRINCIPAL - RESPONSIVIDADE
    ====================================== */
@@ -645,6 +656,125 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
   }
+=======
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+
+/* Ícones sociais */
+.copyright-social .social-icon {
+    width: 24px;
+    height: 24px;
+    filter: grayscale(100%) opacity(70%);
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%);
+    transform: scale(1.1);
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .donation-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .donation-image-frame {
+        height: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .nav {
+        gap: 15px;
+    }
+
+    .nav-link {
+        display: none; /* Esconde o link de nome em telas menores */
+    }
+
+    .hero {
+        height: 400px;
+    }
+
+    .hero-title {
+        font-size: 32px;
+        bottom: 50px;
+        left: 20px;
+    }
+
+    .products {
+        padding: 80px 0;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+
+    .donation-blur-box {
+        padding: 40px 30px;
+    }
+
+    .donation-title {
+        font-size: 28px;
+    }
+
+    .donation-text {
+        font-size: 14px;
+    }
+
+    .donation-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 300px;
+    }
+>>>>>>> 93ab08c508d522e3f6222c77c195333378a00fe8
 
   /* ajusta o conteúdo do card para ocupar o espaço */
   .donation-blur-box,
@@ -653,6 +783,7 @@ html, body {
     max-width: 100% !important;
   }
 
+<<<<<<< HEAD
   /* garante que o background da seção continue atrás do card */
   .donation {
     display: block;
@@ -780,3 +911,9 @@ html, body {
   .search-input { padding: 10px 44px 10px 12px; font-size: 0.92rem; }
   .logo .logo-text { font-size: 1.05rem; }
 }
+=======
+    .search-title {
+        font-size: 22px;
+    }
+}
+>>>>>>> 93ab08c508d522e3f6222c77c195333378a00fe8

@@ -1,0 +1,564 @@
+/* ===== RESET E ESTILOS GLOBAIS ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-highlight {
+    color: #5A8F3A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+/* ===== MAIN CONTENT ===== */
+.main-content {
+    min-height: calc(100vh - 200px);
+    padding: 30px 0;
+    background-color: #f8f9fa;
+}
+
+/* ===== HEADER SECTION ===== */
+.header-section {
+    background-color: #f8f9fa;
+    padding: 30px 0;
+    margin-bottom: 30px;
+   
+}
+
+.header-top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.logo-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 100px;
+    object-fit: cover;
+    flex-shrink: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.header-info {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex: 1;
+}
+
+.institution-title {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+}
+
+/* ===== CARD SECTIONS ===== */
+.card-section {
+    margin-bottom: 30px;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative; /* ESSENCIAL para posicionamento absoluto dos botões */
+}
+
+.card:hover {
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+}
+
+.card.editing {
+    box-shadow: 0 0 0 2px #5A8F3A, 0 4px 20px rgba(90, 143, 58, 0.2);
+}
+
+/* ===== CARD HEADER ===== */
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+.card-edit-button {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #1a1a1a;
+    cursor: pointer;
+    padding: 6px 10px;
+    transition: all 0.3s ease;
+    border-radius: 6px;
+}
+
+.card-edit-button:hover {
+    color: #ffffff;
+    background-color: #5A8F3A;
+    transform: scale(1.1);
+}
+
+/* ===== CARD ACTIONS (Botões Salvar/Cancelar) - CORREÇÃO DE POSICIONAMENTO E VISIBILIDADE ===== */
+.card-actions {
+    /* Posicionamento absoluto no canto superior direito do card, no mesmo local do lápis */
+    position: absolute;
+    top: 30px; /* Igual ao padding do card */
+    right: 30px; /* Igual ao padding do card */
+    display: none; /* Inicia oculto */
+    gap: 10px;
+    z-index: 10;
+    /* Removendo margens e bordas que não são mais necessárias com o posicionamento absoluto */
+    /* margin-bottom: 20px; */
+    /* padding-bottom: 15px; */
+    /* border-bottom: 2px solid #f0f0f0; */
+}
+
+/* Controla a visibilidade dos botões de ação e do botão de edição */
+.card.editing .card-actions {
+    display: flex; /* Mostra os botões de ação quando em modo de edição */
+}
+
+.card.editing .card-header .card-edit-button {
+    display: none; /* Oculta o botão de edição quando em modo de edição */
+}
+
+/* Garante que o botão de edição esteja visível quando não estiver em modo de edição */
+.card:not(.editing) .card-header .card-edit-button {
+    display: block;
+}
+
+.card-save-button,
+.card-cancel-button {
+    padding: 8px 16px;
+    border: none;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.card-save-button {
+    background-color: #5A8F3A;
+    color: white;
+}
+
+.card-save-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+.card-cancel-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.card-cancel-button:hover {
+    background-color: #c82333;
+    transform: translateY(-2px);
+}
+
+/* ===== FORM STYLES ===== */
+.institution-form,
+.address-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-field label {
+    font-size: 12px;
+    color: #666666;
+    font-weight: 600;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.form-field input,
+.form-field textarea {
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    background-color: #ffffff;
+    font-size: 14px;
+    color: #1a1a1a;
+    font-family: inherit;
+    transition: all 0.3s ease;
+    resize: vertical;
+}
+
+.form-field textarea {
+    min-height: 100px;
+    max-height: 200px;
+}
+
+.form-field input:disabled,
+.form-field textarea:disabled {
+    background-color: #f5f5f5;
+    color: #333333;
+    cursor: not-allowed;
+    border-color: #e0e0e0;
+}
+
+.form-field input:enabled,
+.form-field textarea:enabled {
+    background-color: #ffffff;
+    border-color: #5A8F3A;
+}
+
+.form-field input:focus,
+.form-field textarea:focus {
+    outline: none;
+    border-color: #5A8F3A;
+    box-shadow: 0 0 0 3px rgba(90, 143, 58, 0.1);
+}
+
+.form-field input::placeholder,
+.form-field textarea::placeholder {
+    color: #999999;
+}
+
+/* ===== MAP SECTION ===== */
+.map-placeholder {
+    width: 100%;
+    height: 400px;
+    background-color: #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.map-placeholder iframe {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+    background-color: #002c0b;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-logo-highlight {
+    color: #9bff5d;
+}
+
+.footer-tagline {
+    color: rgb(255, 255, 255);
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .header .container {
+      
+        gap: 150px;
+    }
+
+    .nav {
+        flex-direction: column;
+        gap: 15px;
+        width: 100%;
+    }
+
+    .nav-link,
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-top {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .institution-title {
+        font-size: 24px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card-header {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-edit-button {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
+    
+    /* Ajuste para mobile: botões de ação no canto superior direito */
+    .card-actions {
+        top: 20px; /* Igual ao padding do card */
+        right: 20px; /* Igual ao padding do card */
+    }
+
+    .card-save-button,
+    .card-cancel-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .form-field input,
+    .form-field textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+
+    .map-placeholder {
+        height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav-link,
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .header-section {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .header-top {
+        flex-direction: column;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .institution-title {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card-header {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-edit-button {
+        font-size: 16px;
+        padding: 4px 6px;
+    }
+    
+    /* Ajuste para mobile: botões de ação no canto superior direito */
+    .card-actions {
+        top: 15px; /* Igual ao padding do card */
+        right: 15px; /* Igual ao padding do card */
+    }
+
+}
+
+/* ===== ESTILOS PARA EDIÇÃO DE FOTO NO HEADER ===== */
+.logo-institution {
+    position: relative;
+    /* Garante que o botão de edição seja posicionado em relação a este contêiner */
+}
+
+.photo-edit-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #5A8F3A;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+.photo-edit-button:hover {
+    background-color: #4a7a2f;
+    transform: scale(1.05);
+}
+
+/* Ajuste responsivo para o botão de edição */
+@media (max-width: 480px) {
+    .photo-edit-button {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+}
+

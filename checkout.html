@@ -8,9 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/loja.css"> 
-    <link rel="stylesheet" href="style/checkout.css"> <!-- Novo CSS para o checkout -->
-    <script src="js/carrinho.js" defer></script> <!-- Reutiliza a lógica de carrinho -->
-    <script src="js/checkout.js" defer></script> <!-- Novo JS para o checkout -->
+    <link rel="stylesheet" href="style/checkout.css">
+    <!-- Não incluímos os scripts, pois é apenas uma simulação estática -->
 </head>
 <body>
     <!-- Header (Reutilizado do carrinho.html) -->
@@ -31,22 +30,71 @@
             <h1 class="checkout-title">Finalizar Pedido</h1>
 
             <div class="checkout-grid">
-                <!-- Card 1: Resumo do Pedido -->
+                <!-- Card 1: Resumo do Pedido (Adaptado para o formato de nota fiscal com imagem) -->
                 <div class="checkout-card order-summary-card">
-                    <h2 class="card-title">Seu Pedido</h2>
-                    <div id="order-items-container">
-                        <!-- O resumo do pedido será injetado aqui pelo JavaScript -->
-                        <div class="empty-order-message">
-                            Nenhum item no pedido. <a href="loja.html">Voltar à Loja</a>.
+                    <div class="order-card-header">
+                        <span class="store-name">Cesta Rural</span>
+                        <h2 class="card-title">Seu Pedido</h2>
+                    </div>
+                    <div id="order-items-container" class="order-items-scrollable">
+                        
+                        <!-- Item 1: Banana Prata -->
+                        <div class="order-item-detail">
+                            <div class="item-info-group">
+                                <img src="img/banana.png" alt="Banana Prata" class="order-item-image">
+                                <div class="item-text-details">
+                                    <span class="item-name">Banana Prata</span>
+                                    <span class="item-category">Frutas</span>
+                                    <span class="item-base-price">Preço base: R$ 5,99 / kg</span>
+                                </div>
+                            </div>
+                            <div class="item-quantity-price-group">
+                                <span class="item-quantity">1.5 kg</span>
+                                <span class="item-total-price">R$ 8,99</span>
+                            </div>
                         </div>
+
+                        <!-- Item 2: Tomate Cereja -->
+                        <div class="order-item-detail">
+                            <div class="item-info-group">
+                                <img src="https://via.placeholder.com/80x80?text=Tomate" alt="Tomate Cereja" class="order-item-image">
+                                <div class="item-text-details">
+                                    <span class="item-name">Tomate Cereja</span>
+                                    <span class="item-category">Legumes</span>
+                                    <span class="item-base-price">Preço base: R$ 3,50 / un</span>
+                                </div>
+                            </div>
+                            <div class="item-quantity-price-group">
+                                <span class="item-quantity">3 un</span>
+                                <span class="item-total-price">R$ 10,50</span>
+                            </div>
+                        </div>
+
+                        <!-- Item 3: Alface Crespa -->
+                        <div class="order-item-detail">
+                            <div class="item-info-group">
+                                <img src="https://via.placeholder.com/80x80?text=Alface" alt="Alface Crespa" class="order-item-image">
+                                <div class="item-text-details">
+                                    <span class="item-name">Alface Crespa</span>
+                                    <span class="item-category">Folhagens</span>
+                                    <span class="item-base-price">Preço base: R$ 2,00 / un</span>
+                                </div>
+                            </div>
+                            <div class="item-quantity-price-group">
+                                <span class="item-quantity">1 un</span>
+                                <span class="item-total-price">R$ 2,00</span>
+                            </div>
+                        </div>
+
+                        <!-- FIM DOS ITENS -->
                     </div>
                     <div class="summary-total-line">
                         <span class="summary-total-label">Total Geral:</span>
-                        <span class="summary-total-value" id="checkout-grand-total">R$ 0,00</span>
+                        <span class="summary-total-value" id="checkout-grand-total">R$ 21,49</span>
                     </div>
                 </div>
 
-                <!-- Card 2: Agendamento de Retirada -->
+                <!-- Card 2: Agendamento de Retirada (Mantido como estava) -->
                 <div class="checkout-card schedule-card">
                     <h2 class="card-title">Agendamento de Retirada</h2>
                     <form id="schedule-form">
@@ -58,11 +106,11 @@
                             <label for="pickup-time">Hora de Retirada:</label>
                             <input type="time" id="pickup-time" name="pickup-time" required>
                         </div>
-                        <button type="submit" class="confirm-order-btn" disabled>Confirmar Pedido</button>
+                        <button type="submit" class="confirm-order-btn">Confirmar Pedido</button>
                     </form>
                 </div>
             </div>
         </div>
     </main>
 </body>
-</html> 
+</html>

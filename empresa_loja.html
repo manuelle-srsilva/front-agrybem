@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/loja.css">
-   
+    <script src="js/carrinho.js" defer></script>
 </head>
 <body>
     <!-- Header -->
@@ -25,7 +25,6 @@
         </div>
     </header>
     
-
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -46,13 +45,20 @@
                         <h1 class="institution-title">Cesta Rural</h1>
         
                     </div>
+                    <!-- Ícone do Carrinho Movido para Aqui -->
+                    <a href="carrinho.html" class="cart-icon-link-profile">
+                        <img src="img/vista-lateral-vazia-do-carrinho-de-compras.png" alt="Carrinho de Compras" class="cart-icon-profile">
+                        <span class="cart-count-profile" id="cart-count-profile">0</span>
+                    </a>
                 </div>
                 
             </div>
         </section>
 
-        <div class="comment-feed">
-            <a href="pag_comentario.html"> Comentários</a>
+        <div class="container">
+            <div class="comment-feed">
+                <a href="pag_comentario.html"> Comentários</a>
+            </div>
         </div>
 
         <!-- DESCRIPTION CARD -->
@@ -184,19 +190,19 @@
             </div>
         </section>
     <!-- FIM DO CONTEÚDO DO PERFIL INTEGRADO -->
-    <!-- Seção de Pesquisa -->
-    <section class="search-section">
-        
-        <h2 class="search-title">Pesquise seu produto por categoria</h2>
-      
-        <div class="search-container">
-            <input type="text" class="search-input" placeholder="Pesquisar...">
-          <button class="menu-toggle" id="menuToggle">
-                        <img src="img/lupa de pesquisa.png" alt="Menu" class="menu-icon-img">
-          </button>
-         </div>
-         
-    </section>
+     <!-- Seção de Pesquisa -->
+        <section class="search-section">
+            
+            <h2 class="search-title">Descubra lojas perto de você.</h2>
+            <div class="search-container">
+                <div class="search-input-wrapper">
+                    <input type="text" class="search-input" placeholder="Pesquisar...">
+                    <button class="search-btn-icon" id="searchIcon">
+                        <img src="img/lupa de pesquisa.png" alt="Pesquisar" class="search-icon-img">
+                    </button>
+                </div>
+            </div>
+        </section>
     <div class="informacao-secao">
          <p>Clique no card para saber preço e categoria</p> 
     </div>

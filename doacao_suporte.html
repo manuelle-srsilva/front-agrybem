@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrybem - Suporte e Ajuda</title>
+    <!-- O nome do arquivo CSS deve ser o mesmo que você usa no seu projeto, aqui estamos usando o nome do arquivo que você enviou -->
+    <link rel="stylesheet" href="style/doacao_suporte.css"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Mantido do modelo) -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+               
+                <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+            </div>
+            <nav class="nav">  
+                <a href="doacao_login.html" class="nav-button">Voltar</a>
+            </nav>
+        </div>
+    </header>
+<main>
+    <section class="support-main-section">
+        <div class="container">
+            <h1 class="support-title">Suporte para Instituições</h1>
+            <p class="support-subtitle">
+                Tudo o que você precisa saber para cadastrar sua instituição, receber doações e ajudar ainda mais quem precisa.
+            </p>
+
+            <!-- Grid de Opções de Suporte -->
+            <div class="support-options-grid">
+
+                <!-- Opção 1: Cadastro de Instituição -->
+                <a href="#cadastro-instituicao" class="support-card">
+                    <div class="card-icon-box">
+                        <img src="img/supote rede.png" alt="Ícone Cadastro" class="card-icon">
+                    </div>
+                    <h3 class="card-title">Como se cadastrar</h3>
+                    <p class="card-text">
+                        Aprenda o passo a passo para registrar sua instituição de caridade, ONG ou igreja e começar a receber doações no Agrybem.
+                    </p>
+                </a>
+
+                <!-- Opção 2: Gerenciar Perfil -->
+                <a href="#perfil-instituicao" class="support-card">
+                    <div class="card-icon-box">
+                        <img src="img/supote pontas.png" alt="Ícone Perfil" class="card-icon">
+                    </div>
+                    <h3 class="card-title">Dicas de Perfil</h3>
+                    <p class="card-text">
+                        Saiba como deixar o perfil da sua instituição mais visível, transparente e atrativo para doadores.
+                    </p>
+                </a>
+
+                <!-- Opção 3: Dúvidas Frequentes -->
+                <a href="#faq-section" class="support-card">
+                    <div class="card-icon-box">
+                        <img src="img/suporte perguntas-frequentes.png" alt="Ícone FAQ" class="card-icon">
+                    </div>
+                    <h3 class="card-title">Perguntas Frequentes</h3>
+                    <p class="card-text">
+                        Encontre respostas sobre cadastros, doações e exibição de localização no mapa solidário.
+                    </p>
+                </a>
+
+            </div>
+
+            <div class="contato-eqp">
+                <!-- Bloco 1: Contato -->
+                <div class="info-block">
+                    <h3 class="info-title">Entre em contato com nossa equipe</h3>
+                    <div class="info-text">
+                        <p>Se tiver dúvidas sobre o processo de doações ou precisar de suporte técnico, fale com a equipe Agrybem através do e-mail <a href="mailto:agrybem@gmail.com">agrybem@gmail.com</a>.</p>
+                        <p>Responderemos o mais rápido possível para garantir que sua instituição esteja pronta para receber ajuda com segurança e transparência.</p>
+                        <p class="tip-text"><strong>Dica:</strong> Inclua no e-mail o nome da instituição e uma breve descrição da dúvida para agilizar o suporte.</p>
+                    </div>
+                </div>
+
+                <!-- Bloco 2: Cadastro da Instituição -->
+                <div id="cadastro-instituicao" class="info-block">
+                    <h3 class="info-title">Como cadastrar sua instituição no Agrybem</h3>
+                    <div class="info-text">
+                        <p>O cadastro é simples e gratuito! Siga os passos abaixo para colocar sua instituição no mapa da solidariedade:</p>
+                        <ul>
+                            <li>Acesse “Cadastre-se” no formulário de login.</li>
+                            <li>Preencha os dados principais</li>
+                            <li>Adicione o endereço completo</li>
+                            <li>Descreva brevemente sua missão e o público atendido.</li>
+                            <li>Envie uma imagem representativa ou o logotipo da instituição.</li>
+                        </ul>
+                        <p>Após o cadastro, sua instituição será exibida no catálogo do Agrybem, permitindo que produtores, comerciantes e consumidores possam doar diretamente a você.</p>
+                    </div>
+                </div>
+
+                <!-- Bloco 3: Gerenciar Perfil -->
+                <div id="perfil-instituicao" class="info-block">
+                    <h3 class="info-title">Torne seu perfil mais atrativo para doadores</h3>
+                    <div class="info-text">
+                        <p>Um perfil bem montado ajuda a transmitir confiança e atrair mais doações. Veja algumas boas práticas:</p>
+                        <ul>
+                            <li>Use uma boa foto de capa e perfil, que mostre o trabalho da instituição.</li>
+                            <li>Adicione informações atualizadas sobre campanhas e necessidades.</li>
+                            <li>Descreva com clareza quem vocês ajudam e como as doações são utilizadas.</li>
+                            <li>Responda com rapidez aos doadores interessados.</li>
+        
+                        </ul>
+                        <p>Essas práticas fortalecem a credibilidade da instituição e incentivam mais pessoas a participar da rede solidária Agrybem.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bloco 4: FAQ -->
+            <section class="faq-section" id="faq-section">
+                <div class="container">
+                    <h2 class="section-title">Perguntas Frequentes</h2>
+                    <div class="accordion">
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq1" class="accordion-toggle" hidden>
+                            <label for="faq1" class="accordion-header">
+                                O cadastro de instituições tem algum custo?
+                                <img src="img/seta-para-baixo (1).png" alt="Abrir" class="accordion-icon">
+                            </label>
+                            <div class="accordion-content">
+                                <p>Não. Todo o processo é gratuito — o Agrybem é uma plataforma colaborativa que apoia o combate à fome e o desperdício.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq2" class="accordion-toggle" hidden>
+                            <label for="faq2" class="accordion-header">
+                                Como minha instituição aparece para os doadores?
+                                <img src="img/seta-para-baixo (1).png" alt="Abrir" class="accordion-icon">
+                            </label>
+                            <div class="accordion-content">
+                                <p>Sua localização e informações básicas ficam visíveis no mapa do Agrybem, permitindo que doadores encontrem instituições próximas.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq3" class="accordion-toggle" hidden>
+                            <label for="faq3" class="accordion-header">
+                                Quem pode doar para minha instituição?
+                                <img src="img/seta-para-baixo (1).png" alt="Abrir" class="accordion-icon">
+                            </label>
+                            <div class="accordion-content">
+                                <p>Produtores, comerciantes e consumidores cadastrados na plataforma podem doar alimentos ou produtos diretamente à sua instituição.</p>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <input type="checkbox" id="faq4" class="accordion-toggle" hidden>
+                            <label for="faq4" class="accordion-header">
+                                Posso editar meus dados depois do cadastro?
+                                <img src="img/seta-para-baixo (1).png" alt="Abrir" class="accordion-icon">
+                            </label>
+                            <div class="accordion-content">
+                                <p>Sim. É possível atualizar informações e fotos no painel da instituição a qualquer momento.</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </section>
+</main>
+
+
+
+</html>

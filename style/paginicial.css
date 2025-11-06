@@ -340,6 +340,7 @@ body {
     text-decoration: none; /* tira o sublinhado */
       box-shadow: 0 2px 10px rgba(129, 28, 28, 0.295);
   
+
 }
 
 .donation-button:hover {
@@ -499,267 +500,158 @@ body {
     transform: scale(1.1);
 }
 
-/* ==================================================================== */
-/* ======================== RESPONSIVIDADE MOBILE ===================== */
-/* ==================================================================== */
-
+/* Responsive Design */
 @media (max-width: 768px) {
-    .container {
-        padding: 0 15px; /* Reduz o padding lateral */
-    }
-
-    /* HEADER */
-    .header .container {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .nav {
-        margin-top: 10px;
-        width: 100%;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    
-    .nav-link, .nav-button {
-        font-size: 14px;
-        padding: 8px 16px;
-    }
-    
-    /* HERO SECTION */
-    .hero {
-        min-height: 450px; /* Altura ajustada */
-        background-position: center top; /* Foca a imagem no topo */
-        border-bottom-left-radius: 30px;
-        border-bottom-right-radius: 30px;
-        padding-bottom: 20px;
-    }
-
-    .hero-container {
-        grid-template-columns: 1fr; /* Coluna única */
-        gap: 20px;
-    }
-
-    .hero-content {
-        padding-right: 0;
-        text-align: left;
-    }
-
-    .hero-title {
-        font-size: 32px; /* Reduz o tamanho da fonte */
-        margin-bottom: 15px;
-        color: white; /* Cor da fonte branca conforme a imagem de referência */
-        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-    }
-    
-    /* PRODUCTS SECTION */
-    .products {
-        padding: 40px 0;
-        margin-top: -30px; /* Ajusta a sobreposição */
-        border-top-left-radius: 30px;
-        border-top-right-radius: 30px;
-        background-color: #f5f5f5; /* Cor de fundo mais clara conforme a imagem */
-    }
-
-    .section-title {
-        font-size: 28px;
-        margin-bottom: 30px;
-        text-align: left; /* Alinha o título à esquerda */
-        padding-left: 15px; /* Adiciona padding para alinhar com o container */
-    }
-    
-    .products .container {
-        padding: 0; /* Remove o padding do container para o carrossel ocupar a largura total */
-    }
-
-    /* Ajuste do Carrossel para Mobile */
-    .carousel-wrapper {
-        margin-left: 0; /* Remove o truque de largura total, pois o container já está sem padding */
-        width: 100%;
-    }
-    
-    .products-carousel {
-        animation: scroll-left 40s linear infinite; /* Reativa a animação de carrossel contínuo */
-        overflow-x: hidden; /* Esconde o conteúdo que ultrapassa a largura */
-        -webkit-overflow-scrolling: touch;
-        padding: 20px 0; /* Ajusta o padding vertical */
-        width: calc(150px * 10 + 15px * 9); /* Largura ajustada para 10 cards de 150px + espaçamento */
-    }
-    
-    .products-carousel::-webkit-scrollbar {
-        display: none; /* Esconde a barra de rolagem */
-    }
-
-    /* Animação de Carrossel Contínuo (Ajustada para Mobile) */
-    @keyframes scroll-left {
-        0% {
-            transform: translateX(0);
-        }
-        100% {
-            /* Move a largura de 5 cards + 5 espaçamentos.
-               (150px * 5) + (15px * 5) = 750px + 75px = 825px. */
-            transform: translateX(calc(-1 * (150px * 5 + 15px * 5))); 
-        }
-    }
-
-    .product-card {
-        width: 150px; /* Reduz o tamanho do card */
-        height: 150px;
-        margin-right: 15px; /* Reduz o espaçamento */
-        border-radius: 15px;
-    }
-    
-    .product-img {
-        height: 150px;
-    }
-    
-    /* ABOUT SECTION */
-    .about {
-        padding: 40px 0;
-    }
-
-    .about-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .about-image {
-        order: -1; /* Move a imagem para cima do texto */
-    }
-    
-    .about-title {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-    
-    .about-text {
-        font-size: 16px;
-    }
-    
-    .about-image-accent {
-        display: none; /* Remove o detalhe de acento */
-    }
-    
-    .about-img {
-        border-radius: 15px;
-    }
-
-    /* DONATION SECTION */
-    .donation {
-        padding: 40px 0;
-    }
-
-    .donation-container {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .donation-title {
-        font-size: 28px;
-        margin-bottom: 15px;
-    }
-    
-    .donation-text {
-        font-size: 16px;
-        margin-bottom: 20px;
-    }
-    
-    .donation-image {
-        order: -1; /* Move a imagem para cima do texto */
-    }
-    
-    .donation-button {
-        width: 100%;
-        text-align: center;
-        padding: 12px 20px;
-        font-size: 16px;
-    }
-
-    /* CTA SECTION */
-    .cta {
-        padding: 40px 0;
-    }
-
+    .hero-container,
+    .about-container,
+    .donation-container,
     .cta-container {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .cta-image {
-        order: -1; /* Move a imagem para cima do texto */
-    }
-    
-    .cta-title {
-        font-size: 32px;
-        text-align: center;
-    }
-    
-    /* FOOTER */
-    .footer {
-        padding: 10px 0;
+        gap: 40px;
     }
 
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        gap: 5px;
-    }
-    
-    .footer-logo-text {
-        font-size: 20px;
-    }
-    
-    .footer-tagline {
-        font-size: 14px;
-        padding: 5px 0;
-        transform: none; /* Remove a translação */
-    }
-    
-    /* COPYRIGHT SECTION */
-    .copyright-section {
-        padding: 15px 0;
-    }
+.products-grid {
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 20px; */
+}
 
-    .copyright-container {
-        flex-direction: column;
-        gap: 10px;
-        text-align: center;
+.carousel-wrapper {
+    /* No mobile, o carrossel ainda pode ser de largura total, mas o tamanho do card pode ser ajustado */
+    margin-left: 0;
+    width: 100%;
+}
+
+.products-carousel {
+    /* Ajuste a largura total e a animação para o mobile se necessário.
+       Por exemplo, para mostrar 1 card por vez no mobile, defina a largura do card para 80vw.
+       Aqui, vamos manter a animação, mas ajustar o tamanho do card. */
+    width: calc(80vw * 10 + 20px * 9); /* 10 cards * 80vw + 9 espaçamentos */
+    animation-duration: 30s; /* Animação mais rápida no mobile */
+}
+
+.product-card {
+    width: 80vw; /* Largura do card no mobile */
+    margin-right: 20px; /* Espaçamento entre os cards no mobile */
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
     }
-    
-    .copyright-info,
-    .copyright-address,
-    .copyright-social {
-        flex-basis: 100%;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-    }
-    
-    .copyright-social {
-        order: -1; /* Move os ícones sociais para o topo da seção */
+    100% {
+        /* Move a largura de 5 cards + 5 espaçamentos.
+           (80vw * 5) + (20px * 5) = 400vw + 100px. */
+        transform: translateX(calc(-1 * (80vw * 5 + 20px * 5))); 
     }
 }
 
-/* Ajustes finos para telas muito pequenas (ex: 320px) */
-@media (max-width: 480px) {
-    .hero-title {
-        font-size: 28px;
-    }
-    
-    .section-title, .about-title, .donation-title {
-        font-size: 24px;
-    }
-    
+    .hero-title,
     .cta-title {
-        font-size: 28px;
+        font-size: 36px;
     }
-    
-    .product-card {
-        width: 120px;
-        height: 120px;
+
+    .section-title,
+    .about-title,
+    .donation-title {
+        font-size: 32px;
     }
-    
-    .product-img {
-        height: 120px;
+
+    .nav {
+        gap: 15px;
     }
+
+    .nav-link {
+        font-size: 14px;
+    }
+}
+
+
+/* Efeito de Salto para a Exclamação */
+.exclamation {
+    display: inline-block; /* Permite aplicar a transformação de movimento */
+    animation: bounce 2s infinite; /* Aplica a animação: 2 segundos, infinito */
+    transform-origin: bottom; /* Faz a animação parecer um salto a partir da base */
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0); /* Posições de repouso */
+    }
+    40% {
+        transform: translateY(-10px); /* Salto para cima (40% do tempo) */
+    }
+    60% {
+        transform: translateY(-5px); /* Salto menor (60% do tempo) */
+    }
+}
+@media (max-width: 768px) {
+  .header {
+    padding: 10px 0;
+  }
+
+  .header .container {
+    display: flex;
+    flex-direction: row; /* mantém tudo lado a lado */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+    text-align: left;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .nav-button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
+}
+@media (max-width: 768px) {
+  .nav-link:first-child {
+    display: none; /* Esconde o primeiro link (Instituição) no mobile */
+  }
+
+  .header .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 15px;
+  }
+
+  .logo-text {
+    font-size: 20px;
+    white-space: nowrap;
+  }
+
+  .nav {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .nav-link {
+    font-size: 13px;
+    padding: 4px 6px;
+  }
+
+  .nav-button {
+    font-size: 13px;
+    padding: 6px 10px;
+  }
 }

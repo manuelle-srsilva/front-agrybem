@@ -1,65 +1,67 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrybem - Login Empresarial</title>
-    <link rel="stylesheet" href="style/doacao_login.css  ">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <!-- Header -->
-    <header class="header">
-        <div class="container">
-            <div class="logo">
-               
-                <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+    <html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Agrybem - Login Empresarial</title>
+        <link rel="stylesheet" href="style/doacao_login.css  ">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="logo">
+                
+                    <span class="logo-text">Agry<span class="logo-highlight">bem</span></span>
+                </div>
+                <nav class="nav">  
+                    <a href="doacao_suporte.html" class="nav-link">Suporte</a>
+                    <a href="paginicial.html" class="nav-button">Voltar ao início</a>
+                </nav>
             </div>
-            <nav class="nav">  
-                <a href="paginicial.html" class="nav-button">Voltar ao início</a>
-            </nav>
-        </div>
-    </header>
+        </header>
 
-    </header>
+        </header>
 
-    <!-- Main Section -->
-    <section class="main-section">
-        <div class="container main-container">
-            
+        <!-- Main Section -->
+        <section class="main-section">
+            <div class="container main-container">
+                
 
-            <!-- Right Side - Login Form -->
-            <div class="right-content">
-                <div class="login-box">
-                    <h2>Conecte-se à sua conta institucional </h2>
-                    <p class="subtitle">Agrybem para o bem!</p>
-                    
-                    <form class="login-form">
-                        <div class="form-group">
-                            <label for="cnpj">Digite seu CNPJ</label>
-                            <input type="text" id="cnpj" name="cnpj" placeholder="">
-                        </div>
+                <!-- Right Side - Login Form -->
+                <div class="right-content">
+                    <div class="login-box">
+                        <h2>Conecte-se à sua conta institucional </h2>
+                        <p class="subtitle">Agrybem para o bem!</p>
                         
-                        <div class="form-group">  
-                            <label for="senha">Digite sua Senha</label>
-                            <input type="password" id="senha" name="senha" placeholder="">
-                        </div>
-                        
-                  <a href="doacao_pag_principal.html" class="btn-entrar">ENTRAR</a>
-                        
-                        <p class="cadastro-link">
-                            Não tem conta ainda? <a href="doacao_cadastro.html">Cadastre-se</a>
-                        </p>
-                    </form>
+                        <form class="login-form">
+                            <div class="form-group">
+                                <label for="cnpj">Digite seu CNPJ</label>
+                                <input type="text" id="cnpj" name="cnpj" placeholder="">
+                            </div>
+                            
+                            <div class="form-group">  
+                                <label for="senha">Digite sua Senha</label>
+                                <input type="password" id="senha" name="senha" placeholder="">
+                                <div class="recuperacao-senha"><a href="doacao_senha.html">Esqueceu a senha?</a></div>
+                            </div>
+                            
+                    <a href="doacao_pag_principal.html" class="btn-entrar">ENTRAR</a>
+                            
+                            <p class="cadastro-link">
+                                Não tem conta ainda? <a href="doacao_cadastro.html">Cadastre-se</a>
+                            </p>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Footer -->
-     <footer class="footer">
+<!-- Footer fixo para todas as pag -->
+    <footer class="footer">
         <div class="container footer-container">
             <div class="footer-logo">
                 
@@ -70,6 +72,50 @@
             </div>
         </div>
     </footer>
-</body>
-</html>
+  
 
+     <!-- Seção de Copyright (Nova) -->
+    <section class="copyright-section">
+        <div class="container copyright-container">
+            <!-- Coluna 1: Copyright e Direitos -->
+            <div class="copyright-info">
+                <p class="copyright-text">
+                    &copy;  2025 - Agrybem 
+                </p>
+                <p class="copyright-text-small">
+                    Agrybem Agência de Negócios Agrícolas e Bem-Estar 
+                </p>
+            </div>
+
+
+            <!-- Coluna 2: CNPJ e Endereço (Adaptado para o contexto Agrybem) -->
+            <div class="copyright-address">
+                <p class="copyright-text-small">
+                    Camaçari/BA  | agrybem@gmail.com
+                </p>
+            </div>
+
+
+            <!-- Coluna 3: Ícones Sociais -->
+            <div class="copyright-social">
+                
+                <a href="https://www.instagram.com/agrybem?igsh=MW55dW04M3B2bXJvMA%3D%3D&utm_source=qr" target="_blank">
+                    <img src="img/instagram (1).png" alt="Instagram Agrybem" class="icon social-icon">
+                </a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Api Vlibras -->
+    <div vw class="enabled">
+    <div vw-access-button class="active"></div>
+    <div vw-plugin-wrapper>
+        <div class="vw-plugin-top-wrapper"></div>
+    </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+    new window.VLibras.Widget('https://vlibras.gov.br/app/vlibras-plugin.js');
+    </script>
+    </body>
+    </html>
