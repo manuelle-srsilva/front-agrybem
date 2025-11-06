@@ -351,14 +351,12 @@ body {
      transform: translatex( 160px);
     
 }
-<<<<<<< HEAD
 @media screen and (max-width: 768px) {
   body { transform: scale(0.85); zoom: 0.85; overflow-x: hidden; }
   .login-box { width: 90%; max-width: 400px; margin: auto; }
   input, button { font-size: 0.9rem; }
 }
-@media screen and (max-width: 480px) { body { transform: scale(0.75); zoom: 0.75; } }
-=======
+@media screen and (max-width: 480px) { body { transform: scale(1); zoom: 0.75; } }
 /* ===========================
    COPYRIGHT SECTION
 =========================== */
@@ -458,4 +456,351 @@ body {
         background-size: contain;
     }
 }
->>>>>>> 93ab08c508d522e3f6222c77c195333378a00fe8
+/* Reset e configurações globais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-highlight {
+    color: #5A8F3A;
+}
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+
+.voltar-inicio {
+    text-decoration: none;
+    color: #333;
+    font-weight: 400;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.voltar-inicio:hover {
+    color: #6b8e23;
+}
+
+/* Main Section */
+.main-section {
+  /* Imagem de fundo ajustada para o mobile */
+  background-image: url("/img/login\ cliente.png");
+  background-size: cover;             
+  background-repeat: no-repeat;
+  background-position: center center;  /* Centraliza a imagem */
+  background-color: #e8f5e0;          
+  min-height: 100vh;                  /* Ocupa a altura total da viewport */
+  display: flex;
+  align-items: center; 
+  justify-content: center; /* Centraliza o conteúdo principal */
+}
+
+.main-container {
+    /* Remove o layout de duas colunas para o mobile */
+    display: block; 
+    position: static;
+    z-index: 2;
+    padding: 0; /* Remove padding desnecessário */
+}
+
+/* Left Content - Removido no mobile, mas mantido para desktop */
+.left-content {
+    display: none; /* Esconde o conteúdo da esquerda no mobile */
+}
+
+/* Right Content - Login Box Container */
+.right-content {
+    /* Centraliza o box de login na tela */
+    flex: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.login-box {
+    /* Estilo do box de login conforme a imagem de referência */
+    background-color: rgba(255, 255, 255, 0.7); /* Fundo branco semi-transparente */
+    backdrop-filter: blur(5px); /* Efeito de desfoque */
+    border-radius: 30px;
+    padding: 40px 30px; /* Aumenta o padding interno */
+    width: 90%; /* Ocupa a maior parte da largura */
+    max-width: 400px;
+    transform: none; /* Remove a translação */
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.login-box h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #315901; /* Cor mais escura conforme a imagem */
+    margin-bottom: 5px;
+    transform: none;
+}
+
+.subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5A8F3A;
+    margin-bottom: 30px;
+    transform: none;
+}
+
+/* Form Styles */
+.login-form {
+    gap: 20px;
+}
+
+.form-group {
+    gap: 5px;
+    text-align: left;
+}
+
+.form-group label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    margin-left: 15px; /* Alinha o label com o input */
+}
+
+.form-group input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group input:focus {
+    box-shadow: 0 0 0 3px rgba(90, 143, 58, 0.5);
+}
+
+.recuperacao-senha {
+    text-align: right;
+    margin-top: 5px;
+}
+
+.recuperacao-senha a {
+    font-size: 12px;
+    color: #315901;
+    font-weight: 500;
+}
+
+.btn-entrar {
+    background-color: #1A4D2E;
+    color: white;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 100%; /* Ocupa a largura total do box */
+    max-width: 200px; /* Limita a largura do botão */
+    align-self: center;
+}
+
+.cadastro-link {
+    font-size: 14px;
+    color: #333;
+    margin-top: 15px;
+    transform: none;
+}
+
+.cadastro-link a {
+    color: #315901;
+    font-weight: 700;
+}
+
+/* Footer - Ajustado para o mobile */
+.footer {
+    /* Remove o footer padrão e usa o estilo da imagem de referência */
+    background-color: #5A8F3A; /* Cor de fundo verde */
+    padding: 0;
+    border-top: none;
+    position: fixed; /* Fixa no rodapé */
+    bottom: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+}
+
+.footer-logo {
+    /* Logo no canto inferior esquerdo */
+    background-color: #315901; /* Cor de fundo mais escura */
+    padding: 10px 20px;
+    border-top-right-radius: 20px;
+    gap: 5px;
+}
+
+.footer-logo-text {
+    font-size: 18px;
+    color: white;
+}
+
+.footer-logo-highlight {
+    color: #9bff5d;
+}
+
+.footer-tagline {
+    /* Tagline no canto inferior direito */
+    color: white;
+    font-weight: 600;
+    font-size: 14px;
+    padding: 10px 20px;
+    transform: none;
+    text-align: right;
+    flex-grow: 1;
+}
+
+/* Remove a seção de copyright no mobile, pois não aparece na imagem de referência */
+.copyright-section {
+    display: none;
+}
+
+/* Regras de responsividade para desktop (revertendo o que foi feito no mobile) */
+@media (min-width: 769px) {
+    .main-section {
+        min-height: 80vh;
+        justify-content: flex-start;
+    }
+    
+    .main-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        gap: 80px;
+        padding: 0 20px;
+    }
+    
+    .left-content {
+        display: flex;
+        /* Reintroduzir estilos originais de desktop se necessário */
+    }
+    
+    .right-content {
+        justify-content: flex-end;
+        padding: 80px 40px;
+    }
+    
+    .login-box {
+        background-color: #c8d5b9;
+        backdrop-filter: none;
+        box-shadow: none;
+        transform: translateX(-320px); /* Retorna a translação original */
+    }
+    
+    .footer {
+        position: static;
+        background-color: #D9D9D9;
+        padding: 2px 0;
+    }
+    
+    .footer-logo {
+        background-color: transparent;
+        padding: 0;
+    }
+    
+    .footer-logo-text {
+        color: #000000;
+    }
+    
+    .footer-logo-highlight {
+        color: #0e2500;
+    }
+    
+    .footer-tagline {
+        color: #002c0b;
+        padding: 20px 200px;
+        transform: translatex( 160px);
+    }
+    
+    .copyright-section {
+        display: block;
+    }
+}

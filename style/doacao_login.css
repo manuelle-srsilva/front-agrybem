@@ -450,10 +450,210 @@ body {
     }
 }
 
+/* =====================
+   TABLET (largura entre 421px e 1024px)
+   ===================== */
+@media (min-width: 421px) and (max-width: 1024px) {
+    /* Cabeçalho reduzido, mas não fixo */
+    .header {
+        position: sticky;
+        top: 0;
+        padding: 12px 18px;
+        background-color: rgba(217,217,217,0.98);
+    }
+
+    .header .container { align-items: center; }
+
+    /* Mostra menos elementos laterais para foco no login */
+    .left-content, .keywords { display: none; }
+
+    /* Seção principal com mais espaço vertical */
+    .main-section {
+        min-height: 80vh;
+        padding: 40px 16px;
+        background-position: center top;
+        background-size: cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* Login box maior que mobile, centrado, sem transform */
+    .login-box {
+        transform: none;
+        max-width: 640px;
+        width: calc(100% - 120px);
+        padding: 36px 36px;
+        border-radius: 22px;
+        background-color: rgba(255,255,255,0.95);
+        box-shadow: 0 14px 40px rgba(0,0,0,0.18);
+    }
+
+    .login-box h2 { font-size: 20px; }
+    .subtitle { font-size: 14px; margin-bottom: 20px; }
+
+    /* Inputs com altura um pouco maior e arredondamento moderado */
+    .form-group input {
+        height: 48px;
+        padding: 12px 18px;
+        border-radius: 28px;
+        font-size: 15px;
+    }
+
+    .form-group { gap: 16px; }
+
+    /* Botão maior e centralizado */
+    .btn-entrar {
+        width: 220px;
+        padding: 14px 26px;
+        border-radius: 999px;
+        margin: 12px auto 8px auto;
+        display: block;
+        font-size: 16px;
+    }
+
+    .cadastro-link { font-size: 14px; margin-top: 8px; }
+
+    /* Footer padrão (não fixo) para tablet */
+    .footer {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        right: auto;
+        background-color: #D9D9D9;
+        padding: 12px 20px;
+        border-top: 1px solid #e0e0e0;
+    }
+
+    /* evita espaço extra no body (contrário ao mobile) */
+    body { padding-bottom: 0; }
+}
+
 
 /* Estilos adicionados para o link "Esqueceu a senha?" */
 .recuperacao-senha a {
     font-size: 12px;
     text-decoration: none;
     color: #008b00;
+}
+
+/* =====================
+   MOBILE: Ajustes para ficar similar ao mockup (tela celular)
+   ===================== */
+@media (max-width: 480px) {
+    /* Header compacto e fixo */
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        padding: 8px 12px;
+        background-color: rgba(217,217,217,0.98);
+        z-index: 1200;
+        box-shadow: none;
+    }
+
+    .header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 8px;
+        padding: 0;
+    }
+
+    .logo-text { font-size: 14px; }
+
+    .nav { gap: 8px; }
+    .nav-link { font-size: 13px; }
+    .nav-button { padding: 6px 10px; font-size: 13px; border-radius: 6px; }
+
+    /* Esconder conteúdos desnecessários no mobile */
+    .left-content, .keywords, .icon-box, .footer-tagline {
+        display: none;
+    }
+
+    /* Ajusta a seção principal para ocupar a tela inteira e aplicar overlay */
+    .main-section {
+        min-height: 100vh;
+        padding-top: 64px; /* espaço para header fixo */
+        background-position: center;
+        background-size: cover;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    /* adiciona overlay escuro-esverdeado sobre a imagem de fundo */
+    .main-section::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: linear-gradient(180deg, rgba(0,0,0,0.25) 0%, rgba(90,143,58,0.25) 60%, rgba(0,0,0,0.45) 100%);
+        z-index: 1;
+    }
+
+    /* centraliza o box de login e remove transform usado no desktop */
+    .login-box {
+        position: relative;
+        z-index: 2; /* acima do overlay */
+        max-width: 360px;
+        width: calc(100% - 40px);
+        margin: 0 auto;
+        transform: none;
+        background-color: rgba(255,255,255,0.92);
+        padding: 28px 22px;
+        border-radius: 20px;
+        box-shadow: 0 8px 30px rgba(0,0,0,0.25);
+        backdrop-filter: blur(4px);
+    }
+
+    .login-box h2 { font-size: 18px; margin-bottom: 6px; }
+    .subtitle { font-size: 13px; margin-bottom: 18px; color: #2d6b2a; }
+
+    /* Inputs grandes em formato 'pill' */
+    .form-group input {
+        height: 46px;
+        padding: 10px 18px;
+        border-radius: 999px;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.06) inset;
+        font-size: 15px;
+    }
+
+    .form-group { gap: 14px; }
+
+    /* Botão centralizado em formato pill */
+    .btn-entrar {
+        display: block;
+        width: 160px;
+        padding: 12px 24px;
+        border-radius: 999px;
+        text-align: center;
+        margin: 10px auto 6px auto;
+    }
+
+    .cadastro-link { font-size: 13px; transform: none; margin-top: 6px; }
+
+    /* Footer fixo com cor verde e conteúdo condensado */
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: #5A8F3A;
+        color: #fff;
+        padding: 10px 12px;
+        z-index: 1200;
+        border-top: 4px solid rgba(0,0,0,0.06);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .footer .footer-logo { display: none; }
+
+    .footer-container { padding: 0; }
+
+    /* garante que o conteúdo principal não fique escondido atrás do footer */
+    body { padding-bottom: 68px; }
 }
