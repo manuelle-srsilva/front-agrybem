@@ -1278,3 +1278,4 @@ body {
     .copyright-info, .copyright-address { flex: 1 1 auto; text-align: left; }
     .copyright-social { flex: 0 0 auto; display: flex; justify-content: flex-end; }
 }
+
