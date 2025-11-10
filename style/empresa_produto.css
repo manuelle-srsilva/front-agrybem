@@ -165,9 +165,7 @@ html, body {
 /* ===== HERO SECTION ===== */
 .hero {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                url('/img/clienete\ pag\ principal.png') center/cover;
-    height: 550px;
+   background-color: transparent; /* Cor de fundo removida */    height: 650px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -178,7 +176,28 @@ html, body {
   border-bottom-right-radius: 50px;
 
   position: relative; /* permite controlar sobreposição */
-  z-index: 2; /* fica acima da próxima seção */
+    z-index: 2; /* fica acima da próxima seção */
+    overflow: hidden; /* Garante que a imagem de fundo não vaze */
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Overlay de cor */
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
 }
 
 
@@ -693,7 +712,14 @@ html, body {
         font-size: 18px;
     }
     .menu-icon-img{
-        content-visibility: hidden;
+	    content-visibility: hidden;
+	}
+}
+
+/* Ajuste para telas maiores (Desktop) */
+@media (min-width: 1025px) {
+    .hero {
+        height: 750px; /* Altura aumentada para desktop */
     }
 }
 
