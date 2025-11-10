@@ -279,12 +279,19 @@ body {
   height: 40px;
   transition: transform 0.3s ease;
 }
+<<<<<<< HEAD
 
 .icon:hover {
   transform: scale(1.1);
 }
 
 /* --- Seção de Copyright (Abaixo do Footer) --- */
+=======
+@media screen and (max-width: 480px) { body { transform: scale(1) } }
+/* ===========================
+   COPYRIGHT SECTION
+=========================== */
+>>>>>>> 727634d64b304a8a33eaf3d79b4c6eb6d8e77fb9
 .copyright-section {
     background-color: #ffffff;
     padding: 20px 0;

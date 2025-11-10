@@ -70,6 +70,18 @@ body {
     color: #5A8F3A;
 }
 
+.nav-separator {
+       text-decoration: none;
+    color: #1a1a1a;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+
+.nav-separator:hover {
+    color: #5A8F3A;
+}
 .nav-button {
     background-color: #315901;
     color: white;
@@ -176,12 +188,12 @@ body {
     padding: 0 20px;
 }
 
-.products-grid {
+/* .products-grid { */
     /* Removido, substituído por .carousel-wrapper e .products-carousel */
     /* display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 30px; */
-}
+/* } */
 
 /* Estrutura do Carrossel */
 .carousel-wrapper {
@@ -414,8 +426,11 @@ body {
 
 .footer-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* center items horizontally */
     align-items: center;
+    gap: 20px;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    text-align: center;
 }
 
 .footer-logo {
@@ -435,14 +450,13 @@ body {
 }
 
 .footer-tagline {
-    
     color: rgb(255, 255, 255);
-    padding: 20px 200px;
+    padding: 20px; /* reduced horizontal padding so text centers properly */
     border-radius: 20px;
     font-weight: 600;
     font-size: 20px;
-     transform: translatex( 160px);
-    
+    transform: none;
+    text-align: center;
 }
 /* --- Seção de Copyright (Abaixo do Footer) --- */
 .copyright-section {
@@ -455,10 +469,13 @@ body {
 
 .copyright-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* keep items side-by-side on larger screens */
     align-items: center;
     gap: 20px;
-    /* O container já está definido para 1200px e centralizado */
+    flex-wrap: nowrap; /* prevent wrapping so items stay in one row */
+    width: 100%;
+    max-width: 1200px; /* keep aligned with main container */
+    margin: 0 auto;
 }
 
 .copyright-info,
@@ -468,10 +485,12 @@ body {
     display: flex;
     flex-direction: column;
     gap: 5px;
+    text-align: center; /* center text in copyright columns */
 }
 
 .copyright-info {
-    text-align: left;
+    /* centered to match footer alignment */
+    text-align: center;
 }
 
 .copyright-address {
@@ -519,12 +538,7 @@ body {
         grid-template-columns: 1fr;
         gap: 40px;
     }
-
-.products-grid {
-    /* grid-template-columns: repeat(2, 1fr);
-    gap: 20px; */
-}
-
+    
 .carousel-wrapper {
     /* No mobile, o carrossel ainda pode ser de largura total, mas o tamanho do card pode ser ajustado */
     margin-left: 0;
@@ -656,6 +670,7 @@ body {
   }
 
   .nav-link {
+    /* visibility: hidden; */
     font-size: 13px;
     padding: 4px 6px;
   }
@@ -664,4 +679,39 @@ body {
     font-size: 13px;
     padding: 6px 10px;
   }
+<<<<<<< HEAD
 }
+=======
+
+  .nav-separator {
+    display: none; /* Esconde o separador no mobile */
+  }
+
+  .hero-title {
+    color: rgb(0, 0, 0);
+    margin-bottom: 300px;
+    font-weight: 700;
+  }
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
+    }
+}
+>>>>>>> 727634d64b304a8a33eaf3d79b4c6eb6d8e77fb9
