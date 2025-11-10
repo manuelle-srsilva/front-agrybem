@@ -356,7 +356,7 @@ body {
   .login-box { width: 90%; max-width: 400px; margin: auto; }
   input, button { font-size: 0.9rem; }
 }
-@media screen and (max-width: 480px) { body { transform: scale(1); zoom: 0.75; } }
+@media screen and (max-width: 480px) { body { transform: scale(1) } }
 /* ===========================
    COPYRIGHT SECTION
 =========================== */

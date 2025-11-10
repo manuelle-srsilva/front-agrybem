@@ -439,4 +439,10 @@ body {
     max-width: 100%;
     height: auto;
   }
+   .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+  
 }

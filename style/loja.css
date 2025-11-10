@@ -883,4 +883,29 @@ html, body {
 .institution-title {
     font-size: 25px;
 }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
+    }
+    .footer-tagline{
+        transform: translateX(0px);
+        padding: 0;
+    }
+ .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
 

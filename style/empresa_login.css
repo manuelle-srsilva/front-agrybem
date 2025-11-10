@@ -377,6 +377,7 @@ body {
 .text-center {
   display: flex;
   justify-content: center;
+  margin-bottom: 30px;
 }
 .partner-info-2 {
     background-color: #f7f7f7;
@@ -1277,5 +1278,27 @@ body {
     .copyright-container { max-width: none; width: 100%; padding: 0 12px; display: flex; flex-direction: row; justify-content: space-between; align-items: center; gap: 8px; }
     .copyright-info, .copyright-address { flex: 1 1 auto; text-align: left; }
     .copyright-social { flex: 0 0 auto; display: flex; justify-content: flex-end; }
+
+     .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
+    }
 }
 
