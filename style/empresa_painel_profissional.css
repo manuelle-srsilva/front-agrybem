@@ -116,7 +116,7 @@ html, body {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    right: -50px; /* empurra 20px para a direita */
+    right: -1px; /* empurra 20px para a direita */
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);

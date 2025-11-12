@@ -61,7 +61,7 @@ html, body {
     font-weight: 500;
     font-size: 16px;
     transition: color 0.3s ease;
-     transform: translateX(50px); 
+     /* transform: translateX(50px);  */
 }
 
 .nav-link:hover {
@@ -98,7 +98,7 @@ html, body {
     color: #007411;
     padding: 8px;
     transition: color 0.3s ease;
-    transform: translateX(50px); 
+    /* transform: translateX(50px);  */
 
 }
 
@@ -116,7 +116,7 @@ html, body {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    right: -50px; /* empurra 20px para a direita */
+    right: -1px; /* empurra 20px para a direita */
     background-color: white;
     border-radius: 12px;
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
@@ -581,6 +581,9 @@ html, body {
     text-align: center;
 }
 
+/* ======================================
+   CLIENTE PAG PRINCIPAL - RESPONSIVIDADE
+   ====================================== */
 
 
 
@@ -613,6 +616,7 @@ html, body {
     margin: 0 !important;
     padding: 0 !important;
   }
+
 
 .copyright-social {
     flex-basis: 33.33%;
@@ -800,6 +804,10 @@ html, body {
 
 @media (max-width: 480px) {
   
+    .hero {
+        height: 300px;
+    }
+
 
   /* ajusta o conteúdo do card para ocupar o espaço */
 	  .donation-blur-box,
@@ -935,6 +943,8 @@ html, body {
   .logo .logo-text { font-size: 1.05rem; }
    }
    
+
+
     .search-title {
         font-size: 22px;
     }
