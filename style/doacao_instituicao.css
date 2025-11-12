@@ -51,7 +51,7 @@ body {
 }
 
 .logo-highlight {
-    color: #5A8F3A;
+    color: #8f3a3a;
 }
 
 .nav {
@@ -73,7 +73,7 @@ body {
 }
 
 .nav-button {
-    background-color: #315901;
+    background-color: #6d0000;
     color: white;
     padding: 10px 24px;
     border-radius: 8px;
@@ -86,7 +86,7 @@ body {
 }
 
 .nav-button:hover {
-    background-color: #4a7a2f;
+    background-color: #c40000;
     transform: translateY(-2px);
 }
 
@@ -99,7 +99,7 @@ body {
 
 /* ===== HEADER SECTION ===== */
 .header-section {
-    background-color: #f8f9fa;
+    background-color: #520000;
     padding: 30px 0;
     margin-bottom: 30px;
    
@@ -131,7 +131,7 @@ body {
 .institution-title {
     font-size: 32px;
     font-weight: 700;
-    color: #1a1a1a;
+    color: #ffffff;
     transition: all 0.3s ease;
 }
 
@@ -337,7 +337,7 @@ body {
 
 /* ===== FOOTER ===== */
 .footer {
-    background-color: #002c0b;
+    background-color: #4d0000;
     padding: 20px 0;
     border-top: 1px solid #e0e0e0;
 }
@@ -361,7 +361,7 @@ body {
 }
 
 .footer-logo-highlight {
-    color: #9bff5d;
+    color: #ff5d5d;
 }
 
 .footer-tagline {

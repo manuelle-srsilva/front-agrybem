@@ -170,13 +170,14 @@ html, body {
 /* ===== HERO SECTION ===== */
 .hero {
     position: relative;
-    height: 550px; /* Altura original */
+    /* Altura ajustada para ocupar 90% da altura da tela (viewport height - vh) */
+    min-height: 100vh; 
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: rgb(255, 255, 255);
     text-align: center;
-    padding: 40px 20px;
+    padding: 50px 20px; /* Mantendo um padding para o conteúdo interno */
     border-bottom-left-radius: 50px;
     border-bottom-right-radius: 50px;
     position: relative; 
@@ -205,15 +206,35 @@ html, body {
     z-index: 0;
 }
 
-/* Ajuste para telas maiores */
+/* Ajuste para telas maiores (Desktop) */
 @media (min-width: 1025px) {
     .hero {
-        height: 850px; /* Altura aumentada para desktop */
+        /* Subtrai a altura aproximada do header para que o hero ocupe 90% do espaço restante */
+        min-height: calc(97vh - 80px); 
     }
 }
 
+/* Ajuste para telas de tablet e notebooks (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        /* Mantém uma altura considerável, mas ajusta para o contexto de notebook/tablet */
+        min-height: 80vh; 
+    }
+}
 
-
+/* Ajuste para telas menores (celulares) */
+@media (max-width: 767px) {
+    .hero {
+        /* Altura menor para mobile */
+        min-height: 40vh; 
+    }
+    .hero-title {
+        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+        bottom: 40px;
+        left: 20px;
+        color: white;
+    }
+}
 
 .hero-title {
     color: white;
@@ -500,16 +521,57 @@ html, body {
 }
 
 .footer-logo-highlight {
-    color: #9bff5d;
+    color: #5A8F3A;
 }
 
 .footer-tagline {
-    color: rgb(255, 255, 255);
-    padding: 10px 20px;
-    border-radius: 20px;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Copyright Section */
+.copyright-section {
+    background-color: #e6e6e6;
+    padding: 10px 0;
+    border-top: 1px solid #D9D9D9;
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #696969;
+}
+
+.copyright-info, .copyright-address {
+    text-align: left;
+}
+
+.copyright-text {
     font-weight: 600;
-    font-size: 16px;
-    text-align: center;
+    margin-bottom: 2px;
+}
+
+.copyright-text-small {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.copyright-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
 }
 
 /* ===== RESPONSIVIDADE ===== */

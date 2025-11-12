@@ -236,7 +236,7 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #002c0b;
+    background-color: #9c9c9c;
     padding: 3px 0;
     border-top: 1px solid #e0e0e0;
 }
@@ -256,7 +256,7 @@ body {
 .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: #ffffff;
+    color: #005c05;
 }
 
 .footer-logo-highlight {
@@ -265,7 +265,7 @@ body {
 
 .footer-tagline {
     
-    color: rgb(255, 255, 255);
+    color: rgb(0, 78, 17);
     padding: 20px 200px;
     border-radius: 20px;
     font-weight: 600;
@@ -279,21 +279,21 @@ body {
   height: 40px;
   transition: transform 0.3s ease;
 }
-<<<<<<< HEAD
+
 
 .icon:hover {
   transform: scale(1.1);
 }
 
 /* --- Seção de Copyright (Abaixo do Footer) --- */
-=======
+
 @media screen and (max-width: 480px) { body { transform: scale(1) } }
 /* ===========================
    COPYRIGHT SECTION
 =========================== */
->>>>>>> 727634d64b304a8a33eaf3d79b4c6eb6d8e77fb9
+
 .copyright-section {
-    background-color: #ffffff;
+    background-color: #c2c2c2;
     padding: 20px 0;
     border-top: 1px solid #d9d9d9;
     font-size: 14px;

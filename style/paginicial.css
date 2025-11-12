@@ -418,13 +418,13 @@ body {
 }
 
 /* Footer */
-.footer {
+.footer-mobile {
     background-color: #002c0b;
     padding: 3px 0;
     border-top: 1px solid #e0e0e0;
 }
 
-.footer-container {
+.footer-mobile .footer-container {
     display: flex;
     justify-content: center; /* center items horizontally */
     align-items: center;
@@ -439,17 +439,17 @@ body {
     gap: 8px;
 }
 
-.footer-logo-text {
+.footer-mobile .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
     color: #ffffff;
 }
 
-.footer-logo-highlight {
+.footer-mobile .footer-logo-highlight {
     color: #9bff5d;
 }
 
-.footer-tagline {
+.footer-mobile .footer-tagline {
     color: rgb(255, 255, 255);
     padding: 20px; /* reduced horizontal padding so text centers properly */
     border-radius: 20px;
@@ -459,7 +459,7 @@ body {
     text-align: center;
 }
 /* --- Seção de Copyright (Abaixo do Footer) --- */
-.copyright-section {
+.copyright-mobile {
     background-color: #e6e6e6; /* Cor de fundo cinza claro, similar à imagem */
     padding: 20px 0;
     border-top: 1px solid #d9d9d9;
@@ -467,7 +467,7 @@ body {
     color: #666; /* Cor do texto cinza escuro */
 }
 
-.copyright-container {
+.copyright-mobile .copyright-container {
     display: flex;
     justify-content: space-between; /* keep items side-by-side on larger screens */
     align-items: center;
@@ -478,8 +478,8 @@ body {
     margin: 0 auto;
 }
 
-.copyright-info,
-.copyright-address {
+.copyright-mobile .copyright-mobile .copyright-info,
+.copyright-mobile .copyright-address {
     /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
     flex-basis: 33.33%; 
     display: flex;
@@ -493,11 +493,11 @@ body {
     text-align: center;
 }
 
-.copyright-address {
+.copyright-mobile .copyright-address {
     text-align: center;
 }
 
-.copyright-social {
+.copyright-mobile .copyright-social {
     flex-basis: 33.33%;
     display: flex;
     justify-content: flex-end; /* Alinha os ícones à direita */
@@ -517,14 +517,14 @@ body {
 }
 
 /* Estilo para os ícones sociais dentro da seção de copyright */
-.copyright-social .social-icon {
+.copyright-mobile .copyright-social .social-icon {
     width: 24px; /* Ícones menores para o rodapé */
     height: 24px;
     filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.copyright-social .social-icon:hover {
+.copyright-mobile .copyright-social .social-icon:hover {
     filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
     transform: scale(1.1);
 }
@@ -679,9 +679,7 @@ body {
     font-size: 13px;
     padding: 6px 10px;
   }
-<<<<<<< HEAD
-}
-=======
+
 
   .nav-separator {
     display: none; /* Esconde o separador no mobile */
@@ -692,26 +690,52 @@ body {
     margin-bottom: 300px;
     font-weight: 700;
   }
-  .footer-container {
+  .footer-mobile .footer-container {
     flex-direction: column;
     text-align: center;
     gap: 20px;
   }
     /* Mobile: empilhar elementos do copyright */
-    .copyright-container {
+    .copyright-mobile .copyright-container {
         flex-direction: column;
         align-items: center;
         gap: 12px;
     }
-    .copyright-info,
-    .copyright-address,
-    .copyright-social {
+    .copyright-mobile .copyright-mobile .copyright-info,
+    .copyright-mobile .copyright-address,
+    .copyright-mobile .copyright-social {
         flex-basis: 100%;
         justify-content: center;
         text-align: center;
     }
-    .copyright-social {
+    .copyright-mobile .copyright-social {
         justify-content: center; /* centraliza os ícones no mobile */
     }
 }
->>>>>>> 727634d64b304a8a33eaf3d79b4c6eb6d8e77fb9
+
+
+/* ------------------------------------------------------------------- */
+/* LÓGICA RESPONSIVA: EXIBIR O FOOTER CORRETO */
+/* ------------------------------------------------------------------- */
+
+/* Por padrão (Mobile-First), exibe o footer mobile e esconde o desktop */
+.footer-desktop, .copyright-desktop {
+    display: none !important;
+}
+
+.footer-mobile, .copyright-mobile {
+    display: block !important;
+}
+
+/* Media Query para Desktop/PC (a partir de 769px) */
+@media (min-width: 769px) {
+    /* Esconde o footer mobile */
+    .footer-mobile, .copyright-mobile {
+        display: none !important;
+    }
+
+    /* Exibe o footer desktop */
+    .footer-desktop, .copyright-desktop {
+        display: block !important;
+    }
+}
