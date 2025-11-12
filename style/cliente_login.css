@@ -81,16 +81,27 @@ body {
     background-color: #4a7a2f;
     transform: translateY(-2px);
 }
-
+/* até aqui*/   
 /* Main Section */
 .main-section {
-  background-color: #e8f5e0;
-  min-height: 650px;
+  background-color: #e8f5e0;          /* cor de fundo suave */
+  /* Imagem movida para o HTML */
+  min-height: 650px;                  /* garante altura boa */
   display: flex;
   align-items: center; 
-  margin-bottom: 0;
-  position: relative;
-  overflow: hidden;
+  margin-bottom: 0; /* Ajuste para remover o espaço em branco */
+  position: relative; /* Necessário para posicionar a imagem e o overlay */
+  overflow: hidden; /* Garante que a imagem de fundo não vaze */
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.1); /* Overlay suave para manter o contraste */
+    z-index: 1;
 }
 
 .hero-img {
@@ -101,7 +112,7 @@ body {
     top: 0;
     left: 0;
     z-index: 0;
-    object-position: right center;
+    object-position: right center; /* Mantém o foco no agricultor à direita */
 }
 
 
@@ -113,6 +124,78 @@ body {
     position: relative;
     z-index: 2;
 
+}
+
+/* Left Content */
+.left-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: -500px;
+}
+
+.keywords {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transform: translateX(-150px) translateY(150px);
+   
+}
+
+.keyword-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-keyword {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-box {
+    background-color: #6b8e23;
+    padding: 15px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+    height: 80px;
+}
+
+.icon-box img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+}
+
+.keyword-text-bordered {
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+    background-color: transparent;
+    border: 3px solid white;
+    border-radius: 50px;
+    padding: 15px 40px;
+}
+
+.keyword-text-plain {
+    font-size: 42px;
+    font-weight: 600;
+    color: white;
+}
+
+.keyword-text-highlight {
+    font-size: 42px;
+    font-weight: 600;
+    background-color: #00ff00;
+    color: #1a4d2e;
+    border-radius: 50px;
+    padding: 15px 60px;
 }
 
 /* Right Content - Login Box */
@@ -130,8 +213,7 @@ body {
     padding: 10px 30px;
     width: 100%;
     max-width: 400px;
-    /* Ajuste para mover o formulário para a esquerda: */
-    transform: translateX(-350px); /* Movido de 80px para -100px */
+    transform: translateX(-370px);
      text-align: center;
 }
 
@@ -220,7 +302,7 @@ body {
     font-size: 14px;
     color: #333;
     margin-top: 10px;
-   
+     transform: translateY(-15px);
 }
 
 .cadastro-link a {
@@ -234,11 +316,189 @@ body {
     color: #6b8e23;
 }
 
+/* --- Novas Seções de Parceiros (Partner Info) --- */
+
+/* Seção 1: Imagem e Texto */
+.partner-info-1 {
+    background-color: rgb(238, 238, 238);
+    padding:  150px 0;
+}
+
+.partner-info-1 .partner-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+}
+
+.partner-image-wrapper {
+    flex-shrink: 0;
+    width: 400px; /* Ajuste conforme a imagem */
+    height: 400px; /* Ajuste conforme a imagem */
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: #003f0a; /* Cor de fundo que parece na imagem */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.partner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.1); /* Para simular o encaixe na borda */
+}
+
+.partner-content {
+    flex-grow: 1;
+}
+
+.partner-title {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: 30px;
+  
+}
+
+.partner-text {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.partner-button {
+    display: inline-block;
+    background-color: #085a00; /* Cor do botão na imagem */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+.partner-button:hover {
+    background-color: #30cc00;
+}
+
+/* Seção 2: Vantagens */
+
+.partner-title .section-title{
+      text-align: center;
+      
+}
+.section-title{
+       text-align: center;
+}
+.text-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+    .partner-info-2 {
+        background-color: #f7f7f7;
+        padding: 50px 20px;
+        text-align: center; /* Centralizar texto */
+    }
+
+.advantages-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+
+.advantage-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 15px;
+   align-items: center;
+}
+
+.advantage-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    
+ 
+}
+
+.advantage-text {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.partner-button-secondary {
+    display: inline-block;
+    background-color: #0a7500;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+   justify-content: center; 
+}
+
+.partner-button-secondary:hover {
+    background-color: #07cc00;
+}
+
+.inform-suporte{
+    text-align: center;
+    padding: 15px 30px;
+    
+}
+
+/* Seção 3: Passos */
+.partner-info-3 {
+    background-color: white;
+    padding:  95px ;
+    text-align: center;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    margin-top: 50px;
+    
+}
+
+.step-icon {
+    width: 120px; /* Ajuste conforme o ícone */
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 20px;
+}
+
+.step-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.step-text {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #555;
+    
+}
+
+
 /* Footer */
 .footer {
-    background-color: #9c9c9c;
+    background-color: #818181;
     padding: 3px 0;
-    border-top: 1px solid #e0e0e0;
+    border-top: 1px solid #afafaf;
 }
 
 .footer-container {
@@ -256,7 +516,7 @@ body {
 .footer-logo-text {
     font-size: 24px;
     font-weight: 700;
-    color: #005c05;
+    color: #000000;
 }
 
 .footer-logo-highlight {
@@ -265,7 +525,7 @@ body {
 
 .footer-tagline {
     
-    color: rgb(0, 78, 17);
+    color: rgb(0, 56, 7);
     padding: 20px 200px;
     border-radius: 20px;
     font-weight: 600;
@@ -280,24 +540,427 @@ body {
   transition: transform 0.3s ease;
 }
 
-
 .icon:hover {
   transform: scale(1.1);
 }
+/* Responsividade para as novas seções */
+@media (max-width: 768px) {
+    /* Ajustes para Tablets (Portrait) e Celulares grandes */
+
+    /* Header */
+    .header .container {
+        /* Mantém o display flex e o justify-content: space-between */
+        gap: 10px; /* Reduz o gap */
+    }
+
+    .logo-text {
+        font-size: 20px; /* Reduz o tamanho do logo */
+    }
+
+    .nav-button {
+        padding: 8px 15px;
+        font-size: 14px;
+        white-space: nowrap; /* Garante que o texto não quebre */
+    }
+
+    /* Main Section */
+    .main-section {
+        min-height: 600px; /* Mantém uma altura mínima razoável */
+    }
+
+    .main-container {
+        gap: 30px;
+    }
+
+    /* Ajuste do formulário de login */
+    .right-content {
+        padding: 0 15px; /* Adiciona um padding lateral para o formulário não encostar na borda */
+    }
+
+    .login-box {
+        max-width: 100%; /* Permite que ocupe a largura total do right-content */
+        padding: 30px 20px; /* Aumenta o padding interno para melhor visualização */
+    }
+
+    .login-box h2 {
+        font-size: 18px;
+    }
+
+    .subtitle {
+        font-size: 16px;
+        margin-bottom: 30px;
+    }
+
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input {
+        padding: 12px 15px;
+        font-size: 14px;
+    }
+
+    .btn-entrar {
+        padding: 15px 40px;
+        font-size: 16px;
+    }
+
+    /* Ajuste de margem da seção de vantagens */
+    .partner-info-2 {
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+
+    .keywords {
+        gap: 10px;
+    }
+
+    .keyword-text-bordered,
+    .keyword-text-plain,
+    .keyword-text-highlight {
+        font-size: 28px; /* Reduz mais a fonte */
+        padding: 8px 15px;
+    }
+
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+    }
+
+    .icon-box img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .login-box {
+        max-width: 300px;
+        padding: 20px 15px;
+    }
+
+    .login-box h2 {
+        font-size: 16px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .btn-entrar {
+        padding: 12px 30px;
+        font-size: 14px;
+    }
+
+    /* Partner Info 1 */
+    .partner-info-1 {
+        padding: 60px 0;
+    }
+
+    .partner-image-wrapper {
+        width: 250px;
+        height: 250px;
+    }
+
+    .partner-title {
+        font-size: 28px;
+    }
+
+    .partner-text {
+        font-size: 16px;
+    }
+
+    /* Partner Info 2 */
+    .advantages-grid {
+        grid-template-columns: 1fr; /* 1 coluna para celular/tablet portrait */
+    }
+
+    /* Footer *    .copyright-container {
+        flex-direction: row;
+        text-align: left;
+        gap: 0;
+        justify-content: space-between;
+    }
+    .footer-tagline {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    /* Copyright */
+    .copyright-text,
+    .copyright-text-small {
+        font-size: 12px;
+    }
+}
+ 
+/* Responsividade básica */
+
+@media (max-width: 480px) {
+    /* Ajustes para Celulares */
+
+    .container {
+        padding: 0 15px;
+    }
+
+    /* Header */
+    .header .container {
+        /* Mantém o display flex e o justify-content: space-between */
+        gap: 5px; /* Reduz o gap para telas menores */
+    }
+
+    .logo-text {
+        font-size: 18px; /* Reduz ainda mais o tamanho do logo */
+    }
+
+    .nav-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    /* Main Section */
+    .main-section {
+        min-height: 500px;
+    }
+
+    /* Ajuste de margem da seção de vantagens */
+    .partner-info-2 {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+
+    .keywords {
+        /* Esconde as keywords para dar mais foco ao formulário em telas muito pequenas */
+        display: none; 
+    }
+
+    .right-content {
+        padding: 0;
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 25px 15px; /* Ajuste para melhor visualização */
+    }
+
+    /* Partner Info 1 */
+    .partner-info-1 {
+        padding: 40px 0;
+    }
+
+    .partner-image-wrapper {
+        width: 200px;
+        height: 200px;
+    }
+
+    .partner-title {
+        font-size: 24px;
+    }
+
+    .partner-text {
+        font-size: 14px;
+    }
+
+    .partner-button {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Partner Info 2 */
+    .section-title {
+        font-size: 24px;
+    }
+
+    .advantages-grid {
+        gap: 20px;
+    }
+
+    .advantage-title {
+        font-size: 18px;
+    }
+
+    .advantage-text {
+        font-size: 13px;
+    }
+
+    .partner-button-secondary {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    /* Footer */
+    .footer-logo-text {
+        font-size: 20px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+    }
+
+    /* Copyright */
+    .copyright-container {
+        gap: 5px;
+    }
+
+    .copyright-text,
+    .copyright-text-small {
+        font-size: 10px;
+    }
+}
+@media (max-width: 1024px) {
+    /* Ajustes para Tablets (Landscape) e Desktops menores */
+    .main-container {
+        flex-direction: column;
+        gap: 40px;
+        padding-top: 50px; /* Adiciona um padding superior para melhor visualização */
+        padding-bottom: 50px;
+    }
+    
+    .main-section {
+        min-height: auto; /* Permite que a altura se ajuste ao conteúdo */
+    }
+
+    .hero-img {
+        object-position: center center; /* Centraliza a imagem */
+        opacity: 0.5; /* Suaviza a imagem de fundo para o conteúdo se destacar */
+    }
+
+    .left-content {
+        align-items: center;
+        text-align: center;
+        padding-top: 0; /* Remove o padding negativo */
+    }
+    
+    .keywords {
+        align-items: center;
+        transform: none; /* Remove a transformação de posicionamento */
+        gap: 10px;
+    }
+
+    .keyword-text-bordered,
+    .keyword-text-plain,
+    .keyword-text-highlight {
+        font-size: 32px; /* Reduz o tamanho da fonte */
+        padding: 10px 20px;
+    }
+
+    .icon-box {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+
+    .icon-box img {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .right-content {
+        justify-content: center;
+        padding: 0; /* Remove padding excessivo */
+    }
+
+    .login-box {
+        transform: none; /* Remove a transformação de posicionamento */
+        max-width: 350px;
+        padding: 30px 20px;
+    }
+
+    /* Ajuste de margem da seção de vantagens */
+    .partner-info-2 {
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+
+    /* Footer */
+    .footer-tagline {
+        padding: 20px 50px;
+        transform: none;
+        font-size: 18px;
+    }
+
+    /* Partner Info 1 */
+    .partner-info-1 {
+        padding: 80px 0;
+    }
+
+    .partner-info-1 .partner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partner-image-wrapper {
+        width: 350px;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .partner-title {
+        font-size: 36px;
+    }
+
+    /* Partner Info 2 */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablet */
+        gap: 30px;
+    }
+
+    /* Copyright */
+    .copyright-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .copyright-social {
+        margin-top: 0;
+    }
+}
+
+
+
+/* --- Listras Decorativas (Decorative Stripes) --- */
+.decorative-stripes {
+    display: flex;
+    width: 100%;
+    height: 15px; /* Altura total das listras */
+    margin: 0; /* Remove qualquer margem da section */
+    padding: 0; /* Remove qualquer padding da section */
+}
+
+.stripe {
+    height: 100%;
+}
+
+.stripe-red {
+    background-color: #059400; /* Vermelho do iFood */
+    width: 70%; /* Proporção aproximada da listra vermelha */
+}
+
+.stripe-yellow {
+    background-color: #059400; /* Amarelo do iFood */
+    width: 30%; /* Proporção aproximada da listra amarela */
+}
+/* Ajuste para garantir que a seção anterior e a próxima estejam coladas */
+
+
+
+
+
 
 /* --- Seção de Copyright (Abaixo do Footer) --- */
-
-@media screen and (max-width: 480px) { body { transform: scale(1) } }
-/* ===========================
-   COPYRIGHT SECTION
-=========================== */
-
 .copyright-section {
-    background-color: #c2c2c2;
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
     padding: 20px 0;
     border-top: 1px solid #d9d9d9;
     font-size: 14px;
-    color: #666;
+    color: #666; /* Cor do texto cinza escuro */
 }
 
 .copyright-container {
@@ -305,10 +968,12 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
 }
 
 .copyright-info,
 .copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
     flex-basis: 33.33%; 
     display: flex;
     flex-direction: column;
@@ -326,7 +991,7 @@ body {
 .copyright-social {
     flex-basis: 33.33%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-end; /* Alinha os ícones à direita */
     align-items: center;
     gap: 15px;
 }
@@ -344,61 +1009,488 @@ body {
 
 /* Estilo para os ícones sociais dentro da seção de copyright */
 .copyright-social .social-icon {
-    width: 24px;
+    width: 24px; /* Ícones menores para o rodapé */
     height: 24px;
-    filter: grayscale(100%) opacity(70%);
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
 .copyright-social .social-icon:hover {
-    filter: grayscale(0%) opacity(100%);
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
     transform: scale(1.1);
 }
 
-/* Responsividade básica */
-@media (max-width: 1024px) {
-    .main-container {
-        flex-direction: column;
-        gap: 40px;
+
+
+
+/* --- Seção de Perguntas Frequentes (FAQ) --- */
+.faq-section {
+    background-color: #ffffff; /* Cor de fundo suave para destacar a seção */
+    padding: 100px 0;
+}
+
+.faq-section .section-title {
+    margin-bottom: 40px;
+    font-size: 35px;
+    color: #1a4d2e; /* Cor escura do tema */
+}
+
+.accordion {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border: 1px solid #f0f0f0; /* Borda suave */
+    margin-bottom: 10px;
+    border-radius: 30px;
+    overflow: hidden;
+    background-color: rgb(211, 211, 211);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #333;
+    font-size: 15px;
+    background-color: #eeeded;
+    transition: background-color 0.3s ease;
+}
+
+.accordion-header:hover {
+    background-color: #e0e0e0;
+}
+
+
+.accordion-icon {
+  width: 16px; /* Tamanho do ícone */
+  height: 16px;
+  vertical-align: middle;
+  transition: transform 0.3s ease;
+}
+/* Esconde o conteúdo por padrão */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+    padding: 0 25px;
+}
+
+.accordion-content p {
+    padding: 12px 0;
+    margin: 0;
+    line-height: 1.6;
+    color: #555;
+    border-top: 1px solid #eee;
+}
+
+/* Estado Ativo: Quando o checkbox está marcado */
+.accordion-toggle:checked ~ .accordion-content {
+    max-height: 500px; /* Valor grande o suficiente para o conteúdo expandir */
+    transition: max-height 0.4s ease-in, padding 0.4s ease-in;
+    padding: 0 25px 20px 25px;
+}
+
+.accordion-toggle:checked ~ .accordion-header .accordion-icon {
+    transform: rotate(180deg); /* Gira a seta para baixo */
+}
+
+/* Ajuste para telas menores */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 50px 0;
     }
-    
-    .right-content {
-        justify-content: center;
+
+    .accordion-header {
+        font-size: 16px;
+        padding: 15px 20px;
     }
-    
-    .login-box {
-        /* Remove o ajuste de posição para telas menores para centralizar */
-        transform: translateX(0); 
+
+    .accordion-content {
+        padding: 0 20px;
     }
-    
-    .main-section {
-        background-size: contain;
+
+    .accordion-content p {
+        padding: 10px 0;
     }
 }
 
-@media (max-width: 768px) {
-    .copyright-container {
+
+/* --- Novos Estilos para a Página de Suporte --- */
+
+/* Seção Principal de Suporte */
+.support-main-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.support-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a4d2e; /* Cor principal do tema */
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.support-subtitle {
+    font-size: 20px;
+    color: #555;
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+/* Grid de Opções */
+.support-options-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+.support-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 10px;
+    background-color: #f7f7f7;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+.support-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background-color: #e8f5e0; /* Cor suave do tema */
+}
+
+.card-icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: #6b8e23; /* Cor de destaque */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.card-icon {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Ícones brancos */
+}
+
+.card-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 15px;
+    color: #666;
+    text-align: center;
+}
+
+/* Seção de Busca */
+.support-search {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto;
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 15px 25px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    background-color: #1a4d2e; /* Cor escura do tema */
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #0f3320;
+}
+
+.contato-eqp{
+     font-size: 25px;
+    font-weight: 500px;
+    color: #1a1a1a;
+    margin-bottom: 200px;
+    margin-top: 300px;
+    text-align: start;
+}
+
+.corpo-text{
+    font-size: 20px;
+    text-align: justify;
+   margin-top: 10px;
+}
+
+
+
+
+
+/* ==================================================================== */
+/* RESPONSIVIDADE */
+/* ==================================================================== */
+
+/* Desktop (Telas maiores que 1024px) */
+@media (min-width: 1000px) {
+    .main-section {
+        /* Mantém a lógica de 90vh */
+        min-height: calc(90vh - 80px); 
+    }
+}
+
+
+/* Mobile (Telas menores que 768px) */
+@media (max-width: 800px) {
+    .main-section {
+        min-height: auto;
+        padding-top: 30px;
+        padding-bottom: 30px;
+        background-color: #002c0b;
+    }
+    
+
+    /* Oculta a imagem de fundo e o overlay */
+    .hero-img, .hero-image-overlay {
+        display: none;
+    
+    }
+
+    .main-container {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    /* Oculta a seção de ícones/keywords */
+    .left-content {
+        display: none;
+    }
+
+    .right-content {
+        order: 1; /* Move o formulário para cima */
+        justify-content: center;
+        flex: none; /* Garante que o formulário não tente ocupar espaço extra */
+    }
+
+    .login-box {
+        max-width: 100%;
+        padding: 20px 15px;
+    }
+
+    .login-box h2 {
+        font-size: 20px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    /* Partner Info 1 */
+    .partner-info-1 {
+        padding: 50px 0;
+    }
+    .partner-info-1 .partner-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .copyright-info,
-    .copyright-address,
-    .copyright-social {
-        flex-basis: auto;
-        width: 100%;
-        text-align: center;
-        justify-content: center;
+    .partner-image-wrapper {
+        width: 200px;
+        height: 200px;
     }
 
-    .copyright-social {
-        order: -1; /* Move os ícones sociais para o topo em telas pequenas */
-        margin-bottom: 15px;
+    .partner-title {
+        font-size: 28px;
     }
-    
-    .footer-tagline {
-        transform: translatex(0);
-        padding: 10px 20px;
+
+    .partner-text {
         font-size: 16px;
     }
+
+    /* Advantages Grid */
+    .advantages-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+   
+}
+
+/* --- INÍCIO: Modificações de Responsividade para Tablet (768px a 1024px) --- */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    /* 1. Ocultar a imagem de fundo e o overlay */
+    .hero-img,
+    .hero-image-overlay {
+        display: none !important;
+    }
+
+  
+    .main-section {
+        background-color: #003b0a; /* Manter a cor de fundo suave */
+        min-height: auto; /* Deixar a altura se ajustar ao conteúdo */
+        padding: 20px 20px; /* Adicionar padding para espaçamento */
+    }
+
+    /* 3. Ajustar o container principal para que os itens fiquem lado a lado (esquerda/direita) */
+    .main-container {
+        flex-direction: row; /* Garantir que fiquem lado a lado */
+        justify-content: space-between; /* Espaçamento entre os elementos */
+        align-items: center; /* Centralizar verticalmente */
+        gap: 20px; /* Reduzir o gap */
+    }
+
+    /* 4. Ajustar o conteúdo da esquerda (Ícones) */
+    .left-content {
+        flex: 1; /* Ocupar espaço */
+        align-items: flex-start; /* Alinhar à esquerda */
+       
+    }
+
+    /* 4.1. Ajustar a posição dos ícones (Keywords) para a esquerda */
+    .keywords {
+        /* Reintroduzir transformações para o layout escalonado em tablet */
+        transform: translateX(-50px) translateY(0px); /* Ajuste de posição geral - Movido para cima */
+        align-items: flex-start;
+        gap: 5px;
+        
+    }
+    
+    /* 4.2. Reduzir o tamanho dos elementos dos ícones para o tablet */
+    .icon-box {
+        width: 50px;
+        height: 50px;
+        padding: 8px;
+        border-radius: 10px;
+    }
+
+    .icon-box img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .keyword-text-bordered,
+    .keyword-text-plain,
+    .keyword-text-highlight {
+        font-size: 50px; /* Reduzir o tamanho da fonte */
+        padding: 8px 15px; /* Ajustar o padding */
+    }
+    
+    .keyword-text-highlight {
+        padding: 8px 20px; /* Ajustar o padding */
+    }
+    
+    .keyword-item {
+        gap: 10px;
+    }
+    
+    /* Ajustes de posição para o layout escalonado */
+    .keywords > .keyword-item:nth-child(2) { /* "que cultivam" */
+        transform: translateX(30px);
+    }
+    
+    .keywords > .keyword-item:nth-child(3) { /* "Valores" */
+        transform: translateX(60px);
+    }
+
+    /* 5. Ajustar o conteúdo da direita (Caixa de Login) */
+    .right-content {
+        flex: 1; /* Ocupar espaço */
+        justify-content: flex-end; /* Alinhar à direita */
+        padding: 0; /* Remover padding */
+    }
+
+    /* 5.1. Ajustar a caixa de login */
+    .login-box {
+        transform: none; /* Remover a transformação para posicionar corretamente */
+        max-width: 400px; /* Aumentar a largura máxima */
+        padding: 15px 20px; /* Diminuir o padding vertical para reduzir a altura */
+        margin-left: auto; /* Garantir que fique à direita */
+    }
+    
+    /* Ajustes menores no formulário */
+    .login-box h2 {
+        font-size: 20px;
+        transform: translateY(0);
+        margin-bottom: 5px; /* Reduzir margem */
+    }
+    
+    .subtitle {
+        margin-bottom: 15px; /* Reduzir margem */
+        transform: translateY(0);
+    }
+    
+    .cadastro-link {
+        transform: translateY(0);
+        margin-top: 0; /* Ajuste para diminuir a altura */
+    }
+    
+    /* Ajustes para outras seções para evitar quebras de layout em tablet */
+    .partner-info-1 {
+        padding: 80px 0;
+    }
+    
+    .partner-info-1 .partner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .partner-image-wrapper {
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    
+    .partner-content {
+        text-align: center;
+    }
+    
+    .partner-title {
+        font-size: 32px;
+    }
+    
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        text-align: center; /* Centralizar texto nos itens do grid */
+    }
+    
+    .steps-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    
+    .partner-info-3 {
+        padding: 50px 20px;
+    }
+
+    
+    
+    
 }
