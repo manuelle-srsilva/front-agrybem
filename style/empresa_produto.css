@@ -162,57 +162,7 @@ html, body {
 }
 
 /* até aqui*/
-/* ===== HERO SECTION ===== */
-.hero {
-    position: relative;
-   background-color: transparent; /* Cor de fundo removida */    height: 650px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
 
-  position: relative; /* permite controlar sobreposição */
-    z-index: 2; /* fica acima da próxima seção */
-    overflow: hidden; /* Garante que a imagem de fundo não vaze */
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Overlay de cor */
-    z-index: 1;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-
-.hero-title {
-      position: absolute;
-    bottom: 95px; /* distância do fundo */
-    left: 50px;   /* distância da esquerda */
-    color: white;
-  
-    font-weight: 70px;
-    font-size: 40px;
-
-   
-    
-}
 
 /* Products Section */
 .products {
@@ -579,10 +529,7 @@ html, body {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 32px;
-    }
-
+    
     .panel-title {
         font-size: 24px;
     }
@@ -634,13 +581,7 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .hero {
-        height: 250px;
-    }
-
-    .hero-title {
-        font-size: 24px;
-    }
+   
 
     .panel-title {
         font-size: 20px;
@@ -716,12 +657,8 @@ html, body {
 	}
 }
 
-/* Ajuste para telas maiores (Desktop) */
-@media (min-width: 1025px) {
-    .hero {
-        height: 750px; /* Altura aumentada para desktop */
-    }
-}
+
+
 
 /* ======================================= */
 /* ===== ESTILOS DO MODAL DE EDIÇÃO/EXCLUSÃO (NOVO) ===== */
@@ -950,5 +887,250 @@ html, body {
     .footer-tagline{
         transform: translateX(0px);
         padding: 0;
+    }
+}
+
+
+
+
+
+/* até aqui*/
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    /* Altura ajustada para ocupar 90% da altura da tela (viewport height - vh) */
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px 20px; /* Mantendo um padding para o conteúdo interno */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative; 
+    z-index: 2; 
+    overflow: hidden; /* Garante que a imagem de fundo não vaze */
+
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Overlay de cor */
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Ajuste para telas maiores (Desktop) */
+@media (min-width: 1025px) {
+    .hero {
+        /* Subtrai a altura aproximada do header para que o hero ocupe 90% do espaço restante */
+        min-height: calc(97vh - 80px); 
+    }
+}
+
+/* Ajuste para telas de tablet e notebooks (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        /* Mantém uma altura considerável, mas ajusta para o contexto de notebook/tablet */
+        min-height: 80vh; 
+    }
+}
+
+/* Ajuste para telas menores (celulares) */
+@media (max-width: 767px) {
+    .hero {
+        /* Altura menor para mobile */
+        min-height: 40vh; 
+    }
+    .hero-title {
+        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+        bottom: 40px;
+        left: 20px;
+        color: white;
+    }
+}
+
+.hero-title {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Removendo margem padrão */
+    padding: 0;
+     position: absolute;
+    bottom: 95px; /* distância do fundo */
+    left: 30px;   /* distância da esquerda */
+    color: white;
+}
+
+ 
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query) ... */
+    
+    /* CORREÇÃO PRIORITÁRIA: product-cards-container para Rolagem Horizontal (Mobile) */
+  
+
+  
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query para 768px) ... */
+
+
+    
+    /* ... (o restante das regras de 768px) ... */
+}
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .panel-title {
+        font-size: 24px;
+    }
+
+  
+
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .hero-blur-box {
+        width: 90%;
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .panel-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .button-group {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+ 
+}
+
+/* --- Seção de Copyright (Abaixo do Footer) --- */
+.copyright-section {
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Cor do texto cinza escuro */
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
+}
+
+.copyright-info,
+.copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright-info {
+    text-align: left;
+}
+
+.copyright-address {
+    text-align: center;
+}
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Estilo para os ícones sociais dentro da seção de copyright */
+.copyright-social .social-icon {
+    width: 24px; /* Ícones menores para o rodapé */
+    height: 24px;
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Regras de responsividade que estavam no final do arquivo */
+.product-cards-container{
+            display: flex !important;
+        flex-direction: row;
+        gap: 14px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+ .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
     }
 }

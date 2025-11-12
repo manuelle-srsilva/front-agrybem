@@ -157,7 +157,7 @@ html, body {
 
 .menu-item:hover {
     background-color: #f5f5f5;
-    color: #520000;
+    color: #5A8F3A;
 }
 
 .menu-item-icon {
@@ -167,56 +167,6 @@ html, body {
 }
 
 /* até aqui*/
-/* ===== HERO SECTION ===== */
-.hero {
-    position: relative;
-    background-color: transparent; /* Imagem movida para o HTML */
-      height: 550px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-align: center;
-    padding: 40px 20px;
-    border-bottom-left-radius: 50px;
-  border-bottom-right-radius: 50px;
-
-  position: relative; /* permite controlar sobreposição */
-  z-index: 2; /* fica acima da próxima seção */
-  overflow: hidden; /* Garante que a imagem de fundo não vaze */
-}
-
-.hero-image-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Overlay de cor */
-    z-index: 1;
-}
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
-}
-
-
-.hero-title {
-      position: absolute;
-    bottom: 95px; /* distância do fundo */
-    left: 30px;   /* distância da esquerda */
-    color: white;
-    font-size: 40px;
-    font-weight: 700;
-    text-shadow: 2px 2p0x 8px rgba(0, 0, 0, 0.5);
-    
-}
 
 /* ===== FEATURED PRODUCTS SECTION ===== */
 .featured-products {
@@ -231,7 +181,7 @@ html, body {
 .featured-title {
     font-size: 38px;
     font-weight: 700;
-    color: rgb(78, 0, 0);
+    color: hsl(0, 100%, 15%);
     margin-bottom: 10px;
 }
 
@@ -620,9 +570,7 @@ html, body {
 
 /* ===== RESPONSIVIDADE ===== */
 @media (max-width: 768px) {
-    .hero-title {
-        font-size: 32px;
-    }
+   
 
     .panel-title {
         font-size: 24px;
@@ -675,13 +623,9 @@ html, body {
 }
 
 @media (max-width: 480px) {
-    .hero {
-        height: 250px;
-    }
+    
 
-    .hero-title {
-        font-size: 24px;
-    }
+    
 
     .panel-title {
         font-size: 20px;
@@ -952,3 +896,969 @@ html, body {
     }
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    width: 100%;
+}
+
+/* ===== HEADER ===== */
+.header {
+    background-color: #D9D9D9;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    
+     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #1a1a1a;
+}
+
+.logo-highlight {
+    color: #5A8F3A;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color:#007411;
+    font-weight: 500;
+    font-size: 16px;
+    transition: color 0.3s ease;
+     /* transform: translateX(50px);  */
+}
+
+.nav-link:hover {
+    color: #5A8F3A;
+}
+
+.nav-button {
+    background-color: #315901;
+    color: white;
+    padding: 10px 24px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #4a7a2f;
+    transform: translateY(-2px);
+}
+
+/* Menu Container and Toggle */
+.menu-container {
+    position: relative;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #007411;
+    padding: 8px;
+    transition: color 0.3s ease;
+    /* transform: translateX(50px);  */
+
+}
+
+.menu-toggle:hover {
+    color: #5A8F3A;
+}
+
+.menu-icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: -50px; /* empurra 20px para a direita */
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+    min-width: 180px;
+    margin-top: 10px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+    z-index: 1001;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.473); /* Fundo branco transparente */
+  backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+
+}
+
+.dropdown-menu.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    color: #333;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-bottom: 1px solid #ffffff60;
+}
+
+.menu-item:last-child {
+    border-bottom: none;
+}
+
+.menu-item:hover {
+    background-color: #f5f5f5;
+    color: #5A8F3A;
+}
+
+.menu-item-icon {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* até aqui*/
+/* ===== HERO SECTION ===== */
+.hero {
+    position: relative;
+    /* Altura ajustada para ocupar 90% da altura da tela (viewport height - vh) */
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 50px 20px; /* Mantendo um padding para o conteúdo interno */
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative; 
+    z-index: 2; 
+    overflow: hidden; /* Garante que a imagem de fundo não vaze */
+
+}
+
+.hero-image-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)); /* Overlay de cor */
+    z-index: 1;
+}
+
+.hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+
+/* Ajuste para telas maiores (Desktop) */
+@media (min-width: 1025px) {
+    .hero {
+        /* Subtrai a altura aproximada do header para que o hero ocupe 90% do espaço restante */
+        min-height: calc(97vh - 80px); 
+    }
+}
+
+/* Ajuste para telas de tablet e notebooks (768px a 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .hero {
+        /* Mantém uma altura considerável, mas ajusta para o contexto de notebook/tablet */
+        min-height: 80vh; 
+    }
+}
+
+/* Ajuste para telas menores (celulares) */
+@media (max-width: 767px) {
+    .hero {
+        /* Altura menor para mobile */
+        min-height: 40vh; 
+    }
+    .hero-title {
+        font-size: 28px; /* Reduz o tamanho da fonte para telas menores */
+        bottom: 40px;
+        left: 20px;
+        color: white;
+    }
+}
+
+.hero-title {
+    color: white;
+    font-size: 40px;
+    font-weight: 700;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+    margin: 0; /* Removendo margem padrão */
+    padding: 0;
+     position: absolute;
+    bottom: 95px; /* distância do fundo */
+    left: 30px;   /* distância da esquerda */
+    color: white;
+}
+
+/* ===== FEATURED PRODUCTS SECTION ===== */
+.featured-products {
+    background-color: #f3f3f3; /* Fundo escuro similar ao da imagem */
+    padding: 120px;
+    text-align: center;
+    margin-top: 50px;
+    
+    
+}
+
+.featured-title {
+    font-size: 38px;
+    font-weight: 700;
+    color: rgb(14, 83, 0);
+    margin-bottom: 10px;
+}
+
+.featured-subtitle {
+    font-size: 18px;
+    color: #33863e; /* Verde claro para contraste */
+    margin-bottom: 50px;
+}
+
+.product-cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.product-card {
+    position: relative;
+    width: 250px;
+    height: 300px;
+    background-color: #2E4B3A; /* Cor de fundo do card (opcional, mas bom para o placeholder) */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.product-card-2{
+     position: relative;
+    width: 400px;
+    height: 350px;
+    background-color: #2E4B3A; /* Cor de fundo do card (opcional, mas bom para o placeholder) */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+.product-card-2:hover {
+    transform: translateY(-5px);
+}
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #4a7a2f;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 14px;
+    overflow: hidden; /* Garante que a imagem não ultrapasse o card */
+}
+.product-image-placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz a imagem preencher o espaço corretamente */
+    object-position: center; /* Centraliza a imagem dentro do card */
+    border-radius: 15px; /* Mantém o mesmo arredondamento do card */
+    display: block;
+}
+
+.product-info-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 20px;
+    color: white;
+    transform: translateY(60%); /* Esconde parte do overlay */
+    transition: transform 0.3s ease;
+      background: rgba(109, 109, 109, 0.2); /* Fundo branco transparente */
+  backdrop-filter: blur(10px); /* Aplica o efeito de desfoque */
+  -webkit-backdrop-filter: blur(10px); /* Suporte para Safari */
+  border-radius: 15px;
+
+}
+
+.product-card:hover .product-info-overlay {
+    transform: translateY(0); /* Mostra o overlay completo no hover */
+}
+
+.product-card-2:hover .product-info-overlay {
+    transform: translateY(0); /* Mostra o overlay completo no hover */
+}
+
+.product-rating {
+    position: absolute;
+    top: -40px; /* Posiciona acima do overlay */
+    left: 20px;
+    background-color: #F0E68C; /* Cor de fundo do rating (amarelo claro) */
+    color: #315901; /* Cor do texto do rating */
+    padding: 5px 10px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 600;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    
+}
+
+.product-name {
+    font-size: 15px;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+.product-name-2{
+     font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 60px;
+
+}
+
+
+
+.product-description {
+    font-size: 12px;
+    color: #cccccc;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.product-description-2 {
+    font-size: 14px;
+    color: #cccccc;
+    margin-bottom: 50px;
+    text-align: justify;
+}
+
+.add-to-cart-btn {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: white;
+    color: #315901;
+    border: none;
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #e0e0e0;
+}
+
+
+
+
+
+/* Donation Section */
+.donation {
+    background-color: #133C1F;
+    padding: 40px 0;
+    margin-bottom: 80px; /* Adiciona espaço entre a seção de doação e o footer */
+}
+
+.donation-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.donation-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.donation-highlight {
+    color: #5A8F3A;
+}
+
+.donation-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 40px;
+       text-decoration: none; /* tira o sublinhado */
+    
+}
+
+.donation-button {
+    background-color: #CCCCCC;
+    color: #007411;
+    padding: 16px 40px;
+    border: none;
+    border-radius: 12px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* tira o sublinhado */
+      box-shadow: 0 2px 10px rgba(129, 28, 28, 0.295);
+  
+
+}
+
+.donation-button:hover {
+    background-color: #ffffff;
+    transform: translateY(-2px);
+       text-decoration: none; /* tira o sublinhado */
+}
+
+.donation-image {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.donation-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+
+.footer {
+    background-color: #002c0b;
+    padding: 20px 0;
+    border-top: 1px solid #e0e0e0;
+    
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.footer-logo-text {
+    font-size: 24px;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.footer-logo-highlight {
+    color: #5A8F3A;
+}
+
+.footer-tagline {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Copyright Section */
+.copyright-section {
+    background-color: #e6e6e6;
+    padding: 10px 0;
+    border-top: 1px solid #D9D9D9;
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+    color: #696969;
+}
+
+.copyright-info, .copyright-address {
+    text-align: left;
+}
+
+.copyright-text {
+    font-weight: 600;
+    margin-bottom: 2px;
+}
+
+.copyright-text-small {
+    font-size: 11px;
+    opacity: 0.8;
+}
+
+.copyright-social {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.social-icon:hover {
+    opacity: 1;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query) ... */
+    
+    /* CORREÇÃO PRIORITÁRIA: product-cards-container para Rolagem Horizontal (Mobile) */
+    .product-cards-container {
+        /* Sobrescreve o justify-content: center */
+        justify-content: flex-start;
+        /* Habilita a rolagem horizontal */
+        overflow-x: auto;
+        /* Garante que os cards não quebrem linha */
+        flex-wrap: nowrap; 
+        /* Diminui a distância entre os cards no mobile */
+        gap: 20px; 
+        /* Adiciona um pequeno padding nas laterais (do container pai) */
+        padding: 0 20px;
+        
+        /* Remove o padding-bottom desnecessário que estava no seu CSS no final */
+        padding-bottom: 0; 
+    }
+    
+    .featured-products {
+        padding: 60px 0; /* Ajusta o padding da seção */
+    }
+
+    /* Garante que os cards tenham um tamanho mínimo para rolagem */
+    .product-card, .product-card-2 {
+        min-width: 280px; /* Tamanho fixo para cards menores */
+        height: 300px;
+        flex-shrink: 0; /* Impede que o flexbox tente diminuir o card */
+    }
+    
+    .product-card-2 {
+        min-width: 300px; /* Mantém um pouco maior se for o caso */
+        height: 350px;
+    }
+    
+    .featured-title {
+        font-size: 28px;
+    }
+
+    .featured-subtitle {
+        margin-bottom: 30px;
+    }
+    @media (max-width: 768px) {
+    /* ... (outras regras de media query para 768px) ... */
+
+    /* CORREÇÃO PARA UNIFICAR O TAMANHO DOS CARDS NO MOBILE */
+    .product-card, 
+    .product-card-2 {
+        min-width: 280px; /* Define uma largura mínima consistente para todos os cards */
+        height: 350px;   /* Define uma altura consistente para todos os cards */
+        flex-shrink: 0;  /* Impede que o flexbox tente diminuir o card */
+        /* Remova quaisquer outras propriedades de largura/altura específicas para mobile */
+    }
+
+    /* Ajuste para o overlay, se necessário, para se adequar à nova altura do card */
+    .product-info-overlay {
+        padding: 30px 20px; /* Ajusta o padding para melhor visualização */
+        transform: translateY(calc(100% - 120px)); /* Mostra mais do overlay inicialmente */
+        /* (Ajuste o valor '120px' para controlar o quanto do overlay fica visível por padrão) */
+    }
+
+    /* Ajuste para os elementos internos do overlay, se necessário */
+    .product-rating {
+        top: -30px; /* Ajusta a posição do rating */
+        font-size: 11px;
+    }
+
+    .product-name, .product-name-2 {
+        font-size: 16px; /* Tamanho da fonte unificado */
+        margin-bottom: 10px; /* Ajusta margem inferior */
+    }
+    
+    .product-description, .product-description-2 {
+        font-size: 13px; /* Tamanho da fonte unificado */
+        margin-bottom: 15px;
+    }
+
+    .add-to-cart-btn {
+        width: 28px;
+        height: 28px;
+        font-size: 18px;
+        top: 10px;
+        right: 10px;
+    }
+
+    /* ... (o restante das regras de 768px) ... */
+}
+    .hero-title {
+        font-size: 32px;
+    }
+
+    .panel-title {
+        font-size: 24px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    .btn {
+        min-width: auto;
+    }
+
+    .doe-content {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .doe-title {
+        font-size: 24px;
+    }
+
+    .search-title {
+        font-size: 22px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+        gap: 20px;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+
+    .donation {
+        height: auto;
+        padding: 60px 0;
+    }
+
+    .donation-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+
+    .donation-blur-box {
+        padding: 40px 30px;
+    }
+
+   
+
+    .donation-subtitle {
+        font-size: 16px;
+    }
+
+    .donation-text {
+        font-size: 14px;
+    }
+
+    .donation-image-frame {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        height: 250px;
+    }
+
+    .hero-blur-box {
+        width: 90%;
+        min-height: 150px;
+        padding: 20px;
+    }
+
+    .hero-title {
+        font-size: 24px;
+    }
+
+    .panel-title {
+        font-size: 20px;
+        margin-bottom: 25px;
+    }
+
+    .button-group {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+
+    .doe-section {
+        padding: 40px 15px;
+    }
+
+    .doe-title {
+        font-size: 20px;
+    }
+
+    .doe-description {
+        font-size: 14px;
+    }
+
+    .search-section {
+        padding: 40px 15px;
+    }
+
+    .search-title {
+        font-size: 18px;
+        margin-bottom: 25px;
+    }
+
+    .search-container {
+        flex-direction: column;
+    }
+
+    .search-input,
+    .search-btn {
+        width: 100%;
+    }
+
+    .cards-section {
+        padding: 40px 15px;
+    }
+
+    .cards-grid {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+    }
+
+    .card-image {
+        height: 150px;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-category {
+        font-size: 12px;
+    }
+
+    .footer-logo-text {
+        font-size: 18px;
+    }
+
+    .donation {
+        height: auto;
+        padding: 40px 0;
+    }
+
+    .donation-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 15px;
+    }
+
+    .donation-blur-box {
+        padding: 30px 20px;
+    }
+
+    .donation-title {
+        font-size: 28px;
+    }
+
+    .donation-subtitle {
+        font-size: 14px;
+    }
+
+    .donation-text {
+        font-size: 12px;
+        margin-bottom: 25px;
+    }
+
+    .donation-button {
+        padding: 12px 30px;
+        font-size: 16px;
+    }
+
+    .donation-image-frame {
+        height: 250px;
+    }
+}
+
+/* --- Seção de Copyright (Abaixo do Footer) --- */
+.copyright-section {
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
+    padding: 20px 0;
+    border-top: 1px solid #d9d9d9;
+    font-size: 14px;
+    color: #666; /* Cor do texto cinza escuro */
+}
+
+.copyright-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    /* O container já está definido para 1200px e centralizado */
+}
+
+.copyright-info,
+.copyright-address {
+    /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
+    flex-basis: 33.33%; 
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.copyright-info {
+    text-align: left;
+}
+
+.copyright-address {
+    text-align: center;
+}
+
+.copyright-social {
+    flex-basis: 33.33%;
+    display: flex;
+    justify-content: flex-end; /* Alinha os ícones à direita */
+    align-items: center;
+    gap: 15px;
+}
+
+.copyright-text {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.copyright-text-small {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.4;
+}
+
+/* Estilo para os ícones sociais dentro da seção de copyright */
+.copyright-social .social-icon {
+    width: 24px; /* Ícones menores para o rodapé */
+    height: 24px;
+    filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.copyright-social .social-icon:hover {
+    filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
+    transform: scale(1.1);
+}
+
+/* Regras de responsividade que estavam no final do arquivo */
+.product-cards-container{
+            display: flex !important;
+        flex-direction: row;
+        gap: 14px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 8px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+ .footer-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
+    }
+}
