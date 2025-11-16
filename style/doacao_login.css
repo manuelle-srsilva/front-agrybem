@@ -457,46 +457,13 @@ body {
     
 }
 
-/* Seção 3: Passos */
-.partner-info-3 {
-    background-color: white;
-    padding:  95px ;
-    text-align: center;
-}
 
-.steps-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    margin-top: 50px;
-    
-}
 
-.step-icon {
-    width: 120px; /* Ajuste conforme o ícone */
-    height: auto;
-    margin-bottom: 20px;
-    border-radius: 20px;
-}
-
-.step-title {
-    font-size: 20px;
-    font-weight: 600;
-    color: #1a1a1a;
-    margin-bottom: 10px;
-}
-
-.step-text {
-    font-size: 16px;
-    line-height: 1.6;
-    color: #555;
-    
-}
 
 
 /* Footer */
 .footer {
-    background-color: #818181;
+    background-color: #b8b8b8;
     padding: 3px 0;
     border-top: 1px solid #afafaf;
 }
@@ -520,7 +487,7 @@ body {
 }
 
 .footer-logo-highlight {
-    color: #9bff5d;
+    color: #2d7500;
 }
 
 .footer-tagline {

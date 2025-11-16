@@ -144,7 +144,7 @@ body {
     background-color: #ffffff;
     border-radius: 12px;
     padding: 30px;
-    box-shadow: 0 2px 12px rgba(207, 27, 27, 0.08);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
     transition: all 0.3s ease;
     position: relative; /* ESSENCIAL para posicionamento absoluto dos botões */
 }
@@ -253,9 +253,6 @@ body {
     background-color: #c82333;
     transform: translateY(-2px);
 }
-.company-name{
-    margin-top: 20px;
-}
 
 /* ===== FORM STYLES ===== */
 .institution-form,
@@ -272,13 +269,11 @@ body {
 
 .form-field label {
     font-size: 12px;
-    color: #000000;
+    color: #666666;
     font-weight: 600;
-    margin-top: 8px;
     margin-bottom: 8px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    left: 30px;
 }
 
 .form-field input,
@@ -378,71 +373,212 @@ body {
     text-align: center;
 }
 
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: space-between;
+        gap: 150px;
+    }
 
-/* ========== GLOBAL ========== */
-@media (max-width: 480px) {
-  body {
-    font-size: 0.95rem;
-    overflow-x: hidden;
-  }
+    .nav {
+        flex-direction: s;
+        gap: 15px;
+        width: 100%;
+    }
 
-  /* HEADER FIXO HORIZONTAL */
-  header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 12px 16px;
-    flex-wrap: wrap; /* Mantém alinhamento mesmo se faltar espaço */
-  }
+    .nav-link,
+    .nav-button {
+        width: 100%;
+        text-align: center;
+    }
 
-  header img.logo {
-    width: 120px; /* ajuste conforme necessário */
-  }
+    .header-top {
+        flex-direction: space-between;
+        align-items: flex-start;
+    }
 
-  header nav {
-    display: flex;
-    gap: 12px;
-  }
+    .institution-title {
+        font-size: 24px;
+    }
 
-  header nav ul {
-    display: flex;
-    flex-direction: row; /* Mantém os itens lado a lado */
-    gap: 12px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
+    .card {
+        padding: 20px;
+    }
 
-  header nav ul li a {
-    font-size: 0.9rem;
-    text-decoration: none;
-  }
+    .card-header {
+        margin-bottom: 20px;
+        padding-bottom: 12px;
+    }
 
-  /* BOTÕES */
-  .btn {
-    width: 100%;
-    font-size: 1rem;
-    padding: 12px 0;
+    .card-title {
+        font-size: 16px;
+    }
+
+    .card-edit-button {
+        font-size: 18px;
+        padding: 5px 8px;
+    }
     
-  }
+    /* Ajuste para mobile: botões de ação no canto superior direito */
+    .card-actions {
+        top: 20px; /* Igual ao padding do card */
+        right: 20px; /* Igual ao padding do card */
+    }
 
-  .container {
-    width: 100%;
-    padding: 0 12px;
-  }
+    .card-save-button,
+    .card-cancel-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
 
-  .grid {
-    grid-template-columns: 1fr;
-  }
+    .form-field input,
+    .form-field textarea {
+        padding: 10px 12px;
+        font-size: 13px;
+    }
 
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-   .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-  
+    .map-placeholder {
+        height: 300px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+        padding: 8px 15px;
+    }
 }
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px;
+    }
+
+    .header {
+        padding: 15px 0;
+    }
+
+    .logo-text {
+        font-size: 20px;
+    }
+
+    .nav {
+        gap: 10px;
+    }
+
+    .nav-link,
+    .nav-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+
+    .header-section {
+        padding: 20px 0;
+        margin-bottom: 20px;
+    }
+
+    .header-top {
+        flex-direction: space-between;
+    }
+
+    .logo-img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .institution-title {
+        font-size: 22px;
+    }
+
+    .card {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+
+    .card-header {
+        margin-bottom: 15px;
+        padding-bottom: 10px;
+    }
+
+    .card-title {
+        font-size: 14px;
+    }
+
+    .card-edit-button {
+        font-size: 16px;
+        padding: 4px 6px;
+    }
+    
+    /* Ajuste para mobile: botões de ação no canto superior direito */
+    .card-actions {
+        top: 15px; /* Igual ao padding do card */
+        right: 15px; /* Igual ao padding do card */
+    }
+
+}
+
+/* ===== ESTILOS PARA EDIÇÃO DE FOTO NO HEADER ===== */
+.logo-institution {
+    position: relative;
+    /* Garante que o botão de edição seja posicionado em relação a este contêiner */
+}
+
+.photo-edit-button {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background-color: #5A8F3A;
+    color: white;
+    border: 2px solid white;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    z-index: 10;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 0;
+}
+
+.photo-edit-button:hover {
+    background-color: #4a7a2f;
+    transform: scale(1.05);
+}
+
+/* Ajuste responsivo para o botão de edição */
+@media (max-width: 480px) {
+    .photo-edit-button {
+        width: 24px;
+        height: 24px;
+        font-size: 12px;
+    }
+    /* Mobile: empilhar elementos do copyright */
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
+    }
+    .footer-tagline{
+        transform: translateX(0px);
+        padding: 0;
+    }
+}
+

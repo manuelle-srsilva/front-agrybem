@@ -371,24 +371,24 @@ html, body {
 }
 
 .search-container {
-	    max-width: 500px;
-	    margin: 0 auto;
-	}
+    max-width: 500px;
+    margin: 0 auto;
+}
 
 .search-input-wrapper {
-	    position: relative;
-	    width: 100%;
-	}
+    position: relative;
+    width: 100%;
+}
 
-	.search-input {
-	    width: 100%;
-	    padding: 15px 50px 15px 20px; /* Aumenta o padding à direita para o ícone */
-	    border: 2px solid #d0d0d0;
-	    border-radius: 25px;
-	    font-size: 16px;
-	    font-family: 'Poppins', sans-serif;
-	    transition: border-color 0.3s ease;
-	}
+.search-input {
+    width: 100%;
+    padding: 15px 50px 15px 20px; /* Aumenta o padding à direita para o ícone */
+    border: 2px solid #d0d0d0;
+    border-radius: 25px;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    transition: border-color 0.3s ease;
+}
 
 .search-input:focus {
     outline: none;
@@ -396,27 +396,27 @@ html, body {
 }
 
 .search-btn-icon {
-	    position: absolute;
-	    right: 15px;
-	    top: 50%;
-	    transform: translateY(-50%);
-	    background: none;
-	    border: none;
-	    cursor: pointer;
-	    padding: 0; 
-	    z-index: 10; /* Garante que o botão esteja acima do input */
-	}
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0; 
+    z-index: 10; /* Garante que o botão esteja acima do input */
+}
 
-	.search-icon-img {
-	    width: 24px; /* Tamanho do ícone */
-	    height: 24px;
-	    opacity: 0.6; /* Deixa o ícone mais sutil, como um placeholder */
-	    transition: opacity 0.3s ease;
-	}
+.search-icon-img {
+    width: 24px; /* Tamanho do ícone */
+    height: 24px;
+    opacity: 0.6; /* Deixa o ícone mais sutil, como um placeholder */
+    transition: opacity 0.3s ease;
+}
 
-	.search-btn-icon:hover .search-icon-img {
-	    opacity: 0.8;
-	}
+.search-btn-icon:hover .search-icon-img {
+    opacity: 0.8;
+}
 
 
 
@@ -434,7 +434,7 @@ html, body {
 
 .product-cards-container {
     display: flex;
-    justify-content: space-between; /* Alterado para distribuir o espaço entre os cards */
+    justify-content: center; /* Centraliza os cards quando não preenchem a linha */
     gap: 30px;
     max-width: 1200px;
     margin: 0 auto;
@@ -443,7 +443,7 @@ html, body {
 
 .product-card {
     position: relative;
-    /* Alterado de 230px para 180px para caber 5 cards com 30px de gap */
+    /* Tamanho padrão para desktop (5 cards por linha, como no original) */
     width: 208px; 
     height: 200px;
     background-color: #005523;
@@ -498,9 +498,8 @@ html, body {
     /* Adicionado altura mínima para garantir que o conteúdo caiba */
     min-height: 30%; 
     border-top-left-radius: 20px;   /* canto superior esquerdo */
-  border-top-right-radius: 20px;  /* canto superior direito */
-  border-bottom-left-radius: 0;   /* canto inferior esquerdo reto */
-  border-bottom-right-radius: 0;  /* canto inferior direito reto */
+    border-bottom-left-radius: 0;   /* canto inferior esquerdo reto */
+    border-bottom-right-radius: 0;  /* canto inferior direito reto */
 }
 
 .product-card:hover .product-info-overlay {
@@ -755,31 +754,34 @@ html, body {
 }
 
 /* ===== Responsividade ===== */
-@media (max-width: 480px) {
-  .senha-box {
-    padding: 1.5rem;
-  }
 
-  .senha-box h2 {
-    font-size: 1.4rem;
-  }
-
-  .senha-box p {
-    font-size: 0.9rem;
-  }
-}
-    .footer {
-        margin-top: 10px;
-    }
+/* Tablet (max-width: 1024px) - 4 cards por fileira */
+@media (max-width: 1024px) {
     .product-cards-container {
-    display: flex;
-    justify-content: center; /* Alterado para distribuir o espaço entre os cards */
-    gap: 30px;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
+        gap: 15px; /* Ajuste o gap para caber 4 */
+        padding: 0 10px;
+    }
+    .product-card {
+        /* 100% / 4 = 25%. Subtrai o gap para garantir que caiba.
+           (4 * 15px) / 4 = 15px. (4 * 15px) / 4 = 11.25px (3 gaps entre 4 itens)
+           100% / 4 = 25%. 25% - (3 * 15px / 4) = 25% - 11.25px
+           Usando calc(25% - 11.25px) é mais preciso.
+        */
+        width: calc(25% - 11.25px); 
+        height: 180px; /* Reduz o tamanho do card */
+        min-width: 160px; /* Garante um tamanho mínimo */
+    }
+    
+    /* Outros ajustes de responsividade para tablet */
+    .header .container {
+        padding: 0 15px;
+    }
+    .institution-title {
+        font-size: 28px;
+    }
+}
 
-/* Responsividade */
+/* Mobile (max-width: 768px) - 2 cards por fileira */
 @media (max-width: 768px) {
     .header .container {
         flex-direction: column;
@@ -809,7 +811,7 @@ html, body {
     }
 
     .institution-title {
-        font-size: 28px;
+        font-size: 24px; /* Reduz ainda mais */
     }
 
     .comment-feed {
@@ -820,11 +822,33 @@ html, body {
 
     .product-cards-container {
         justify-content: center;
+        gap: 10px; /* Reduz o gap */
+        padding: 0 5px; /* Adiciona um pequeno padding lateral */
+        max-width: 100%; /* Garante que o container use a largura total */
     }
 
     .product-card {
-        width: 45%; /* Ajuste para 2 cards por linha */
-        margin-bottom: 20px;
+        /* Força a largura para 2 cards por linha.
+           100% / 2 = 50%. 50% - (1 * 10px / 2) = 50% - 5px
+        */
+        width: calc(50% - 5px); 
+        height: 150px; /* Reduz o tamanho do card para mobile */
+        min-width: 130px;
+        margin-bottom: 10px; /* Reduz a margem inferior */
+    }
+    
+    .product-name {
+        font-size: 16px; /* Ajusta o texto do card */
+    }
+    
+    .product-description {
+        font-size: 12px; /* Ajusta o texto do card */
+    }
+    
+    .add-to-cart-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 18px;
     }
 
     .footer-container {
@@ -840,14 +864,60 @@ html, body {
     .copyright-social {
         margin-top: 10px;
     }
-}
-
-@media (max-width: 480px) {
-    .product-card {
-        width: 100%; /* 1 card por linha em telas muito pequenas */
+    
+    .footer-tagline{
+        transform: translateX(0px);
+        padding: 0;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+    
+    .copyright-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+    .copyright-social {
+        justify-content: center; /* centraliza os ícones no mobile */
     }
 }
 
+/* Ajuste fino para telas muito pequenas (mantendo 2 cards por linha) */
+@media (max-width: 480px) {
+    .product-cards-container {
+        gap: 8px;
+        padding: 0 5px;
+        max-width: 100%;
+    }
+    .product-card {
+        width: calc(50% - 4px); /* 4px é metade do gap de 8px */
+        height: 140px;
+        min-width: 120px;
+    }
+    
+    .senha-box {
+        padding: 1.5rem;
+    }
+
+    .senha-box h2 {
+        font-size: 1.4rem;
+    }
+
+    .senha-box p {
+        font-size: 0.9rem;
+    }
+}
 
 /* Estilos do Ícone do Carrinho (Ajuste para garantir que fique no canto direito da nav) */
 .nav {
@@ -878,34 +948,6 @@ html, body {
 }
 
 /* Estilos do Ícone do Carrinho (Removido do Header Principal) */
-    }
-
 .institution-title {
     font-size: 25px;
 }
-    /* Mobile: empilhar elementos do copyright */
-    .copyright-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .copyright-info,
-    .copyright-address,
-    .copyright-social {
-        flex-basis: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .copyright-social {
-        justify-content: center; /* centraliza os ícones no mobile */
-    }
-    .footer-tagline{
-        transform: translateX(0px);
-        padding: 0;
-    }
- .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-
