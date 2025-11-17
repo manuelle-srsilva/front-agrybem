@@ -675,9 +675,10 @@ body {
         grid-template-columns: 1fr; /* 1 coluna para celular/tablet portrait */
     }
 
-    /* Footer *    .copyright-container {
+    /* Footer */
+        .copyright-container {
         flex-direction: row;
-        text-align: left;
+        text-align: left;   
         gap: 0;
         justify-content: space-between;
     }

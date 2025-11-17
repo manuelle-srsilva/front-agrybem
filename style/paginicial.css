@@ -83,7 +83,7 @@ body {
     color: #5A8F3A;
 }
 .nav-button {
-    background-color: #315901;
+    background-color: #133C1F;
     color: white;
     padding: 10px 24px;
     border-radius: 8px;
@@ -418,10 +418,10 @@ body {
 }
 
 /* Footer */
-.footer {
-    background-color: #003f13;
+.footer-mobile, .footer-desktop {
+    background-color: #133C1F;
     padding: 3px 0;
-    border-top: 1px solid #afafaf;
+    border-top: 1px solid #ffffff;
 }
 
 .footer-container {
@@ -443,12 +443,12 @@ body {
 }
 
 .footer-logo-highlight {
-    color: #9bff5d;
+    color: #378f00;
 }
 
 .footer-tagline {
     
-    color: rgb(0, 56, 7);
+    color: rgb(255, 255, 255);
     padding: 20px 200px;
     border-radius: 20px;
     font-weight: 600;
@@ -466,46 +466,42 @@ body {
 .icon:hover {
   transform: scale(1.1);
 }
+
 /* --- Seção de Copyright (Abaixo do Footer) --- */
-.copyright-mobile {
-    background-color: #e6e6e6; /* Cor de fundo cinza claro, similar à imagem */
+.copyright-section {
+    background-color: #ffffff; /* Cor de fundo cinza claro, similar à imagem */
     padding: 20px 0;
     border-top: 1px solid #d9d9d9;
     font-size: 14px;
     color: #666; /* Cor do texto cinza escuro */
 }
 
-.copyright-mobile .copyright-container {
+.copyright-container {
     display: flex;
-    justify-content: space-between; /* keep items side-by-side on larger screens */
+    justify-content: space-between;
     align-items: center;
     gap: 20px;
-    flex-wrap: nowrap; /* prevent wrapping so items stay in one row */
-    width: 100%;
-    max-width: 1200px; /* keep aligned with main container */
-    margin: 0 auto;
+    /* O container já está definido para 1200px e centralizado */
 }
 
-.copyright-mobile .copyright-mobile .copyright-info,
-.copyright-mobile .copyright-address {
+.copyright-info,
+.copyright-address {
     /* Ajuste para que as colunas ocupem espaço de forma flexível, mas com alinhamento */
     flex-basis: 33.33%; 
     display: flex;
     flex-direction: column;
     gap: 5px;
-    text-align: center; /* center text in copyright columns */
 }
 
 .copyright-info {
-    /* centered to match footer alignment */
+    text-align: left;
+}
+
+.copyright-address {
     text-align: center;
 }
 
-.copyright-mobile .copyright-address {
-    text-align: center;
-}
-
-.copyright-mobile .copyright-social {
+.copyright-social {
     flex-basis: 33.33%;
     display: flex;
     justify-content: flex-end; /* Alinha os ícones à direita */
@@ -525,17 +521,19 @@ body {
 }
 
 /* Estilo para os ícones sociais dentro da seção de copyright */
-.copyright-mobile .copyright-social .social-icon {
+.copyright-social .social-icon {
     width: 24px; /* Ícones menores para o rodapé */
     height: 24px;
     filter: grayscale(100%) opacity(70%); /* Deixa os ícones em tons de cinza */
     transition: filter 0.3s ease, transform 0.3s ease;
 }
 
-.copyright-mobile .copyright-social .social-icon:hover {
+.copyright-social .social-icon:hover {
     filter: grayscale(0%) opacity(100%); /* Colore ao passar o mouse */
     transform: scale(1.1);
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
@@ -595,6 +593,25 @@ body {
     .nav-link {
         font-size: 14px;
     }
+
+      /* Footer */
+    .footer-logo-text {
+        font-size: 20px;
+    }
+
+    .footer-tagline {
+        font-size: 14px;
+    }
+
+    /* Copyright */
+    .copyright-container {
+        gap: 5px;
+    }
+
+    .copyright-text,
+    .copyright-text-small {
+        font-size: 10px;
+    }
 }
 
 
@@ -614,6 +631,60 @@ body {
     }
     60% {
         transform: translateY(-5px); /* Salto menor (60% do tempo) */
+    }
+}
+
+@media (max-width: 1024px)
+{
+     /* Footer */
+    .footer-tagline {
+        padding: 20px 50px;
+        transform: none;
+        font-size: 18px;
+    }
+
+    /* Partner Info 1 */
+    .partner-info-1 {
+        padding: 80px 0;
+    }
+
+    .partner-info-1 .partner-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .partner-image-wrapper {
+        width: 350px;
+        height: 350px;
+        margin-bottom: 30px;
+    }
+
+    .partner-title {
+        font-size: 36px;
+    }
+
+    /* Partner Info 2 */
+    .advantages-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 colunas para tablet */
+        gap: 30px;
+    }
+
+    /* Copyright */
+    .copyright-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .copyright-info,
+    .copyright-address,
+    .copyright-social {
+        flex-basis: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .copyright-social {
+        margin-top: 0;
     }
 }
 @media (max-width: 768px) {
@@ -698,52 +769,22 @@ body {
     margin-bottom: 300px;
     font-weight: 700;
   }
-  .footer-mobile .footer-container {
-    flex-direction: column;
-    text-align: center;
-    gap: 20px;
-  }
-    /* Mobile: empilhar elementos do copyright */
-    .copyright-mobile .copyright-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 12px;
-    }
-    .copyright-mobile .copyright-mobile .copyright-info,
-    .copyright-mobile .copyright-address,
-    .copyright-mobile .copyright-social {
-        flex-basis: 100%;
-        justify-content: center;
-        text-align: center;
-    }
-    .copyright-mobile .copyright-social {
-        justify-content: center; /* centraliza os ícones no mobile */
-    }
-}
-
-
-/* ------------------------------------------------------------------- */
-/* LÓGICA RESPONSIVA: EXIBIR O FOOTER CORRETO */
-/* ------------------------------------------------------------------- */
-
-/* Por padrão (Mobile-First), exibe o footer mobile e esconde o desktop */
-.footer-desktop, .copyright-desktop {
-    display: none !important;
-}
-
-.footer-mobile, .copyright-mobile {
-    display: block !important;
-}
-
-/* Media Query para Desktop/PC (a partir de 769px) */
-@media (min-width: 769px) {
-    /* Esconde o footer mobile */
-    .footer-mobile, .copyright-mobile {
-        display: none !important;
+    /* Footer */
+    .footer-logo-text {
+        font-size: 20px;
     }
 
-    /* Exibe o footer desktop */
-    .footer-desktop, .copyright-desktop {
-        display: block !important;
+    .footer-tagline {
+        font-size: 14px;
+    }
+
+    /* Copyright */
+    .copyright-container {
+        gap: 5px;
+    }
+
+    .copyright-text,
+    .copyright-text-small {
+        font-size: 10px;
     }
 }

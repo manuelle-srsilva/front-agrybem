@@ -783,9 +783,9 @@ html, body {
 
 /* Mobile (max-width: 768px) - 2 cards por fileira */
 @media (max-width: 768px) {
-    .header .container {
-        flex-direction: column;
-        gap: 15px;
+   .header .container {
+        flex-direction: space-between;
+        gap: 150px;
     }
 
     .nav {
